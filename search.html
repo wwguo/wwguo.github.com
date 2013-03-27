@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Wei-Wei Guo&#39;s Home Page &mdash; Wei-Wei Guo&#39;s Home Page</title>
+    <title>Search &mdash; Wei-Wei Guo&#39;s Home Page</title>
     
     <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -27,16 +27,19 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/sword_folder.js"></script>
-    <link rel="top" title="Wei-Wei Guo&#39;s Home Page" href="#" />
-    <link rel="next" title="基本算法" href="algorithmic/index.html" /> 
+    <script type="text/javascript" src="_static/searchtools.js"></script>
+    <link rel="top" title="Wei-Wei Guo&#39;s Home Page" href="index.html" />
+  <script type="text/javascript">
+    jQuery(function() { Search.loadIndex("searchindex.js"); });
+  </script>
+   
+
   </head>
   <body>
     <div class="header-wrapper">
       <div class="header">
-        <h1><a href="#">Wei-Wei Guo&#39;s Home Page</a></h1>
+        <h1><a href="index.html">Wei-Wei Guo&#39;s Home Page</a></h1>
         <div class="rel">
-          <a href="algorithmic/index.html" title="基本算法"
-             accesskey="N">next</a>
         </div>
        </div>
     </div>
@@ -49,44 +52,29 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="wei-wei-guo-s-home-page">
-<h1>Wei-Wei Guo's Home Page<a class="headerlink" href="#wei-wei-guo-s-home-page" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>文档说明<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>也许要，也许不要。</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="algorithmic/index.html">基本算法</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="algorithmic/frist.html">第一篇</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="qualitative/index.html">案例方法</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qualitative/frist.html">第一篇</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="visualize/index.html">基本图示</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="visualize/frist.html">第一篇</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="managerial/index.html">组织理论</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="managerial/frist.html">第一篇</a></li>
-<li class="toctree-l2"><a class="reference internal" href="managerial/second.html">第二篇</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div class="section" id="id2">
-<h2>参考引用<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="sharing/references.html">参考文献</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sharing/todo.html">TODO LIST</a></li>
-</ul>
-</div>
-</div>
-</div>
-
+  <h1 id="search-documentation">Search</h1>
+  <div id="fallback" class="admonition warning">
+  <script type="text/javascript">$('#fallback').hide();</script>
+  <p>
+    Please activate JavaScript to enable the search
+    functionality.
+  </p>
+  </div>
+  <p>
+    From here you can search these documents. Enter your search
+    words into the box below and click "search". Note that the search
+    function will automatically search for all of the words. Pages
+    containing fewer words won't appear in the result list.
+  </p>
+  <form action="" method="get">
+    <input type="text" name="q" value="" />
+    <input type="submit" value="search" />
+    <span id="search-progress" style="padding-left: 10px"></span>
+  </form>
+  
+  <div id="search-results">
+  
+  </div>
 
           </div>
         </div>
@@ -106,7 +94,7 @@
 </ul>
 
           <h3 style="margin-top: 1.5em;">Search</h3>
-          <form class="search" action="search.html" method="get">
+          <form class="search" action="#" method="get">
             <input type="text" name="q" size="18" />
             <input type="submit" value="Go" />
             <input type="hidden" name="check_keywords" value="yes" />
@@ -123,8 +111,6 @@
     <div class="footer-wrapper">
       <div class="footer">
         <div class="left">
-          <a href="algorithmic/index.html" title="基本算法"
-             >next</a>
         </div>
 
         <div class="right">
