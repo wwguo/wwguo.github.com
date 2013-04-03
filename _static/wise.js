@@ -84,7 +84,13 @@ $(document).ready(function (){
         $("a.headlink").removeClass("present")
         $("a.headlink#mlink").addClass("present")
         break;
-    case "wwguo.github.com":
+    case "sharing":
+        $("div.front").hide()
+        switchcolor("gray")
+        $("a.headlink").removeClass("present")
+        $("a.headlink#glink").addClass("present")
+        break;
+    default:
         if (pathurl[pathurl.length-1]=="index.html") {
             $("div.related").hide()
             $("div.footer").hide()
@@ -93,12 +99,6 @@ $(document).ready(function (){
             $("div.front").hide()
             $("div.tocwrapper").hide()
         }
-        switchcolor("gray")
-        $("a.headlink").removeClass("present")
-        $("a.headlink#glink").addClass("present")
-        break;
-    default:
-        $("div.front").hide()
         switchcolor("gray")
         $("a.headlink").removeClass("present")
         $("a.headlink#glink").addClass("present")
