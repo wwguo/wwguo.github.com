@@ -90,7 +90,7 @@ div.related a#glink
     padding: 0;
     width: 60px; 
     height: 60px;
-    background: url('fav.gif') no-repeat;
+    background: url('fav.png') no-repeat;
 }
 
 div.related div.headlink
@@ -210,8 +210,8 @@ div.front a#glink
     top: -15px;
     left: 400px;
     width: 60px; 
-    background: url('fav.gif') no-repeat;
-    background-color: #CCCCCC;
+    background: #ffffff url('fav.png') no-repeat;
+    /* background-color: #CCCCCC; */
 }
 
 div.front div.frontlink
