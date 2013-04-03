@@ -1,0 +1,729 @@
+/*****************************************************
+ * page layout - sidebar
+ *****************************************************/
+
+.toc > ul > li > a.gray {
+  background: url(favicon.ico) no-repeat 4px;
+}
+.toc > ul > li > a.blue {
+  background: url(al.ico) no-repeat 4px;
+}
+.toc > ul > li > a.green {
+  background: url(el.ico) no-repeat 4px;
+}
+.toc > ul > li > a.purple {
+  background: url(vl.ico) no-repeat 4px;
+}
+.toc > ul > li > a.orange {
+  background: url(mh.ico) no-repeat 4px;
+}
+
+table.docutils.footnote.gray,
+table.docutils.citation.gray,
+table.docutils.option-list.gray,
+table.docutils.field-list.gray,
+table.docutils.footnote.blue,
+table.docutils.citation.blue,
+table.docutils.option-list.blue,
+table.docutils.field-list.blue,
+table.docutils.footnote.green,
+table.docutils.citation.green,
+table.docutils.option-list.green,
+table.docutils.field-list.green,
+table.docutils.footnote.purple,
+table.docutils.citation.purple,
+table.docutils.option-list.purple,
+table.docutils.field-list.purple,
+table.docutils.footnote.orange,
+table.docutils.citation.orange,
+table.docutils.option-list.orange,
+table.docutils.field-list.orange
+{
+    border: none;
+}
+
+table.docutils.gray th.field-name,
+table.docutils.blue th.field-name,
+table.docutils.green th.field-name,
+table.docutils.purple th.field-name,
+table.docutils.orange th.field-name
+{ background: none; }
+
+/*****************************************************
+ * document - gray
+ *****************************************************/
+
+/*----------------------------------------------------
+   document - section headers
+  ---------------------------------------------------*/
+
+div.body h1.gray,
+div.body h2.gray
+{
+    color: #444444;
+}
+
+div.body h3.gray,
+div.body h4.gray,
+div.body h5.gray,
+div.body p.rubric.gray,
+div.body h6.gray
+{
+    color: #555555;
+}
+
+/* a.headerlink */
+/* { */
+/*     color: ; */
+/* } */
+/* a.headerlink:hover */
+/* { */
+/*     background-color: ; */
+/*     color: white; */
+/* } */
+
+/*----------------------------------------------------
+   document - links
+  ---------------------------------------------------*/
+
+a.gray
+{
+    color: #555555;
+}
+
+a.gray:visited
+{
+    color: #555555;
+}
+
+dt.gray:target,
+.footnote.gray:target,
+{
+    background-color: ;
+}
+
+/*----------------------------------------------------
+   document - table styles
+  ---------------------------------------------------*/
+
+table.docutils.gray { 
+    border-color:  #CCCCCC;
+}
+
+table.docutils.gray th {
+    background: #DDDDDD;
+}
+
+table.docutils.gray th.head:not(.stub) {
+    border-color:  #CCCCCC;
+}
+
+table.docutils.gray th.stub + td
+{
+    border-color: #CCCCCC;
+}
+
+table.docutils.gray tr.row-odd td { background: #EEEEEE; }
+
+/*----------------------------------------------------
+   document - admonitions
+  ---------------------------------------------------*/
+
+div.admonition.gray, p.deprecated.gray
+{
+    background: #EEEEEE;
+    border-color: #CCCCCC;
+}
+
+
+
+
+div.note.gray {
+    background-color: #EEEEEE;
+}
+
+
+div.seealso.gray {
+    background-color: #EEEEEE;
+}
+
+
+div.warning.gray {
+    background-color: #EEEEEE;
+}
+
+
+div.caution.gray {
+    background-color: #EEEEEE;
+}
+
+
+div.todo.gray {
+    background-color: #EEEEEE;
+}
+
+
+div.deprecated.gray {
+    background-color: #EEEEEE;
+}
+
+
+/*----------------------------------------------------
+   document - quoted text (TT & PRE)
+  ---------------------------------------------------*/
+
+div.highlight pre.gray,
+div.highlight-python pre.gray
+{
+    border-color: #CCCCCC;
+    background-color: #EEEEEE;
+    color: #555555;
+}
+
+tt.gray.literal
+{
+    background-color: #FFFFFF;
+}
+
+/*****************************************************
+ * document - blue
+ *****************************************************/
+
+/*----------------------------------------------------
+   document - section headers
+  ---------------------------------------------------*/
+
+div.body h1.blue,
+div.body h2.blue
+{
+    color: #336699;
+}
+
+div.body h3.blue,
+div.body h4.blue,
+div.body h5.blue,
+div.body p.rubric.blue,
+div.body h6.blue
+{
+    color: #29527A;
+}
+
+/* a.headerlink */
+/* { */
+/*     color: ; */
+/* } */
+/* a.headerlink:hover */
+/* { */
+/*     background-color: ; */
+/*     color: white; */
+/* } */
+
+/*----------------------------------------------------
+   document - links
+  ---------------------------------------------------*/
+
+a.blue
+{
+    color: #555555;
+}
+
+a.blue:visited
+{
+    color: #555555;
+}
+
+dt.blue:target,
+.footnote.blue:target,
+{
+    background-color: ;
+}
+
+/*----------------------------------------------------
+   document - table styles
+  ---------------------------------------------------*/
+
+table.docutils.blue { 
+    border-color:  #C2D1E0;
+}
+
+table.docutils.blue th {
+    background: #C2D1E0;
+}
+
+table.docutils.blue th.head:not(.stub) {
+    border-color:  #C2D1E0;
+}
+
+table.docutils.blue th.stub + td
+{
+    border-color: #C2D1E0;
+}
+
+table.docutils.blue tr.row-odd td { background: #EBF0F5; }
+
+/*----------------------------------------------------
+   document - admonitions
+  ---------------------------------------------------*/
+
+div.admonition.blue, p.deprecated.blue
+{
+    background: #EBF0F5;
+    border-color: #C2D1E0;
+}
+
+
+
+
+div.note.blue {
+    background-color: #EBF0F5;
+}
+
+
+div.seealso.blue {
+    background-color: #EBF0F5;
+}
+
+
+div.warning.blue {
+    background-color: #EBF0F5;
+}
+
+
+div.caution.blue {
+    background-color: #EBF0F5;
+}
+
+
+div.todo.blue {
+    background-color: #EBF0F5;
+}
+
+
+div.deprecated.blue {
+    background-color: #EBF0F5;
+}
+
+
+/*----------------------------------------------------
+   document - quoted text (TT & PRE)
+  ---------------------------------------------------*/
+
+div.highlight pre.blue,
+div.highlight-python pre.blue
+{
+    border-color:  #C2D1E0;
+    background-color: #EBF0F5;
+    color: #555555;
+}
+
+tt.blue.literal
+{
+    background-color: #FFFFFF;
+}
+
+/*****************************************************
+ * document - green
+ *****************************************************/
+
+/*----------------------------------------------------
+   document - section headers
+  ---------------------------------------------------*/
+
+div.body h1.green,
+div.body h2.green
+{
+    color: #336600;
+}
+
+div.body h3.green,
+div.body h4.green,
+div.body h5.green,
+div.body p.rubric.green,
+div.body h6.green
+{
+    color: #295200;
+}
+
+/* a.headerlink */
+/* { */
+/*     color: ; */
+/* } */
+/* a.headerlink:hover */
+/* { */
+/*     background-color: ; */
+/*     color: white; */
+/* } */
+
+/*----------------------------------------------------
+   document - links
+  ---------------------------------------------------*/
+
+a.green
+{
+    color: #555555;
+}
+
+a.green:visited
+{
+    color: #555555;
+}
+
+dt.green:target,
+.footnote.green:target,
+{
+    background-color: ;
+}
+
+/*----------------------------------------------------
+   document - table styles
+  ---------------------------------------------------*/
+
+table.docutils.green { 
+    border-color:  #C2D1B2;
+}
+table.docutils.green th {
+    background: #C2D1B2;
+}
+
+table.docutils.green th.head:not(.stub) {
+    border-color:  #C2D1B2;
+}
+
+table.docutils.green th.stub + td
+{
+    border-color: #C2D1B2;
+}
+
+table.docutils.green tr.row-odd td { background: #EBF0E6; }
+
+/*----------------------------------------------------
+   document - admonitions
+  ---------------------------------------------------*/
+
+div.admonition.green, p.deprecated.green
+{
+    background: #EBF0E6;
+    border-color: #C2D1B2;
+}
+
+
+
+
+div.note.green {
+    background-color: #EBF0E6;
+}
+
+
+div.seealso.green {
+    background-color: #EBF0E6;
+}
+
+
+div.warning.green {
+    background-color: #EBF0E6;
+}
+
+
+div.caution.green {
+    background-color: #EBF0E6;
+}
+
+
+div.todo.green {
+    background-color: #EBF0E6;
+}
+
+
+div.deprecated.green {
+    background-color: #EBF0E6;
+}
+
+
+/*----------------------------------------------------
+   document - quoted text (TT & PRE)
+  ---------------------------------------------------*/
+
+div.highlight pre.green,
+div.highlight-python pre.green
+{
+    border-color:  #C2D1B2;
+    background-color: #EBF0E6;
+    color: #555555;
+}
+
+tt.green.literal
+{
+    background-color: #FFFFFF;
+}
+
+
+/*****************************************************
+ * document - purple
+ *****************************************************/
+
+/*----------------------------------------------------
+   document - section headers
+  ---------------------------------------------------*/
+
+div.body h1.purple,
+div.body h2.purple
+{
+    color: #993399;
+}
+
+div.body h3.purple,
+div.body h4.purple,
+div.body h5.purple,
+div.body p.rubric.purple,
+div.body h6.purple
+{
+    color: #7A297A;
+}
+
+/* a.headerlink */
+/* { */
+/*     color: ; */
+/* } */
+/* a.headerlink:hover */
+/* { */
+/*     background-color: ; */
+/*     color: white; */
+/* } */
+
+/*----------------------------------------------------
+   document - links
+  ---------------------------------------------------*/
+
+a.purple
+{
+    color: #555555;
+}
+
+a.purple:visited
+{
+    color: #555555;
+}
+
+dt.purple:target,
+.footnote.purple:target,
+{
+    background-color: ;
+}
+
+/*----------------------------------------------------
+   document - table styles
+  ---------------------------------------------------*/
+
+table.docutils.purple { 
+    border-color:  #E0C2E0;
+}
+table.docutils.purple th {
+    background: #E0C2E0;
+}
+
+table.docutils.purple th.head:not(.stub) {
+    border-color:  #E0C2E0;
+}
+
+table.docutils.purple th.stub + td
+{
+    border-color: #E0C2E0;
+}
+
+table.docutils.purple tr.row-odd td { background: #F5EBF5; }
+
+/*----------------------------------------------------
+   document - admonitions
+  ---------------------------------------------------*/
+
+div.admonition.purple, p.deprecated.purple
+{
+    background: #F5EBF5;
+    border-color: #E0C2E0;
+}
+
+
+
+
+div.note.purple {
+    background-color: #F5EBF5;
+}
+
+
+div.seealso.purple {
+    background-color: #F5EBF5;
+}
+
+
+div.warning.purple {
+    background-color: #F5EBF5;
+}
+
+
+div.caution.purple {
+    background-color: #F5EBF5;
+}
+
+
+div.todo.purple {
+    background-color: #F5EBF5;
+}
+
+
+div.deprecated.purple {
+    background-color: #F5EBF5;
+}
+
+
+/*----------------------------------------------------
+   document - quoted text (TT & PRE)
+  ---------------------------------------------------*/
+
+div.highlight pre.purple,
+div.highlight-python pre.purple
+{
+    border-color:  #E0C2E0;
+    background-color: #F5EBF5;
+    color: #555555;
+}
+
+tt.purple.literal
+{
+    background-color: #FFFFFF;
+}
+
+/*****************************************************
+ * document - orange
+ *****************************************************/
+
+/*----------------------------------------------------
+   document - section headers
+  ---------------------------------------------------*/
+
+div.body h1.orange,
+div.body h2.orange
+{
+    color: #FF9900;
+}
+
+div.body h3.orange,
+div.body h4.orange,
+div.body h5.orange,
+div.body p.rubric.orange,
+div.body h6.orange
+{
+    color: #CC7A00;
+}
+
+/* a.headerlink */
+/* { */
+/*     color: ; */
+/* } */
+/* a.headerlink:hover */
+/* { */
+/*     background-color: ; */
+/*     color: white; */
+/* } */
+
+/*----------------------------------------------------
+   document - links
+  ---------------------------------------------------*/
+
+a.orange
+{
+    color: #555555;
+}
+
+a.orange:visited
+{
+    color: #555555;
+}
+
+dt.orange:target,
+.footnote.orange:target,
+{
+    background-color: ;
+}
+
+/*----------------------------------------------------
+   document - table styles
+  ---------------------------------------------------*/
+
+table.docutils.orange { 
+    border-color:  #FFE0B2;
+}
+table.docutils.orange th {
+    background: #FFE0B2;
+}
+
+table.docutils.orange th.head:not(.stub) {
+    border-color:  #FFE0B2;
+}
+
+table.docutils.orange th.stub + td
+{
+    border-color: #FFE0B2;
+}
+
+table.docutils.orange tr.row-odd td { background: #FFF5E6; }
+
+/*----------------------------------------------------
+   document - admonitions
+  ---------------------------------------------------*/
+
+div.admonition.orange, p.deprecated.orange
+{
+    background: #FFF5E6;
+    border-color: #FFE0B2;
+}
+
+
+
+
+div.note.orange {
+    background-color: #FFF5E6;
+}
+
+
+div.seealso.orange {
+    background-color: #FFF5E6;
+}
+
+
+div.warning.orange {
+    background-color: #FFF5E6;
+}
+
+
+div.caution.orange {
+    background-color: #FFF5E6;
+}
+
+
+div.todo.orange {
+    background-color: #FFF5E6;
+}
+
+
+div.deprecated.orange {
+    background-color: #FFF5E6;
+}
+
+
+/*----------------------------------------------------
+   document - quoted text (TT & PRE)
+  ---------------------------------------------------*/
+
+div.highlight pre.orange,
+div.highlight-python pre.orange
+{
+    border-color:  #FFE0B2;
+    background-color: #FFF5E6;
+    color: #555555;
+}
+
+tt.orange.literal
+{
+    background-color: #FFFFFF;
+}
+

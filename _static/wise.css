@@ -1,0 +1,982 @@
+/*****************************************************
+ * wise.css_t
+ * ~~~~~~~~~~~
+ *
+ * stylesheet for "Wise" theme for Sphinx.
+ *
+ * :copyright: Copyright 2013 by Wei-Wei Guo
+ * :license: BSD
+ *
+ *****************************************************/
+
+/* @import url("basic.css"); */
+
+/*****************************************************
+ * page layout - body
+ *****************************************************/
+
+body
+{
+    margin: 0 auto;
+    padding: 0;
+    max-width: 11in;
+    background-color: #EEEEEE;
+    color: #333333;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+    line-height: 1em;
+}
+
+/*****************************************************
+ * page layout - relbars (top)
+ *****************************************************/
+
+div.related
+{
+    margin: 0 auto;
+    max-width: 11in;
+    height: 122px;
+    background: #CCCCCC;
+    padding: 6px; 
+    color: #FFFFFF;
+    border-left: 6px solid #CCCCCC;
+    border-right: 6px solid #CCCCCC;
+    /* border-radius: .7em .7em 0 0; */
+    /* -moz-border-radius: .7em .7em 0 0; */
+    /* -webkit-border-radius: .7em .7em 0 0; */
+}
+
+div.related a
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+div.related a.present
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+}
+
+div.related a:hover
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+}
+
+div.related a#fork
+{
+    position: relative;
+    float: right;
+    margin: 0;
+    margin-right: -28px;
+    margin-top: -6px;
+    padding: 0;
+    width: 150px; 
+    height: 150px;
+    background: url('forkme_right_gray.png') no-repeat;
+}
+
+div.related a#glink
+{
+    position: relative;
+    float: right;
+    margin: 0;
+    margin-right: -60px;
+    margin-top: 68px;
+    padding: 0;
+    width: 60px; 
+    height: 60px;
+    background: url('fav.png') no-repeat;
+}
+
+div.related div.headlink
+{
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+div.related a#head
+{
+    position: relative;
+    float: left;
+    margin-left: 200px;
+    line-height: 120px;
+    text-align: left;
+    vertical-align: middle;
+    color: #FFFFFF;
+    font-size: 500%;
+    font-weight: bold;
+    text-decoration: none;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+}
+
+div.related a#head:hover
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+}
+
+div.related a.headlink
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 60px; 
+    height: 60px;
+}
+
+div.related a#alink
+{
+    top: 2px;
+    left: 0;
+    background: url('al.png') no-repeat;
+}
+div.related a#elink
+{
+    top: 2px;
+    left: 66px;
+    background: url('el.png') no-repeat;
+}
+div.related a#vlink
+{
+    top: 66px;
+    left: 0;
+    background: url('vl.png') no-repeat;
+}
+div.related a#mlink
+{
+    top: 66px;
+    left: 66px;
+    background: url('mh.png') no-repeat;
+}
+
+/*****************************************************
+ * page layout - relbars (front)
+ *****************************************************/
+
+div.front
+{
+    margin: 100px;
+    max-width: 11in;
+    min-height: 5in;
+    padding: 0 20px; 
+    color: #FFFFFF;
+}
+
+div.front h1
+{
+    position: relative;
+    margin: 120px auto;
+    width: 460px;
+    font-size: 500%;
+    font-weight: bold;
+    color: #6D6D6D;
+}
+
+div.front a.frontlink
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 200px; 
+    height: 60px;
+    /* border: 1px solid #CCCCCC; */
+    text-decoration: none;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+}
+
+div.front a.frontlink:hover
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+}
+
+div.front a#glink
+{
+    margin: 0;
+    padding: 0;
+    top: -15px;
+    left: 400px;
+    width: 60px; 
+    background: url('fav.png') no-repeat;
+}
+
+div.front div.frontlink
+{
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 450px;
+    height: 150px;
+}
+
+div.front a.frontlink span
+{
+    display: inline-block;
+    margin-top: 8px;
+    padding-left: 70px;
+    font-size: 100%;
+    font-weight: bold;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+div.front a#alink
+{
+    top: 0;
+    left: 0;
+    color: #336699;
+    background: url('alfront.png') no-repeat;
+    border: 1px solid #C2D1E0;
+}
+div.front a#elink
+{
+    top: 0;
+    left: 250px;
+    color: #336600;
+    background: url('elfront.png') no-repeat;
+    border: 1px solid #C2D1B2;
+}
+div.front a#vlink
+{
+    top: 100px;
+    left: 0;
+    color: #732C7B;
+    background: url('vlfront.png') no-repeat;
+    border: 1px solid #E0C2E0;
+}
+div.front a#mlink
+{
+    top: 100px;
+    left: 250px;
+    color: #E18A07;
+    background: url('mhfront.png') no-repeat;
+    border: 1px solid #FFE0B2;
+}
+
+/*****************************************************
+ * page layout - document
+ *****************************************************/
+
+div.document
+{
+    /* note: relative used by div.sidebartoggle */
+    position: relative;
+    margin: 0 auto;
+    max-width: 11in;
+    background: #FFFFFF;
+}
+
+div.documentwrapper
+{
+    width: 100%;
+}
+
+div.bodywrapper
+{
+    margin: 0;
+}
+
+div.body
+{
+    min-height: 5in;
+    /* note: this ^ is just a hack to prevent body from being shorter than sidebar */
+    background: #FFFFFF;
+    border: 6px solid #CCCCCC;
+    line-height: 140%;
+    color: #333333;
+    padding: 30px;
+}
+
+/*****************************************************
+ * page layout - sidebar
+ *****************************************************/
+
+div.tocwrapper
+{
+    position: absolute;
+    top: 0; /*122px*/
+    right: 0;
+    width: 260px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+    background: #FFFFFF;
+    font-size: 90%;
+    line-height: 125%;
+}
+
+.appendiex,
+.toc {
+  display: none;
+  margin-top: 10px;
+  padding: 5px;
+  border-top: solid #e9e6d7;
+  border-width: 1px 0;
+  color: #666666;
+}
+
+.appendiex ul,
+.toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.appendiex li,
+.toc li {
+  margin: 0;
+  padding: 0;
+}
+
+.toc ul ul li {
+  background: url(tree.gif) no-repeat 5px 0;
+  line-height: 20px;
+  margin-left: 6px;
+  padding-left: 16px;
+}
+
+.toc ul ul li:last-child {
+  background-repeat: no-repeat;
+  background-position: 5px -1766px;
+}
+
+.appendiex > ul > li > a {
+  padding: 2px;
+  padding-left: 24px;
+  background: url(favicon.ico) no-repeat 4px;
+}
+
+.toc > ul > li > a {
+  padding: 2px;
+  padding-left: 24px;
+  font-weight: bolder;
+}
+
+.toc a {
+  text-decoration: none;
+  color: #666666;
+}
+
+.appendiex a {
+  text-decoration: none;
+  color: #666666;
+}
+
+.toc a tt {
+  font-weight: normal;
+}
+
+.showtoc, .hidetoc {
+  font-size: 11px;
+  text-align: center;
+  color: #ba9;
+}
+
+.showtoc span, .hidetoc span {
+  cursor: pointer;
+  color: #765;
+}
+
+.hidetoc {
+  display: none;
+}
+
+/*****************************************************
+ * page layout - footer
+ *****************************************************/
+
+div.footer
+{
+    background: #CCCCCC;
+    width: 100%;
+    padding: 9px 0;
+    text-align: center;
+    font-size: 75%;
+}
+
+/*****************************************************
+ * document - section headers
+ *****************************************************/
+
+div.body h1,
+div.body h2,
+div.body p.rubric,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6
+{
+    margin: 1em 0 0.5em 0;
+    padding: 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    font-family: "DejaVu Sans", sans-serif;
+    font-weight: normal;
+    line-height: 1em;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+div.body h1 {
+    margin: 0 0 .5em 0;
+    padding: .9em 0 0 0;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px rgba(0,0,0,.1);
+}
+
+div.body h2 { font-size: 160%; }
+div.body h3 { font-size: 140%; }
+div.body h4  { font-size: 120%; }
+div.body h5, div.body p.rubric { font-size: 110%; }
+div.body h6 { font-size: 100%; }
+
+div.body h2
+{
+    margin: 1em -10px 0;
+    padding: 12px 10px 10px;
+    clear: both; /* for floating admonitions */
+    border-bottom: 1px solid;
+    border-width: 0 1px 1px 0;
+    border-color:  #CCCCCC;
+    text-shadow: 2px 2px 1px rgba(0,0,0,.1);
+}
+
+div.body p,
+div.body dd,
+div.body li
+{
+    text-align: justify;
+    line-height: 133%;
+}
+
+a.headerlink
+{
+    display: none;
+    /* font-size: 0.8em; */
+    /* margin: 0 0 0 1px; */
+    /* padding: 0 5px 0 4px; */
+    /* text-decoration: none; */
+    /* border-radius: 5px; */
+}
+
+/* a.headerlink:hover */
+/* { */
+/*     box-shadow: 2px 2px 2px rgba(0,0,0,.2); */
+/*     -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.2); */
+/*     -moz-box-shadow: 2px 2px 2px rgba(0,0,0,.2); */
+/* } */
+
+/*****************************************************
+ * document - links
+ *****************************************************/
+
+a
+{
+    color: #555555;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #555555;
+    text-decoration: none;
+}
+
+a:hover
+{
+    /* background-color: #EEEEEE; */
+    text-decoration: underline;
+}
+
+a.biglink
+{
+    font-size: 130%;
+}
+
+dt:target,
+.footnote:target,
+{
+    padding: 4px;
+    margin: -4px;
+    background-color: #EEEEEE;
+}
+
+/*****************************************************
+ * document - table styles
+ *****************************************************/
+
+table.docutils { 
+    border: 1px solid;
+    margin-top: 1em; 
+}
+
+table.docutils p
+{
+    line-height: 100%;
+}
+
+    /*------------------------------------
+     * custom table classes
+     *------------------------------------*/
+
+table.fullwidth { width: 100%; }
+
+table.centered { margin-left: auto; margin-right: auto; }
+
+table.docutils.plain { border: none; }
+table.docutils.plain tr.row-odd > * { background: none; }
+
+/* legacy alias for table.plain */
+table.docutils.html-plain-table tr.row-odd > * { background: none; }
+
+    /*------------------------------------
+     * default table styling
+     *------------------------------------*/
+
+table.docutils th {
+    border: 0 solid transparent;
+    padding: .4em;
+    font-family: "DejaVu Sans", sans-serif;
+}
+
+table.docutils th.head:not(.stub) {
+    border-bottom: 1px solid;
+}
+
+table.docutils th.stub + td
+{
+    border-left: 1px solid;
+}
+
+table.docutils td {
+    padding: .2em;
+    border: 0 solid transparent;
+}
+
+h2 + table.docutils { margin-top: 1em; }
+table > caption { margin: 1em 0 .5em; }
+
+    /*------------------------------------
+     * td/th classes added by .ext.table_styling
+     *------------------------------------*/
+table.docutils .left-align { text-align: left; }
+table.docutils .center-align { text-align: center; }
+table.docutils .right-align { text-align: right; }
+table.docutils .justify-align { text-align: justify; }
+table.docutils .nowrap { white-space: nowrap; }
+
+table.docutils .single-left-divider { border-left-width: 2px; }
+table.docutils th + .single-left-divider,
+table.docutils th + .double-left-divider { border-left-width: 0; }
+table.docutils .double-left-divider { border-left-width: 6px; border-left-style: double; }
+table.docutils .single-right-divider:last-child { border-right-width: 2px; }
+table.docutils .double-right-divider:last-child { border-right-width: 6px; border-right-style: double; }
+
+/*****************************************************
+ * document - misc styles
+ *****************************************************/
+
+    /*------------------------------------
+     * footnotes
+     *------------------------------------*/
+
+a.footnote-reference
+{
+    font-size: 70%;
+    position: relative;
+    top: -.6em;
+}
+
+table.docutils.footnote { 
+    font-size: 90%;
+    margin: 0; 
+}
+
+table.docutils.footnote p { 
+    line-height: 90%;
+}
+
+table.docutils.citation { 
+    margin: 0; 
+}
+
+table.docutils.option-list { 
+    margin: 0; 
+}
+
+    /*------------------------------------
+     * lists (UL, OL, DL)
+     *------------------------------------*/
+
+dl { margin-bottom: 1.5em; }
+li > dl:only-child { margin-bottom: 0; }
+
+dd ol { margin-bottom: 10px; }
+
+dl.docutils > dt { font-size: 1.1em; margin-bottom: .2em;}
+dl.docutils > dd + dt { margin-top: 1.5em; }
+
+dl.function dd { margin-top: -1em; }
+
+/* join separate ULs together */
+ul + ul,
+ul + div > ul:only-child,
+div.toctree-wrapper + ul { margin-top: -1em; }
+
+
+/*****************************************************
+ * document - field-list tables & contents
+ *****************************************************/
+
+table.docutils.field-list { 
+    margin: 0; 
+    font-size: 90%;
+    line-height: 90%;
+}
+
+.field-list p { margin-bottom: 16px; }
+
+td.field-body > p.first,
+td.field-body > ul.first.simple > li { margin-bottom: 1em; }
+
+td.field-body > em,
+td.field-body > ul.first.simple > li > em { padding: 2px 4px; }
+
+td.field-body > p.first:empty { display: none; }
+td.field-body > p:last-child:empty { margin-bottom: 1em; }
+
+/* workaround for chrome bug */
+td.field-body > p.first:only-child { margin: 0; }
+
+/*****************************************************
+ * document - admonitions
+ *****************************************************/
+
+    /*------------------------------------
+     * basic admonition styling - adds colored bg & icons
+     *------------------------------------*/
+
+div.admonition, p.deprecated
+{
+    border-width: 0 1px 1px 0;
+    margin: 1em 0;
+    padding: .5em;
+    border: 1px solid;
+    border-radius: 0 .5em 0 .5em;
+    -webkit-border-radius: 0 .5em 0 .5em;
+    -moz-border-radius: 0 .5em 0 .5em;
+}
+
+div.note, div.seealso, div.warning, div.admonition-todo, p.deprecated, div.caution
+{
+    background-position: .6em .5em;
+    background-size: auto 1.58em;
+    background-repeat: no-repeat;
+}
+
+    /*------------------------------------
+     * misc adjustments to admonitions
+     *------------------------------------*/
+
+div.admonition p,
+div.admonition pre,
+div.admonition ul,
+div.admonition ol { margin-bottom: 5px; }
+
+/* allow notes to float on right side w/in document */
+div.admonition.floater
+{
+    float: right;
+    max-width: 40%;
+    margin: 1em 0 1.5em 1.5em;
+}
+
+/* next few rules merge the title into the first paragraph */
+p.admonition-title { display: inline; margin-right: 0; font-weight: bold;}
+p.admonition-title + p { display: inline; }
+p.admonition-title:after { content: ":"; }
+p.admonition-title + ul { margin-top: 0; }
+
+/* don't indent admonitions inside definitions */
+dl div.admonition { margin-left: 0; }
+
+    /*------------------------------------
+     * todo summary list
+     *------------------------------------*/
+
+div#todos p.admonition-title
+{
+    font-weight: normal;
+    font-size: 70%;
+}
+
+div#todos div.admonition-todo + p
+{
+    font-size: 70%;
+    text-align: right;
+    margin-top: -.5em;
+    margin-bottom: 1.5em;
+}
+
+div#todos div.admonition-todo + p a
+{
+    font-size: 130%;
+}
+
+/*****************************************************
+ * document - quoted text (TT & PRE)
+ *****************************************************/
+
+div.highlight
+{
+    background: none;
+}
+
+div.highlight pre,
+div.highlight-python pre
+{
+    padding: 10px;
+    border: 1px solid;
+    border-width: 0 4px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    font-family: "DejaVu Sans Mono", monospace;
+    font-size: 85%;
+    line-height: 133%;
+}
+
+/* for source-view pages */
+div.body > h1 + div.highlight:last-child > pre
+{
+    padding-top: 5em;
+    margin-top: -5em;
+    margin-bottom: -10px;
+}
+
+table.highlighttable td { padding: 0; }
+table.highlighttable td.code { width: 100%; }
+table.highlighttable div.linenodiv pre
+{
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-right: .5em;
+    opacity: 0.3;
+}
+
+tt
+{
+    font-family: "DejaVu Sans Mono", monospace;
+    font-size: 90%;
+}
+
+tt.literal
+{
+    padding: 1px;
+    margin: 1px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+p tt.literal { white-space: nowrap; }
+
+tt.samp.literal > em
+{
+    font-family: "DejaVu Sans Mono", monospace;
+    padding: 0 1px;
+}
+
+tt.samp.literal > em:before { content: "<"; }
+tt.samp.literal > em:after { content: ">"; }
+
+h1 tt.literal
+{
+    background-color: inherit;
+    border: 0;
+    font-size: 80%;
+}
+
+h1 tt.samp.literal > em
+{
+    font-weight: normal;
+}
+
+a.reference tt.literal,
+div.related a tt.literal,
+tt.literal.xref
+{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.viewcode-back
+{
+    font-family: "Open Sans", sans-serif;
+}
+
+div.viewcode-block:target
+{
+    background-color: #f4debf;
+    border-top: 1px solid #ac9;
+    border-bottom: 1px solid #ac9;
+}
+
+.line-block
+{
+    margin: 10px;
+    margin-top: 15px;
+    line-height: 100%;
+    font-size: 90%;
+    font-family: "DejaVu Sans Mono", monospace;
+}
+
+/*****************************************************
+ * index page styling
+ * requires classes set by .ext.index_styling
+ *****************************************************/
+
+table.indextable span.category
+{
+    font-size: 80%;
+    font-style: italic;
+    color: ;
+}
+
+table.indextable a,
+table.indextable a:hover span.category
+{
+    color: #555555;
+}
+
+table.indextable span.category span.location
+{
+    font-weight: bold;
+}
+
+table.indextable td > dl > dt
+{
+    margin-bottom: .5em;
+}
+
+table.indextable td > dl > dd > dl
+{
+    margin-top: -.5em;
+    margin-bottom: .5em;
+}
+
+/*****************************************************
+ * adapt for various page sizes & media
+ *****************************************************/
+
+/*------------------------------------
+ * adapt for larger displays
+ *------------------------------------*/
+@media only screen and (min-device-width: 16in)
+{
+    body { font-size: 87.5%; }
+}
+
+/*------------------------------------
+ * adapt for 'compact' and 'minimal' page sizes
+ *------------------------------------*/
+
+@media only screen and (max-width: 960px),
+       only screen and (max-width: 700px),
+       only screen and (max-device-width: 700px),
+       handheld
+{
+    body { margin: 0; }
+
+    div.admonition.floater { display: none; }
+}
+
+/*------------------------------------
+ * adapt for 'minimal' page size
+ *------------------------------------*/
+@media only screen and (max-width: 700px),
+       only screen and (max-device-width: 700px),
+       handheld
+{
+    body { font-size: 87.5%; }
+
+    /* hide the sidebar */
+    div.tocwrapper
+    {
+        display: none;
+    }
+
+    div.bodywrapper
+    {
+        margin-left: 0;
+    }
+
+    /* tweak relbar - emphasize title, hide crumbs */
+    div.related > ul > li.right + li:not(.right) { font-weight: bold; }
+    div.related > ul > li:not(.right) + li { display: none; }
+
+    /* remove spacing on headers and reduce body padding */
+    body div.body h2,
+    body div.body p.rubric,
+    {
+        padding-top: 0.25em;
+        padding-bottom: .25em;
+    }
+
+    div.body
+    {
+        padding: 0 10px 30px;
+    }
+
+    /* shrink the headers */
+    div.body h1 { font-size: 160%; }
+    div.body h2, div.body p.rubric { font-size: 140%; }
+    div.body h3 { font-size: 120%; }
+    div.body h4 { font-size: 110%; }
+    div.body h5 { font-size: 100%; }
+}
+
+/*------------------------------------
+ * adapt for print media
+ *------------------------------------*/
+
+@media print
+{
+    div.body { border: 0; }
+
+    /* remove styling from headers */
+    div.body h1,
+    div.body h2,
+    div.body p.rubric,
+    div.body h3,
+    div.body h4,
+    div.body h5,
+    div.body h6
+    {
+        text-shadow: none !important;
+        border: none !important;
+        padding: 0;
+    }
+}
+
+/*****************************************************
+ * EOF
+ *****************************************************/
