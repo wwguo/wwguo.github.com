@@ -210,7 +210,7 @@ div.front a#glink
     top: -15px;
     left: 400px;
     width: 60px; 
-    background: #ffffff url('fav.png') no-repeat;
+    background: transparent url('favfront.png') no-repeat;
     /* background-color: #CCCCCC; */
 }
 
