@@ -172,17 +172,6 @@ div.front
     color: #FFFFFF;
 }
 
-div.front a#glink
-{
-    margin: 0;
-    padding: 0;
-    top: -15px;
-    left: 400px;
-    width: 60px; 
-    background: transparent url('favfront.png') no-repeat;
-    /* background-color: #CCCCCC; */
-}
-
 div.front h1
 {
     position: relative;
@@ -212,6 +201,17 @@ div.front a.frontlink:hover
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
     -moz-opacity: 1;
     opacity: 1;
+}
+
+div.front a#glink
+{
+    margin: 0;
+    padding: 0;
+    top: -15px;
+    left: 400px;
+    width: 60px; 
+    background: transparent url('fav.png') no-repeat;
+    /* background-color: #CCCCCC; */
 }
 
 div.front div.frontlink
