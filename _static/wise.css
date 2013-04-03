@@ -23,7 +23,7 @@ body
     background-color: #EEEEEE;
     color: #333333;
     font-family: "Open Sans", sans-serif;
-    font-size: 100%;
+    font-size: 15px;
     line-height: 1em;
 }
 
@@ -72,10 +72,10 @@ div.related a#fork
     position: relative;
     float: right;
     margin: 0;
-    margin-right: -28px;
+    margin-right: -13px;
     margin-top: -6px;
     padding: 0;
-    width: 150px; 
+    width: 135px; 
     height: 150px;
     background: url('forkme_right_gray.png') no-repeat;
 }
