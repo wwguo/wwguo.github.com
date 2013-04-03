@@ -19,12 +19,12 @@ $(document).ready(function (){
     $( ".showtoc span" ).click(function() {
         $( this ).parent().hide().next().show();
         $toc.slideDown( "fast" );
-        $appendiex.slideDown( "normal" );
+        $appendiex.slideDown( "fast" );
     });
     $( ".hidetoc span" ).click(function() {
         $( this ).parent().hide().prev().show();
         $toc.slideUp( "fast" );
-        $appendiex.slideUp( "normal" );
+        $appendiex.slideUp( "fast" );
     });
 
     // frist page
