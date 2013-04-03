@@ -211,6 +211,7 @@ div.front a#glink
     left: 400px;
     width: 60px; 
     background: url('fav.png') no-repeat;
+    background-color: #CCCCCC;
 }
 
 div.front div.frontlink
