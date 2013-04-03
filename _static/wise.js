@@ -81,7 +81,7 @@ $(document).ready(function (){
         $("a.headlink").removeClass("present")
         $("a.headlink#mlink").addClass("present")
         break;
-    case "github":
+    case "wwguo.github.com":
         if (pathurl[pathurl.length-1]=="index.html") {
             $("div.related").hide()
             $("div.footer").hide()
