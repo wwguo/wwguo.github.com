@@ -28,9 +28,6 @@ $(document).ready(function (){
     });
 
     // frist page
-    var pathurl = window.location.pathname.split('/');
-    var key = pathurl[pathurl.length-2];
-
     function switchcolor (color) {
         $(".toc > ul > li > a").removeClass("gray blue green purple orange").addClass(color)
         $("div.body h1").removeClass("gray blue green purple orange").addClass(color)
@@ -55,6 +52,12 @@ $(document).ready(function (){
         $("tt").removeClass("gray blue green purple orange").addClass(color)
         $("div.viewcode-block").removeClass("gray blue green purple orange").addClass(color)
     }
+
+    var pathurl = window.location.pathname.split('/');
+    var key = pathurl[pathurl.length-2];
+
+    console.log(pathurl)
+    console.log(key)
 
     switch (key) {
     case "algorithmic":
