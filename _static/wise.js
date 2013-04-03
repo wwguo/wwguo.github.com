@@ -56,9 +56,6 @@ $(document).ready(function (){
     var pathurl = window.location.pathname.split('/');
     var key = pathurl[pathurl.length-2];
 
-    console.log(pathurl)
-    console.log(key)
-
     switch (key) {
     case "algorithmic":
         $("div.front").hide()
@@ -86,18 +83,19 @@ $(document).ready(function (){
         break;
     case "sharing":
         $("div.front").hide()
+        $("div.tocwrapper").hide()
         switchcolor("gray")
         $("a.headlink").removeClass("present")
         $("a.headlink#glink").addClass("present")
         break;
     default:
-        if (pathurl[pathurl.length-1]=="index.html") {
+        if (pathurl[pathurl.length-1]=="genindex.html") {
+            $("div.front").hide()
+            $("div.tocwrapper").hide()
+        } else {
             $("div.related").hide()
             $("div.footer").hide()
             $("div.document").hide()
-        } else {
-            $("div.front").hide()
-            $("div.tocwrapper").hide()
         }
         switchcolor("gray")
         $("a.headlink").removeClass("present")
