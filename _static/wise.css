@@ -523,6 +523,37 @@ dt:target,
     background-color: #EEEEEE;
 }
 
+
+/*****************************************************
+ * document - toctree
+ *****************************************************/
+
+/* div.toctree-wrapper { */
+/*     border-collapse: collapse; */
+/* } */
+
+/* div.toctree-wrapper li { */
+/*     padding: 1px 8px 1px 5px; */
+/*     border:1px solid black;  */
+/* } */
+
+div.toctree-wrapper ul{
+  width:80%;
+  margin-bottom:20px;
+  overflow:hidden;
+  list-style-type: none;
+}
+
+div.toctree-wrapper li  { 
+    display:inline;
+    float:left;
+    width: 33.333%;
+    color: #555555
+    font-size: 110%;
+    line-height: 2em;
+} 
+
+
 /*****************************************************
  * document - table styles
  *****************************************************/
