@@ -22,7 +22,7 @@ body
     max-width: 11in;
     background-color: #EEEEEE;
     color: #333333;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Helvetica", "Arial", "Microsoft YaHei", "SimHei", sans-serif;
     font-size: 15px;
     line-height: 1em;
 }
@@ -46,6 +46,92 @@ div.related
     /* -webkit-border-radius: .7em .7em 0 0; */
 }
 
+div.related a#fork
+{
+    position: relative;
+    float: right;
+    margin: 0;
+    margin-right: -13px;
+    margin-top: -6px;
+    padding: 0;
+    width: 135px; 
+    height: 150px;
+    background: url('forkme_right_gray.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+}
+
+div.related a#glink
+{
+    position: relative;
+    float: right;
+    margin: 0;
+    margin-right: -60px;
+    margin-top: 68px;
+    padding: 0;
+    width: 60px; 
+    height: 60px;
+    background: url('fav.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+}
+
+div.related div.headlink
+{
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+div.related a#head
+{
+    position: relative;
+    float: left;
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 500px;
+    height: 80px;
+    background: url('name.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+}
+
+div.related a.headlink
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 60px; 
+    height: 60px;
+}
+
+div.related a#alink
+{
+    top: 2px;
+    left: 0;
+    background: url('al.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+}
+div.related a#elink
+{
+    top: 2px;
+    left: 66px;
+    background: url('el.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+}
+div.related a#vlink
+{
+    top: 66px;
+    left: 0;
+    background: url('vl.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+}
+div.related a#mlink
+{
+    top: 66px;
+    left: 66px;
+    background: url('mh.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+}
+
 div.related a
 {
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
@@ -67,119 +153,54 @@ div.related a:hover
     opacity: 1;
 }
 
-div.related a#fork
-{
-    position: relative;
-    float: right;
-    margin: 0;
-    margin-right: -13px;
-    margin-top: -6px;
-    padding: 0;
-    width: 135px; 
-    height: 150px;
-    background: url('forkme_right_gray.png') no-repeat;
-}
-
-div.related a#glink
-{
-    position: relative;
-    float: right;
-    margin: 0;
-    margin-right: -60px;
-    margin-top: 68px;
-    padding: 0;
-    width: 60px; 
-    height: 60px;
-    background: url('fav.png') no-repeat;
-}
-
-div.related div.headlink
-{
-    position: relative;
-    float: left;
-    margin: 0;
-    padding: 0;
-}
-
-div.related a#head
-{
-    position: relative;
-    float: left;
-    margin-left: 200px;
-    line-height: 120px;
-    text-align: left;
-    vertical-align: middle;
-    color: #FFFFFF;
-    font-size: 500%;
-    font-weight: bold;
-    text-decoration: none;
-    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
-    -moz-opacity: 0.8;
-    opacity: 0.8;
-}
-
-div.related a#head:hover
-{
-    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-    -moz-opacity: 1;
-    opacity: 1;
-}
-
-div.related a.headlink
-{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 60px; 
-    height: 60px;
-}
-
-div.related a#alink
-{
-    top: 2px;
-    left: 0;
-    background: url('al.png') no-repeat;
-}
-div.related a#elink
-{
-    top: 2px;
-    left: 66px;
-    background: url('el.png') no-repeat;
-}
-div.related a#vlink
-{
-    top: 66px;
-    left: 0;
-    background: url('vl.png') no-repeat;
-}
-div.related a#mlink
-{
-    top: 66px;
-    left: 66px;
-    background: url('mh.png') no-repeat;
-}
-
 /*****************************************************
  * page layout - relbars (front)
  *****************************************************/
 
 div.front
 {
+    position: relative;
     margin: 100px;
     max-width: 11in;
     min-height: 5in;
     padding: 0 20px; 
-    color: #FFFFFF;
 }
 
-div.front h1
+div.front div.name
 {
+    display: block;
     position: relative;
-    margin: 120px auto;
-    width: 460px;
-    font-size: 500%;
-    font-weight: bold;
+    margin: 40px 0;
+    width: 100%;
+}
+
+div.front div.name img
+{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 650px;
+}
+
+div.front div.name a#glink
+{
+    display: block;
+    position: relative;
+    margin: 1px auto;
     color: #6D6D6D;
+    background: url('favfront.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+    border: 1px solid #CCCCCC;
+}
+
+div.front div.frontlink
+{
+    display: block;
+    position: relative;
+    margin: 10px auto;
+    padding: 0;
+    width: 450px;
+    height: 160px;
 }
 
 div.front a.frontlink
@@ -203,26 +224,6 @@ div.front a.frontlink:hover
     opacity: 1;
 }
 
-div.front a#glink
-{
-    margin: 0;
-    padding: 0;
-    top: -15px;
-    left: 400px;
-    width: 60px; 
-    background: transparent url('fav.png') no-repeat;
-    /* background-color: #CCCCCC; */
-}
-
-div.front div.frontlink
-{
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
-    width: 450px;
-    height: 150px;
-}
-
 div.front a.frontlink span
 {
     display: inline-block;
@@ -240,6 +241,7 @@ div.front a#alink
     left: 0;
     color: #336699;
     background: url('alfront.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
     border: 1px solid #C2D1E0;
 }
 div.front a#elink
@@ -248,6 +250,7 @@ div.front a#elink
     left: 250px;
     color: #336600;
     background: url('elfront.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
     border: 1px solid #C2D1B2;
 }
 div.front a#vlink
@@ -256,14 +259,17 @@ div.front a#vlink
     left: 0;
     color: #732C7B;
     background: url('vlfront.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
     border: 1px solid #E0C2E0;
 }
+
 div.front a#mlink
 {
     top: 100px;
     left: 250px;
     color: #E18A07;
     background: url('mhfront.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
     border: 1px solid #FFE0B2;
 }
 
@@ -319,32 +325,39 @@ div.tocwrapper
     line-height: 125%;
 }
 
-.appendiex,
 .toc {
   display: none;
   margin-top: 10px;
   padding: 5px;
-  border-top: solid #e9e6d7;
-  border-width: 1px 0;
   color: #666666;
 }
 
-.appendiex ul,
 .toc ul {
-  margin: 0;
+  margin: 5px 0;
   padding: 0;
+  border-top: solid #e9e6d7;
+  border-width: 1px 0;
   list-style: none;
 }
 
-.appendiex li,
 .toc li {
   margin: 0;
   padding: 0;
 }
 
+.toc ul ul {
+  margin: 0;
+  border: none;
+}
+
+.toc ul li {
+  margin-top: 6px;
+}
+
 .toc ul ul li {
   background: url(tree.gif) no-repeat 5px 0;
   line-height: 20px;
+  margin: 0;
   margin-left: 6px;
   padding-left: 16px;
 }
@@ -354,24 +367,15 @@ div.tocwrapper
   background-position: 5px -1766px;
 }
 
-.appendiex > ul > li > a {
-  padding: 2px;
-  padding-left: 24px;
-  background: url(favicon.ico) no-repeat 4px;
-}
-
 .toc > ul > li > a {
+  margin-top: 5px;
   padding: 2px;
   padding-left: 24px;
   font-weight: bolder;
+  background: url(favicon.ico) no-repeat 4px;
 }
 
 .toc a {
-  text-decoration: none;
-  color: #666666;
-}
-
-.appendiex a {
   text-decoration: none;
   color: #666666;
 }
@@ -423,19 +427,20 @@ div.body h6
     margin: 1em 0 0.5em 0;
     padding: 0;
     text-shadow: 1px 1px 1px rgba(0,0,0,.1);
-    font-family: "DejaVu Sans", sans-serif;
+    font-family: "Verdana", "Adobe Heiti Std", "Microsoft YaHei", sans-serif;
     font-weight: normal;
     line-height: 1em;
     text-align: left;
-    letter-spacing: 1px;
 }
 
 div.body h1 {
     margin: 0 0 .5em 0;
     padding: .9em 0 0 0;
-    font-size: 200%;
+    font-size: 250%;
+    font-family: "Impact", "Adobe Heiti Std", "Microsoft YaHei", sans-serif;
     font-weight: bold;
     text-shadow: 2px 2px 1px rgba(0,0,0,.1);
+    letter-spacing: 2px;
 }
 
 div.body h2 { font-size: 160%; }
@@ -452,7 +457,10 @@ div.body h2
     border-bottom: 1px solid;
     border-width: 0 1px 1px 0;
     border-color:  #CCCCCC;
+    font-family: "Impact", "Adobe Heiti Std", "Microsoft YaHei", sans-serif;
+    font-weight: bold;
     text-shadow: 2px 2px 1px rgba(0,0,0,.1);
+    letter-spacing: 1px;
 }
 
 div.body p,
@@ -550,7 +558,7 @@ table.docutils.html-plain-table tr.row-odd > * { background: none; }
 table.docutils th {
     border: 0 solid transparent;
     padding: .4em;
-    font-family: "DejaVu Sans", sans-serif;
+    font-family: "Verdana", "Adobe Heiti Std", "Microsoft YaHei", sans-serif;
 }
 
 table.docutils th.head:not(.stub) {
@@ -755,7 +763,7 @@ div.highlight-python pre
     border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
-    font-family: "DejaVu Sans Mono", monospace;
+    font-family: "DejaVu Sans Mono", "Courier New", "Adobe Kaiti Std", "SimKai", monospace;
     font-size: 85%;
     line-height: 133%;
 }
@@ -782,7 +790,7 @@ table.highlighttable div.linenodiv pre
 
 tt
 {
-    font-family: "DejaVu Sans Mono", monospace;
+    font-family: "DejaVu Sans Mono", "Courier New", "Adobe Kaiti Std", "SimKai", monospace;
     font-size: 90%;
 }
 
@@ -800,7 +808,7 @@ p tt.literal { white-space: nowrap; }
 
 tt.samp.literal > em
 {
-    font-family: "DejaVu Sans Mono", monospace;
+    font-family: "DejaVu Sans Mono", "Courier New", "Adobe Kaiti Std", "SimKai", monospace;
     padding: 0 1px;
 }
 
@@ -831,7 +839,7 @@ tt.literal.xref
 
 .viewcode-back
 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Helvetica", "Arial", "Microsoft YaHei", "SimHei", sans-serif;
 }
 
 div.viewcode-block:target
@@ -847,7 +855,7 @@ div.viewcode-block:target
     margin-top: 15px;
     line-height: 100%;
     font-size: 90%;
-    font-family: "DejaVu Sans Mono", monospace;
+    font-family: "DejaVu Sans Mono", "Courier New", "Adobe Kaiti Std", "SimKai", monospace;
 }
 
 /*****************************************************

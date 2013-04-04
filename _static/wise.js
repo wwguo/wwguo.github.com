@@ -15,21 +15,18 @@ $(document).ready(function (){
 
     // tocwrapper 
     var $toc = $( ".toc" );
-    var $appendiex = $( ".appendiex" );
     $( ".showtoc span" ).click(function() {
         $( this ).parent().hide().next().show();
         $toc.slideDown( "fast" );
-        $appendiex.slideDown( "fast" );
     });
     $( ".hidetoc span" ).click(function() {
         $( this ).parent().hide().prev().show();
         $toc.slideUp( "fast" );
-        $appendiex.slideUp( "fast" );
     });
 
     // frist page
     function switchcolor (color) {
-        $(".toc > ul > li > a").removeClass("gray blue green purple orange").addClass(color)
+        $(".toc ul li a").first().removeClass("blue green purple orange").addClass(color)
         $("div.body h1").removeClass("gray blue green purple orange").addClass(color)
         $("div.body h2").removeClass("gray blue green purple orange").addClass(color)
         $("div.body h3").removeClass("gray blue green purple orange").addClass(color)
@@ -58,45 +55,33 @@ $(document).ready(function (){
 
     switch (key) {
     case "algorithmic":
-        $("div.front").hide()
         switchcolor("blue")
         $("a.headlink").removeClass("present")
         $("a.headlink#alink").addClass("present")
         break;
     case "evaluative":
-        $("div.front").hide()
         $("a.headlink").removeClass("present")
         $("a.headlink#elink").addClass("present")
         switchcolor("green")
         break;
     case "visualize":
-        $("div.front").hide()
         switchcolor("purple")
         $("a.headlink").removeClass("present")
         $("a.headlink#vlink").addClass("present")
         break;
     case "managerial":
-        $("div.front").hide()
         switchcolor("orange")
         $("a.headlink").removeClass("present")
         $("a.headlink#mlink").addClass("present")
         break;
     case "sharing":
-        $("div.front").hide()
         $("div.tocwrapper").hide()
         switchcolor("gray")
         $("a.headlink").removeClass("present")
         $("a.headlink#glink").addClass("present")
         break;
     default:
-        if (pathurl[pathurl.length-1]=="genindex.html") {
-            $("div.front").hide()
-            $("div.tocwrapper").hide()
-        } else {
-            $("div.related").hide()
-            $("div.footer").hide()
-            $("div.document").hide()
-        }
+        // $("div.tocwrapper").hide()
         switchcolor("gray")
         $("a.headlink").removeClass("present")
         $("a.headlink#glink").addClass("present")

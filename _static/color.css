@@ -2,9 +2,6 @@
  * page layout - sidebar
  *****************************************************/
 
-.toc > ul > li > a.gray {
-  background: url(favicon.ico) no-repeat 4px;
-}
 .toc > ul > li > a.blue {
   background: url(al.ico) no-repeat 4px;
 }
