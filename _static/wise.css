@@ -439,17 +439,12 @@ div.footerwrapper #weibo
     left: 225px;
 }
 
-div.footerwrapper #linkedin
-{
-    position: absolute;
-    top: 0;
-    left: 250px;
-}
-
-div.footerwrapper #linkedin span
-{
-    height: 10px!important;
-}
+/* div.footerwrapper #linkedin */
+/* { */
+/*     position: absolute; */
+/*     top: 0; */
+/*     left: 250px; */
+/* } */
 
 /*****************************************************
  * document - section headers
