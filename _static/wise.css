@@ -293,7 +293,7 @@ div.bodywrapper
 
 div.body
 {
-    min-height: 5in;
+    min-height: 4.5in;
     /* note: this ^ is just a hack to prevent body from being shorter than sidebar */
     background: #FFFFFF;
     border: 6px solid #CCCCCC;
@@ -575,7 +575,7 @@ div.toctree-wrapper ul{
 div.toctree-wrapper li  { 
     display:inline;
     float:left;
-    width: 33.333%;
+    width: 25%;
     color: #555555
     font-size: 110%;
     font-weight: bold;
@@ -680,6 +680,16 @@ table.docutils.footnote p {
 
 table.docutils.citation { 
     margin: 0; 
+    width: 100%;
+}
+
+table.docutils.citation{ 
+    margin: 0; 
+    width: 100%;
+}
+
+table.docutils.citation td{ 
+    width: 2px;
 }
 
 table.docutils.option-list { 
