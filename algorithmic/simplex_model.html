@@ -1,0 +1,218 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Simplex算法 &mdash; Wei-Wei Guo&#39;s Home Page</title>
+    
+    <link rel="stylesheet" href="../_static/wise.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/color.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2013',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/wise.js"></script>
+    <script type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey="></script>
+    <script type="text/javascript" src="//platform.linkedin.com/in.js"></script>
+    <link rel="top" title="Wei-Wei Guo&#39;s Home Page" href="../index.html" />
+    <link rel="up" title="定量算法" href="index.html" />
+    <link rel="next" title="定性方法" href="../evaluative/index.html" />
+    <link rel="prev" title="标准模型" href="linear_model.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <a id="fork" href="http://github.com/wwguo"></a>
+      <div class="headlink">
+        <a id="alink" class="headlink" href="index.html" title="定量算法"></a>
+        <a id="elink" class="headlink" href="../evaluative/index.html" title="定性方法"></a>
+        <a id="vlink" class="headlink" href="../visualize/index.html" title="数据呈现"></a>
+        <a id="mlink" class="headlink" href="../managerial/index.html" title="组织理论"></a>
+      </div>
+      <a id="head" href="../index.html" title="回到首页"></a>
+      <a id="glink" href="../sharing/self.html" title="个人介绍"></a>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="simplex">
+<span id="id1"></span><h1>Simplex算法<a class="headerlink" href="#simplex" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">文章分类:</th><td class="field-body">Optimization</td>
+</tr>
+<tr class="field-even field"><th class="field-name">创建时间:</th><td class="field-body">20011年11月</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="index-0">
+<span id="id2"></span><h2>算法初始<a class="headerlink" href="#index-0" title="Permalink to this headline">¶</a></h2>
+<p>单纯型算法是求解线性规划模型最有效的算法。根据单纯型算法，如果存在 <img class="math" src="../_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m" style="vertical-align: 0px"/> 个约束条件，则最优解不为 0 的变量必然不多于 <img class="math" src="../_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m" style="vertical-align: 0px"/> 个。现在求解 <img class="math" src="../_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m" style="vertical-align: 0px"/> 约束条件的模型，假设目标函数存在可行解且最优解有限。可以选择 <img class="math" src="../_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m" style="vertical-align: 0px"/> 个变量作为 <strong>基变量</strong> 用于求解，其他变量作为 <strong>非基变量</strong> 设定为 0。基变量有时也称 <strong>基</strong>。</p>
+<p>单纯型算法的基本步骤如下：</p>
+<ol class="arabic simple">
+<li>选择 <img class="math" src="../_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m" style="vertical-align: 0px"/> 个基变量，剩余 <img class="math" src="../_images/math/13a08868b0a1023cd389ac62a3a4084cd99dcec4.png" alt="n-m" style="vertical-align: 0px"/> 个变量为非基变量。令非基变量等于 0；</li>
+<li>求取基变量的最优解，并用求解得到的基变量和非基变量计算目标函数值；</li>
+<li>判断目标函数值是否最优。如不是最优解，则返回第 1 步。</li>
+</ol>
+<p>单纯型算法基于 <a class="reference internal" href="linear_model.html#linear-mode"><em>标准模型</em></a>，如果模型不是标准型，则用模型变换方法变换。</p>
+<p>选择基变量后，变量和变量的系数就被分为两组：</p>
+<ul class="simple">
+<li>基变量 <img class="math" src="../_images/math/d99af1ebfbd3b72d235df0ddac51897821bc82ac.png" alt="\vect{x}_B" style="vertical-align: -2px"/> 和非基变量 <img class="math" src="../_images/math/09e5d42efa9ecc0325a73bf7f639ab46322ddb8c.png" alt="\vect{x}_N" style="vertical-align: -2px"/>，即 <img class="math" src="../_images/math/bc0400cbcf4e7a414300c8985431c04a893110c2.png" alt="\vect{x}=\begin{bmatrix}\vect{x}_B\\\vect{x}_N\end{bmatrix}" style="vertical-align: -16px"/></li>
+<li>基变量和非基变量在约束条件中对应的系数： <img class="math" src="../_images/math/1dfad672f8176ba465bed776fdf1261c63b1602b.png" alt="\vect{B}" style="vertical-align: 0px"/> 和 <img class="math" src="../_images/math/a2d807b8247bcf251714f1d576995c07e7ce5baf.png" alt="\vect{N}" style="vertical-align: 0px"/>，即 <img class="math" src="../_images/math/643a37052c97c4d35e11d2f2dee603a9b1240fa2.png" alt="\vect{A} = \begin{bmatrix} \vect{B} &amp; \vect{N} \end{bmatrix}" style="vertical-align: -6px"/></li>
+<li>基变量和非基变量在目标函数中对应的系数：<img class="math" src="../_images/math/85d01397b398fd23d4e70f45b174e4d6ceee6129.png" alt="\vect{c}_B" style="vertical-align: -2px"/> 和 <img class="math" src="../_images/math/29b005a073148494d868db31263e6613129563ec.png" alt="\vect{c}_N" style="vertical-align: -2px"/>，即 <img class="math" src="../_images/math/4bfdccc224243aa5bccac1a9deb9d292608b05c8.png" alt="\vect{c}=\begin{bmatrix} \vect{c}_B &amp; \vect{c}_N \end{bmatrix}" style="vertical-align: -6px"/></li>
+<li>约束条件中不等式或等式的右边的常数不变，即 <img class="math" src="../_images/math/e172d78d870e5b7d75d3b13fcc527443b754d839.png" alt="\vect{b} = \vect{b}" style="vertical-align: 0px"/></li>
+</ul>
+<div class="math">
+<p><img src="../_images/math/5e51de6cba4a9d6551cc3bdc3b62f6356d9b6354.png" alt="\begin{array}{lll}
+\vect{c}\vect{x} &amp; =
+  \begin{bmatrix}
+  \vect{c}_B &amp; \vect{c}_N \\
+  \end{bmatrix}
+  \begin{bmatrix}
+  \vect{x}_B \\ \vect{x}_N \\
+  \end{bmatrix}
+  &amp; = \vect{c}_B \vect{x}_B + \vect{c}_N \vect{x}_N  \\[1.5em]
+\vect{A}\vect{x} &amp; =
+  \begin{bmatrix}
+  \vect{B} &amp; \vect{N} \\
+  \end{bmatrix}
+  \begin{bmatrix}
+  \vect{x}_B \\ \vect{x}_N \\
+  \end{bmatrix}
+  &amp; = \vect{B}\vect{x}_B + \vect{N}\vect{x}_N
+\end{array}"/></p>
+</div></div>
+<div class="section" id="id3">
+<h2>算法过程<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>基本可行解<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>首先需要根据选定的基变量求解模型。因为 <img class="math" src="../_images/math/ffd297bbc303c83227d3ee2d411c8f362515b2b5.png" alt="\vect{x}_N=\vect{0}" style="vertical-align: -2px"/>，所以：</p>
+<div class="math">
+<p><img src="../_images/math/0b42b465804713bbfcc9988775924205f4d176f3.png" alt="\vect{A}\vect{x}=\vect{b}\quad\Rightarrow\quad \vect{B}\vect{x}_B=\vect{b}"/></p>
+</div><p>则基变量 <img class="math" src="../_images/math/d99af1ebfbd3b72d235df0ddac51897821bc82ac.png" alt="\vect{x}_B" style="vertical-align: -2px"/> 的解：</p>
+<div class="math">
+<p><img src="../_images/math/3f7d2312b47845de7ab9dc6e2fe43f17f1df968f.png" alt="\vect{x}_B = \vect{B}^{-1}\vect{b} = \begin{bmatrix} d_1 \\ d_2 \\ \vdots \\ d_m \\ \end{bmatrix}
+\quad\Rightarrow\quad
+\vect{x}_d = \begin{bmatrix} \vect{B}^{-1}\vect{b} \\ \vect{0} \end{bmatrix}
+  = \begin{bmatrix} d_1 \\ d_2 \\ \vdots \\ d_m \\ 0 \\ \vdots \\ 0 \end{bmatrix}"/></p>
+</div><p><img class="math" src="../_images/math/25bcaca9073912ad56445f0d56ccdb3c587972a0.png" alt="\vect{x}_d" style="vertical-align: -2px"/> 即线性优化模型的一个基本解。对于标准型，因为 <img class="math" src="../_images/math/ebf39d61ef593248bf2b5684809dd5f01676edef.png" alt="\vect{x}\ge 0" style="vertical-align: -3px"/>，所以必须满足 <img class="math" src="../_images/math/2ab1efcfa5117e086c7138b2d6717ebb1db268c4.png" alt="\vect{x}_d\ge 0" style="vertical-align: -3px"/>。 <img class="math" src="../_images/math/25bcaca9073912ad56445f0d56ccdb3c587972a0.png" alt="\vect{x}_d" style="vertical-align: -2px"/> 是优化问题的一个 <strong>基本可行解</strong>，矩阵 <img class="math" src="../_images/math/1dfad672f8176ba465bed776fdf1261c63b1602b.png" alt="\vect{B}" style="vertical-align: 0px"/> 为 <strong>可行基</strong>。</p>
+<p>基本可行解与可行域多面体的顶点顶点对应，就像要判断多面体的顶点是否是最优解一样，需要判断基本可行解是否是最优解。如果不是，则需要调整。</p>
+</div>
+<div class="section" id="id5">
+<h3>最优解判定<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>用非基变量表示基变量：</p>
+<div class="math">
+<p><img src="../_images/math/bcd8ca4129f7ea25988d55bbdc7023ba36d3d6b7.png" alt="\vect{A}\vect{x} =\vect{B}\vect{x}_B + \vect{N}\vect{x}_N = \vect{b} \quad\Rightarrow\quad \vect{x}_B=\vect{B}^{-1}\vect{b}-\vect{B}^{-1}\vect{N}\vect{x}_N"/></p>
+</div><p>对应的目标函数用非基变量表示：</p>
+<div class="math">
+<p><img src="../_images/math/efb95a4ac6d32209d2d3bc2b2c82792ef029653e.png" alt="z = \vect{c}\vect{x} = \vect{c}_B \vect{x}_B + \vect{c}_N \vect{x}_N = \vect{c}_B\vect{B}^{-1}\vect{b} + \left(\vect{c}_N-\vect{c}_B\vect{B}^{-1}\vect{N}\right)\vect{x}_N"/></p>
+</div><p>若非基变量 <img class="math" src="../_images/math/ffd297bbc303c83227d3ee2d411c8f362515b2b5.png" alt="\vect{x}_N=\vect{0}" style="vertical-align: -2px"/>，即基本可行解 <img class="math" src="../_images/math/049d43a8fd1a0676fcfccfa53fe819bbffb94e26.png" alt="\vect{x}_d=\vect{B}^{-1}\vect{b}" style="vertical-align: -2px"/> 时，目标函数值 <img class="math" src="../_images/math/f349124a409de9c1dce7f3cbf57beb3c46731e90.png" alt="z=\vect{c}_B\vect{B}^{-1}\vect{b}" style="vertical-align: -2px"/>。如果这个基本可行解是最优解，那么该目标函数值就应该是最大可能值。因此即使某个或全部非基变量 <img class="math" src="../_images/math/09e5d42efa9ecc0325a73bf7f639ab46322ddb8c.png" alt="\vect{x}_N" style="vertical-align: -2px"/> 不取 0，目标函数值也不会增加。因此对于 <img class="math" src="../_images/math/ebf39d61ef593248bf2b5684809dd5f01676edef.png" alt="\vect{x}\ge 0" style="vertical-align: -3px"/> 必须有 <img class="math" src="../_images/math/272597bdfb1bb76cc0aef8d29d310df8d1f5ee14.png" alt="\vect{c}_N-\vect{c}_B\vect{B}^{-1}\vect{N}\le 0" style="vertical-align: -3px"/>。</p>
+<p>令 <img class="math" src="../_images/math/58d68f98d04209924edd77c92fdd670822f87890.png" alt="\sigma_i=c_i-\vect{c}_B\vect{B}^{-1}\vect{a}_i" style="vertical-align: -2px"/>：</p>
+<div class="math">
+<p><img src="../_images/math/2229a5307f8b665bcc90bdf8a15076ab2cb1a984.png" alt="\vect{c}_N-\vect{c}_B\vect{B}^{-1}\vect{N}
+= \begin{bmatrix} \sigma_{\color{red}{1}} \\ \sigma_{\color{red}{2}} \\ \vdots \\ \sigma_{\color{red}{n-m}} \end{bmatrix}^T =
+\begin{bmatrix}
+c_{\color{red}{m+1}}-\vect{c}_B\vect{B}^{-1}\vect{a}_{\color{red}{m+1}} \\
+c_{\color{red}{m+2}}-\vect{c}_B\vect{B}^{-1}\vect{a}_{\color{red}{m+2}} \\
+\vdots \\
+c_{\color{red}{n}}-\vect{c}_B\vect{B}^{-1}\vect{a}_{\color{red}{n}} \\
+\end{bmatrix}^T"/></p>
+</div><p>则基本可行解是最优解的判定条件为：</p>
+<ul class="simple">
+<li>所有 <img class="math" src="../_images/math/670d0f1d79bb81c8ebf0ad82c71fc9cb3a771ea6.png" alt="\sigma_i\le 0" style="vertical-align: -3px"/>，且如所有 <img class="math" src="../_images/math/822be74cb75a3fa49abe6e712911af08fcce33fa.png" alt="\sigma_i&lt;0" style="vertical-align: -2px"/>，则线性规划问题有唯一最优解。</li>
+<li>如果所有 <img class="math" src="../_images/math/670d0f1d79bb81c8ebf0ad82c71fc9cb3a771ea6.png" alt="\sigma_i\le 0" style="vertical-align: -3px"/> 时，存在某个（几个） <img class="math" src="../_images/math/2f1b8f0c47c81a6b2558ebcb3d5e2847a3911646.png" alt="\sigma_k=0" style="vertical-align: -2px"/>，则线性规划问题有多个最优解。</li>
+<li>如果某个 <img class="math" src="../_images/math/d68401fabfae83572b70c86a67eac4ceb9dd6c84.png" alt="\sigma_k&gt;0" style="vertical-align: -2px"/> 且其对应的 <img class="math" src="../_images/math/88bae3db17a9ce8c5c6e04f8f9a17ca050830f7b.png" alt="\vect{B}^{-1}\vect{a}_{m+k}\le \vect{0}" style="vertical-align: -3px"/>，则原优化问题有任意最优解。</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>基变量调整<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>如果基本可行解不是最优解，那么需要调整基变量，对应的 <img class="math" src="../_images/math/1dfad672f8176ba465bed776fdf1261c63b1602b.png" alt="\vect{B}" style="vertical-align: 0px"/> 和 <img class="math" src="../_images/math/a2d807b8247bcf251714f1d576995c07e7ce5baf.png" alt="\vect{N}" style="vertical-align: 0px"/> 等都会发生变化。调整步骤如下：</p>
+<ol class="arabic simple">
+<li>从值为正的 <img class="math" src="../_images/math/897d8920e1f813a1385aaee235eb62ba3c51b6ea.png" alt="\sigma_i" style="vertical-align: -2px"/> 中选择最大的；</li>
+<li>在 <img class="math" src="../_images/math/a2d807b8247bcf251714f1d576995c07e7ce5baf.png" alt="\vect{N}" style="vertical-align: 0px"/> 中找到 <img class="math" src="../_images/math/86df44d705c06a8b803b6d09f87bb903541e6028.png" alt="\sigma_k" style="vertical-align: -2px"/> 对应的第 <img class="math" src="../_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" style="vertical-align: 0px"/> 列 <img class="math" src="../_images/math/f5a15fb89939298d356ad1048128538f862d8ad1.png" alt="\vect{a}_{m+k}" style="vertical-align: -3px"/>，该列为 <strong>进基列</strong>；</li>
+<li>计算 <img class="math" src="../_images/math/91b347f22be0ca2de80942f7feedf9c2bdb5e3e5.png" alt="\vect{B}^{-1}\vect{a}_{m+k}" style="vertical-align: -3px"/> 和 <img class="math" src="../_images/math/8e2fcea83113ac0dfde66ed2692889a9d92c2797.png" alt="\vect{B}^{-1}\vect{b}" style="vertical-align: 0px"/>，求取两个向量的元素比 <img class="math" src="../_images/math/a8460c4579c8b2336dfa4aa6d780a36a7c054330.png" alt="\vect{\beta}" style="vertical-align: -3px"/>，即 <img class="math" src="../_images/math/9142811b970d12d497119df629a23bb54a434452.png" alt="\beta_{j,m+k}=\frac{d_j}{\alpha_{j,m+k}},~j=1,2,\cdots,m" style="vertical-align: -10px"/>。在所有正的 <img class="math" src="../_images/math/799ad29ad0aa93e86f1f86ea7633a432ed678264.png" alt="\alpha_{j,m+k}" style="vertical-align: -4px"/> 中选择最小的 <img class="math" src="../_images/math/eb95d3fb8f7f4bb8eddb0cf0ffc654197e0dcac8.png" alt="\beta_{j,m+k}" style="vertical-align: -4px"/>。</li>
+<li>在 <img class="math" src="../_images/math/1dfad672f8176ba465bed776fdf1261c63b1602b.png" alt="\vect{B}" style="vertical-align: 0px"/> 中找到 <img class="math" src="../_images/math/fb89f4b8e336071b64fc1343c543092155390a50.png" alt="\beta_{l,m+k}" style="vertical-align: -4px"/> 对应的第 <img class="math" src="../_images/math/9b25f8e64b484493fda944d25cad453423041fe6.png" alt="l" style="vertical-align: 0px"/> 列 <img class="math" src="../_images/math/1671f20c99206c6e37f66219462c0d41e2635afd.png" alt="\vect{a}_l" style="vertical-align: -2px"/>，该列为 <strong>出基列</strong>；</li>
+<li>用进基列代替出基列，并对应地调整 <img class="math" src="../_images/math/8559ed6384f968be5c665376a60092b0d34a713f.png" alt="\vect{x}" style="vertical-align: 0px"/> 和 <img class="math" src="../_images/math/079325fbde8b208b6e5d469a1e06c38de662d4df.png" alt="\vect{c}" style="vertical-align: 0px"/>：<ul>
+<li><img class="math" src="../_images/math/d99af1ebfbd3b72d235df0ddac51897821bc82ac.png" alt="\vect{x}_B" style="vertical-align: -2px"/> 和 <img class="math" src="../_images/math/85d01397b398fd23d4e70f45b174e4d6ceee6129.png" alt="\vect{c}_B" style="vertical-align: -2px"/> 增加第 <img class="math" src="../_images/math/c2a78a9191f622742b577956b12b98c88016e25b.png" alt="m+k" style="vertical-align: -1px"/> 个元素，去掉第 <img class="math" src="../_images/math/9b25f8e64b484493fda944d25cad453423041fe6.png" alt="l" style="vertical-align: 0px"/> 个元素；</li>
+<li><img class="math" src="../_images/math/09e5d42efa9ecc0325a73bf7f639ab46322ddb8c.png" alt="\vect{x}_N" style="vertical-align: -2px"/> 和 <img class="math" src="../_images/math/29b005a073148494d868db31263e6613129563ec.png" alt="\vect{c}_N" style="vertical-align: -2px"/> 增加第 <img class="math" src="../_images/math/9b25f8e64b484493fda944d25cad453423041fe6.png" alt="l" style="vertical-align: 0px"/> 个元素，去掉第 <img class="math" src="../_images/math/c2a78a9191f622742b577956b12b98c88016e25b.png" alt="m+k" style="vertical-align: -1px"/> 个元素。</li>
+</ul>
+</li>
+<li>利用调整后的基变量重新迭代。</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="tocwrapper">
+        <!-- <div class="showtoc"><span>资料目录</span></div> -->
+        <div class="showtoc"><span>章节目录</span></div>
+        <div class="hidetoc"><span>隐藏目录</span></div>
+        <div class="toc">
+          <ul>
+<li><a class="reference internal" href="#">Simplex算法</a><ul>
+<li><a class="reference internal" href="#index-0">算法初始</a></li>
+<li><a class="reference internal" href="#id3">算法过程</a><ul>
+<li><a class="reference internal" href="#id4">基本可行解</a></li>
+<li><a class="reference internal" href="#id5">最优解判定</a></li>
+<li><a class="reference internal" href="#id6">基变量调整</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          <ul>
+            <li><a href="../genindex.html">索引目录</a></li>
+            <li><a href="../sharing/references.html">参考文献</a></li>
+          </ul>
+        </div>
+        <!-- <div class="toc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">定量算法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../evaluative/index.html">定性方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualize/index.html">数据呈现</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../managerial/index.html">组织理论</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sharing/references.html">参考文献</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sharing/self.html">个人介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sharing/todo.html">备做列表</a></li>
+</ul>
+</div> -->
+    </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+        <div class="footerwrapper">
+          <span id="copyright">© Copyright 2013, Wei-Wei Guo.</span>
+          <a id="mail" href="mailto:wwguocn@gmail.com"></a>
+          <!-- <wb:share-button count="n" type="button" relateuid="2365879712" ></wb:share-button> -->
+          <span id="weibo"><wb:share-button count="n" relateuid="2365879712"></wb:share-button></span>
+          <!-- <span id="linkedin"><script type="IN/Share"></script></span> -->
+        </div>
+    </div>
+
+  </body>
+</html>
