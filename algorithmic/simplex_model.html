@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Simplex算法 &mdash; Wei-Wei Guo&#39;s Home Page</title>
+    <title>Simplex算法 &mdash; 郭维维</title>
     
     <link rel="stylesheet" href="../_static/wise.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -28,7 +28,8 @@
     <script type="text/javascript" src="../_static/wise.js"></script>
     <script type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey="></script>
     <script type="text/javascript" src="//platform.linkedin.com/in.js"></script>
-    <link rel="top" title="Wei-Wei Guo&#39;s Home Page" href="../index.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="郭维维" href="../index.html" />
     <link rel="up" title="定量算法" href="index.html" />
     <link rel="next" title="定性方法" href="../evaluative/index.html" />
     <link rel="prev" title="标准模型" href="linear_model.html" /> 
@@ -159,6 +160,40 @@ c_{\color{red}{n}}-\vect{c}_B\vect{B}^{-1}\vect{a}_{\color{red}{n}} \\
 </ol>
 </div>
 </div>
+<div class="section" id="id7">
+<h2>计算程序<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>GLPK 是最好的优化软件。当然，我用 Go 语言实现的 Simplex 程序也不差。</p>
+<div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span>glpsol -m mymodel.mod -o mymodel.sol
+</pre></div>
+</div>
+<p><tt class="file docutils literal"><span class="pre">.mod</span></tt> 是模型设定文件，如下述模型：</p>
+<div class="math">
+<p><img src="../_images/math/f207a02ec3768fdf54c4f654322e5302d81bead0.png" alt="\begin{gather*}
+\text{maximize\quad } 3x_1+2x_2 \\[2mm]
+\begin{aligned}
+2x_1 &amp; + x_2 &amp; \le 100 \\
+x_1  &amp; + x_2 &amp; \le 80  \\
+x_1  &amp;       &amp; \le 40  \\
+\end{aligned} \\
+x_1\ge 0 \text{\ and\ } x_2\ge 0 \\
+\end{gather*}"/></p>
+</div><p>模型设定代码为：</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cm">/* Decision variables */</span>
+<span class="n">var</span> <span class="n">x1</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span>  <span class="cm">/* product 1 */</span>
+<span class="n">var</span> <span class="n">x2</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span>  <span class="cm">/* product 2 */</span>
+
+<span class="cm">/* Objective function */</span>
+<span class="n">maximize</span> <span class="n">z</span><span class="o">:</span> <span class="mi">3</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x2</span><span class="p">;</span>
+
+<span class="cm">/* Constraints */</span>
+<span class="n">s</span><span class="p">.</span><span class="n">t</span><span class="p">.</span> <span class="n">Labor</span>    <span class="o">:</span> <span class="mi">2</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="n">s</span><span class="p">.</span><span class="n">t</span><span class="p">.</span> <span class="n">Material</span> <span class="o">:</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span> <span class="o">&lt;=</span> <span class="mi">80</span><span class="p">;</span>
+<span class="n">s</span><span class="p">.</span><span class="n">t</span><span class="p">.</span> <span class="n">Demand</span>   <span class="o">:</span> <span class="n">x1</span> <span class="o">&lt;=</span> <span class="mi">40</span><span class="p">;</span>
+
+<span class="n">end</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -179,6 +214,7 @@ c_{\color{red}{n}}-\vect{c}_B\vect{B}^{-1}\vect{a}_{\color{red}{n}} \\
 <li><a class="reference internal" href="#id6">基变量调整</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id7">计算程序</a></li>
 </ul>
 </li>
 </ul>

@@ -121,6 +121,7 @@ table.docutils.gray th.stub + td
 }
 
 table.docutils.gray tr.row-odd td { background: #EEEEEE; }
+table.docutils.citation.gray tr.row-odd > * { background: none;}
 
 /*----------------------------------------------------
    document - admonitions
@@ -600,7 +601,7 @@ tt.purple.literal
 div.body h1.orange,
 div.body h2.orange
 {
-    color: #FF9900;
+    color: #996600;
 }
 
 div.body h3.orange,
@@ -609,7 +610,7 @@ div.body h5.orange,
 div.body p.rubric.orange,
 div.body h6.orange
 {
-    color: #CC7A00;
+    color: #7A5200;
 }
 
 /* a.headerlink */
@@ -650,7 +651,7 @@ table.docutils.orange {
     border-color:  #FFE0B2;
 }
 table.docutils.orange th {
-    background: #FFE0B2;
+    background: #E0D1B2;
 }
 
 table.docutils.orange th.head:not(.stub) {
@@ -662,7 +663,7 @@ table.docutils.orange th.stub + td
     border-color: #FFE0B2;
 }
 
-table.docutils.orange tr.row-odd td { background: #FFF5E6; }
+table.docutils.orange tr.row-odd td { background: #F5F0E6; }
 
 /*----------------------------------------------------
    document - admonitions
@@ -670,7 +671,7 @@ table.docutils.orange tr.row-odd td { background: #FFF5E6; }
 
 div.admonition.orange, p.deprecated.orange
 {
-    background: #FFF5E6;
+    background: #F5F0E6;
     border-color: #FFE0B2;
 }
 
@@ -678,32 +679,32 @@ div.admonition.orange, p.deprecated.orange
 
 
 div.note.orange {
-    background-color: #FFF5E6;
+    background-color: #F5F0E6;
 }
 
 
 div.seealso.orange {
-    background-color: #FFF5E6;
+    background-color: #F5F0E6;
 }
 
 
 div.warning.orange {
-    background-color: #FFF5E6;
+    background-color: #F5F0E6;
 }
 
 
 div.caution.orange {
-    background-color: #FFF5E6;
+    background-color: #F5F0E6;
 }
 
 
 div.todo.orange {
-    background-color: #FFF5E6;
+    background-color: #F5F0E6;
 }
 
 
 div.deprecated.orange {
-    background-color: #FFF5E6;
+    background-color: #F5F0E6;
 }
 
 
@@ -715,7 +716,7 @@ div.highlight pre.orange,
 div.highlight-python pre.orange
 {
     border-color:  #FFE0B2;
-    background-color: #FFF5E6;
+    background-color: #F5F0E6;
     color: #555555;
 }
 

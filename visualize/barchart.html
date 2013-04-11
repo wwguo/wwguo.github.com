@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>柱状图 &mdash; Wei-Wei Guo&#39;s Home Page</title>
+    <title>柱状图 &mdash; 郭维维</title>
     
     <link rel="stylesheet" href="../_static/wise.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -28,7 +28,8 @@
     <script type="text/javascript" src="../_static/wise.js"></script>
     <script type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey="></script>
     <script type="text/javascript" src="//platform.linkedin.com/in.js"></script>
-    <link rel="top" title="Wei-Wei Guo&#39;s Home Page" href="../index.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="郭维维" href="../index.html" />
     <link rel="up" title="数据呈现" href="index.html" />
     <link rel="next" title="组织理论" href="../managerial/index.html" />
     <link rel="prev" title="数据呈现" href="index.html" /> 
@@ -63,7 +64,63 @@
 </tr>
 </tbody>
 </table>
-<span class="target" id="index-0"></span></div>
+<p id="index-0">柱状图（bar chart）用于呈现频数或百分比。</p>
+<div class="section" id="id2">
+<h2>基本要素<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>柱状图的基本要素包括三个：</p>
+<ul class="simple">
+<li>水平分段：先按照数据的分类数目给水平轴分段。</li>
+<li>竖直数值：确定单位竖直高度的代表的数值，并绘制标度轴。</li>
+<li>绘制柱图：按照数据绘制竖直柱。</li>
+</ul>
+<img alt="../_images/barchart1.png" class="align-center" src="../_images/barchart1.png" />
+<p>R 可以直接绘制柱状图：</p>
+<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span>vector<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>变换图形<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>数值轴变化<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/barchart2.png" class="align-right" src="../_images/barchart2.png" />
+<p>媒体上常见的柱状图通常没有纵轴标度，而是直接将数值标记在竖直柱的顶端或顶端附近。</p>
+<p>R 需要做些调整：</p>
+<div class="highlight-r"><div class="highlight"><pre>bar.plot <span class="o">&lt;-</span> barplot<span class="p">(</span>vector<span class="p">,</span> yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">)</span>
+text<span class="p">(</span>bar.plot<span class="p">,</span> vector<span class="p">,</span> labels<span class="o">=</span>bar.label<span class="p">,</span> pos<span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">pos</span></tt> 用于调整数值显示的相对位置。</p>
+</div>
+<div class="section" id="id5">
+<h3>纵横轴交换<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>柱状图的柱可以绘制为水平柱，由横轴标度数值。</p>
+<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span>vector<span class="p">,</span> horiz<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>衍生图形<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>累加柱状图<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>以 R 的示例生成的图为例展示累加柱状图：</p>
+<img alt="../_images/barchart3.png" src="../_images/barchart3.png" />
+<p>数据需是 <tt class="docutils literal"><span class="pre">matrix</span></tt> 类对象。</p>
+<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span>matrix<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>比较柱状图<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>以 R 的示例生成的图为例展示比较柱状图：</p>
+<img alt="../_images/barchart4.png" src="../_images/barchart4.png" />
+<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span>matrix<span class="p">,</span> beside<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 
 
           </div>
@@ -75,7 +132,20 @@
         <div class="hidetoc"><span>隐藏目录</span></div>
         <div class="toc">
           <ul>
-<li><a class="reference internal" href="#">柱状图</a></li>
+<li><a class="reference internal" href="#">柱状图</a><ul>
+<li><a class="reference internal" href="#id2">基本要素</a></li>
+<li><a class="reference internal" href="#id3">变换图形</a><ul>
+<li><a class="reference internal" href="#id4">数值轴变化</a></li>
+<li><a class="reference internal" href="#id5">纵横轴交换</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">衍生图形</a><ul>
+<li><a class="reference internal" href="#id7">累加柱状图</a></li>
+<li><a class="reference internal" href="#id8">比较柱状图</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
           <ul>
@@ -83,13 +153,10 @@
             <li><a href="../sharing/references.html">参考文献</a></li>
           </ul>
         </div>
-        <!-- <div class="toc"><ul class="current">
+        <!-- <div class="toc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../algorithmic/index.html">定量算法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../evaluative/index.html">定性方法</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">数据呈现</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">柱状图</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">数据呈现</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../managerial/index.html">组织理论</a></li>
 </ul>
 <ul>
