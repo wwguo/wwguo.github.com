@@ -402,13 +402,13 @@ div.footer
     height: 20px;
     padding: 9px 0;
     text-align: center;
-    font-size: 85%;
+    font-size: 95%;
 }
 
 div.footerwrapper
 {
     position: relative;
-    width: 25%;
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -419,21 +419,47 @@ div.footerwrapper #copyright
     left: 0px;
 }
 
-a#mail
+div.footerwrapper #mail
 {
     position: absolute;
-    top: 0;
-    left: 195px;
+    top: -2px;
+    left: 210px;
     width: 29px; 
     height: 20px;
     background: url('gmail.png') no-repeat;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4;
 }
 
 div.footerwrapper #weibo
 {
     position: absolute;
+    top: -2px;
+    left: 250px;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+}
+
+div.footerwrapper .IN-widget
+{
+    position: absolute;
     top: 0;
-    left: 225px;
+    left: 315px;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+}
+
+div.footerwrapper #tumblr
+{
+    position: absolute;
+    top: 0;
+    left: 380px;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4;
 }
 
 a#license
@@ -936,6 +962,7 @@ div.viewcode-block:target
     font-size: 90%;
     font-family: "DejaVu Sans Mono", "Courier New", "Adobe Kaiti Std", "SimKai", monospace;
 }
+
 
 /*****************************************************
  * index page styling
