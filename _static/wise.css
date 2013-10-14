@@ -410,7 +410,6 @@ div.footerwrapper
     position: relative;
     width: 40%;
     margin: 0 auto;
-    color: gray;
 }
 
 div.footerwrapper #copyright 
@@ -418,7 +417,12 @@ div.footerwrapper #copyright
     position: absolute;
     top: 1px;
     left: 0px;
-    color: gray;
+    color: #aaaaaa;
+}
+
+div.footerwrapper #copyright:hover
+{
+    color: #333333;
 }
 
 div.footerwrapper #mail
