@@ -184,7 +184,8 @@ div.front div.name
 {
     display: block;
     position: relative;
-    margin: 40px 0;
+    top: 30px;
+    margin: 0 auto;
     width: 100%;
 }
 
@@ -200,21 +201,20 @@ div.front div.name a#glink
 {
     display: block;
     position: relative;
-    top: -20px;
-    left: 48%;
-    width: 139px; 
-    height: 20px;
-    border: 1px solid #CCCCCC;
+    top: -110px;
+    left: 66%;
+    width: 56px; 
+    height: 130px;
     background: url('favfront.png') no-repeat;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
-    border: 1px solid #CCCCCC;
+    border: 0px solid #CCCCCC;
 }
 
 div.front div.frontlink
 {
     display: block;
     position: relative;
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 0;
     width: 450px;
     height: 160px;
