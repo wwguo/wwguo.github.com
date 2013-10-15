@@ -23,7 +23,7 @@ body
     min-width: 9in;
     background-color: #EEEEEE;
     color: #333333;
-    font-family: "Helvetica", "Arial", "Microsoft YaHei", "SimHei", sans-serif;
+    font-family: "Helvetica", "Arial", "Microsoft YaHei", "Adobe Heiti Std", "SimHei", sans-serif;
     font-size: 15px;
     line-height: 1em;
 }
@@ -201,13 +201,13 @@ div.front div.name a#glink
 {
     display: block;
     position: relative;
-    top: -110px;
+    top: -115px;
     left: 66%;
     width: 56px; 
     height: 130px;
     background: url('favfront.png') no-repeat;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
-    border: 0px solid #CCCCCC;
+    border: 0;
 }
 
 div.front div.frontlink
@@ -319,7 +319,7 @@ div.tocwrapper
 
 .toc {
   display: none;
-  margin-top: 10px;
+  margin-top: -5px;
   padding: 5px;
   color: #666666;
 }
@@ -382,7 +382,13 @@ div.tocwrapper
   color: #ba9;
 }
 
-.showtoc span, .hidetoc span {
+.showtoc span {
+  cursor: pointer;
+  color: #765;
+}
+
+.hidetoc span {
+  line-height: 25px;
   cursor: pointer;
   color: #765;
 }
@@ -408,28 +414,15 @@ div.footer
 div.footerwrapper
 {
     position: relative;
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
-}
-
-div.footerwrapper #copyright 
-{
-    position: absolute;
-    top: 1px;
-    left: 0px;
-    color: #aaaaaa;
-}
-
-div.footerwrapper #copyright:hover
-{
-    color: #333333;
 }
 
 div.footerwrapper #mail
 {
     position: absolute;
     top: -2px;
-    left: 210px;
+    left: 150px;
     width: 29px; 
     height: 20px;
     background: url('gmail.png') no-repeat;
@@ -449,7 +442,7 @@ div.footerwrapper #weibo
 {
     position: absolute;
     top: -2px;
-    left: 250px;
+    left: 185px;
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10);
     -moz-opacity: 0.1;
     opacity: 0.1;
@@ -466,7 +459,7 @@ div.footerwrapper .IN-widget
 {
     position: absolute;
     top: 0;
-    left: 315px;
+    left: 252px;
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10);
     -moz-opacity: 0.1;
     opacity: 0.1;
@@ -483,7 +476,7 @@ div.footerwrapper #tumblr
 {
     position: absolute;
     top: 0;
-    left: 380px;
+    left: 315px;
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10);
     -moz-opacity: 0.1;
     opacity: 0.1;
@@ -494,6 +487,24 @@ div.footerwrapper #tumblr:hover
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
     -moz-opacity: 0.6;
     opacity: 0.6;
+}
+
+div.footer #copyright 
+{
+    position: relative;
+    width: 23%;
+    float: left;
+    top: 1px;
+    color: #aaaaaa;
+    font-weight: bold;
+    /* position: absolute; */
+    /* top: 1px; */
+    /* left: 0px; */
+}
+
+div.footer #copyright:hover
+{
+    color: #333333;
 }
 
 div.footer a#license
@@ -978,7 +989,7 @@ tt.literal.xref
 
 .viewcode-back
 {
-    font-family: "Helvetica", "Arial", "Microsoft YaHei", "SimHei", sans-serif;
+    font-family: "Helvetica", "Arial", "Microsoft YaHei", "Adobe Heiti Std", "SimHei", sans-serif;
 }
 
 div.viewcode-block:target
