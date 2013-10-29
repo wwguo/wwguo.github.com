@@ -492,10 +492,10 @@ div.footerwrapper #tumblr:hover
 div.footer #copyright 
 {
     position: relative;
-    width: 23%;
+    width: 25%;
     float: left;
     top: 1px;
-    color: #aaaaaa;
+    color: #888888;
     font-weight: bold;
     /* position: absolute; */
     /* top: 1px; */
