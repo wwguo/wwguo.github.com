@@ -201,8 +201,9 @@ div.front div.name a#glink
 {
     display: block;
     position: relative;
-    top: -115px;
-    left: 66%;
+    top: -120px;
+    left: 540px;
+    /* left: 66%; */
     width: 56px; 
     height: 130px;
     background: url('favfront.png') no-repeat;
@@ -530,10 +531,10 @@ div.footer #copyright:hover
 div.footer a#license
 {
     position: relative;
-    width: 5%;
+    width: 9%;
     float: right;
     top: -7px;
-    left: -41px;
+    left: -2px;
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);
     -moz-opacity: 0.3;
     opacity: 0.3;
@@ -1079,7 +1080,7 @@ table.indextable td > dl > dd > dl
        only screen and (max-device-width: 700px),
        handheld
 {
-    /* body { font-size: 87.5%; } */
+    body { font-size: 90%; }
 
     /* hide the sidebar */
     div.tocwrapper
@@ -1108,13 +1109,6 @@ table.indextable td > dl > dd > dl
     {
         padding: 0 10px 30px;
     }
-
-    /* /\* shrink the headers *\/ */
-    /* div.body h1 { font-size: 200%; } */
-    /* div.body h2, div.body p.rubric { font-size: 140%; } */
-    /* div.body h3 { font-size: 120%; } */
-    /* div.body h4 { font-size: 110%; } */
-    /* div.body h5 { font-size: 100%; } */
 }
 
 /*------------------------------------
