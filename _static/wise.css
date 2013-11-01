@@ -585,7 +585,7 @@ div.body h2
     border-bottom: 1px solid;
     border-color:  #CCCCCC;
     font-family: "Impact", "Adobe Heiti Std", "Microsoft YaHei", sans-serif;
-    font-size: 160%;
+    font-size: 180%;
     font-weight: bold;
     text-shadow: 2px 2px 1px rgba(0,0,0,.1);
     letter-spacing: 1px;
@@ -1110,7 +1110,7 @@ table.indextable td > dl > dd > dl
     }
 
     /* shrink the headers */
-    div.body h1 { font-size: 180%; }
+    div.body h1 { font-size: 200%; }
     div.body h2, div.body p.rubric { font-size: 140%; }
     div.body h3 { font-size: 120%; }
     div.body h4 { font-size: 110%; }
