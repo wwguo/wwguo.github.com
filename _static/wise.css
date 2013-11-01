@@ -197,15 +197,23 @@ div.front div.name img
     width: 650px;
 }
 
-div.front div.name a#glink
+div.front div.glink
 {
     display: block;
     position: relative;
-    top: -120px;
-    left: 540px;
-    /* left: 66%; */
+    margin: 0 auto;
+    padding: 0;
+    width: 650px; 
+    height: 100px;
+}
+
+div.front div.glink a#glink
+{
+    position: absolute;
     width: 56px; 
     height: 130px;
+    top: -87px;
+    left: 455px;
     background: url('favfront.png') no-repeat;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
     border: 0;
@@ -1108,6 +1116,11 @@ table.indextable td > dl > dd > dl
     div.body
     {
         padding: 0 10px 30px;
+    }
+
+    div.front div.name a#glink
+    {
+        left: 68%;
     }
 }
 
