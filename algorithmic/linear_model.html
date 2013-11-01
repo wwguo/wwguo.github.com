@@ -54,7 +54,7 @@
           <div class="body">
             
   <div class="section" id="linear-mode">
-<span id="id1"></span><h1>标准模型<a class="headerlink" href="#linear-mode" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>标准模型</h1>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -66,7 +66,7 @@
 </tbody>
 </table>
 <div class="section" id="index-0">
-<span id="id2"></span><h2>模型设定<a class="headerlink" href="#index-0" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>模型设定</h2>
 <p>线性规划模型通常表述为精炼的数学形式，包括三个部分：</p>
 <ul class="simple">
 <li>目标函数，通常是最大化利润或最小化成本。</li>
@@ -91,7 +91,7 @@ x_j\ge 0 &amp; \text{\quad for\ } j=1,2,\ldots,n \\
 </ul>
 </div>
 <div class="section" id="id3">
-<h2>模型变换<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>模型变换</h2>
 <p>线性规划模型的约束条件存在以下三种形式：</p>
 <div class="math">
 <p><img src="../_images/math/51a8ce1ed31af117515870665b6b80912d794037.png" alt="\begin{array}{rcrcccrcl}
@@ -101,14 +101,14 @@ c_1 x_1 &amp; + &amp; c_2 x_2 &amp; + &amp; \cdots &amp; + &amp; c_n x_n &amp; \
 \end{array}"/></p>
 </div><p>在求解线性规划问题时，需要将两种不等式转换为标准型中的等式，因此需要掌握转换方法。</p>
 <div class="section" id="id4">
-<h3>目标函数变换<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3>目标函数变换</h3>
 <p>线性规划模型的目标函数只有两种形式：最大化模型和最小化模型。两者之间的变换可以简单地将目标函数系数的符号取反，就可以将最大化函数转换为最小化函数，反之亦然。</p>
 <div class="section" id="id5">
-<h4>不等式间变换<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<h4>不等式间变换</h4>
 <p>约束条件中 <img class="math" src="../_images/math/8a02869b26c04eeb0edb2b095761ddc01f14de65.png" alt="\sum_{j=1}^n{a_jx_j}\le b1" style="vertical-align: -7px"/> 可以变换为 <img class="math" src="../_images/math/a8b5e0d6f20acc90aa04ef31c66fdfcd9cc6cf65.png" alt="\sum_{j=1}^n{(-a_j)x_j}\ge -b" style="vertical-align: -7px"/>，反之亦反。</p>
 </div>
 <div class="section" id="id6">
-<h4>不等式变换等式<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<h4>不等式变换等式</h4>
 <p>模型中的任何不等式都可以在引入一个非负变量后变换为一个等式。</p>
 <ul class="simple">
 <li><img class="math" src="../_images/math/a5a8c01fa1c533610cb98bf65e5f61934dd923d9.png" alt="\sum_{j=1}^n{a_jx_j}\le b" style="vertical-align: -7px"/> 可变换为 <img class="math" src="../_images/math/f4cbaa81f9f9a0ed313af82c67b63b1920bba1fe.png" alt="\sum_{j=1}^n{a_jx_j} + 1s = b" style="vertical-align: -7px"/>，其中 <img class="math" src="../_images/math/015e2b829dd7f8dd3d7789f338b85b2c7c7725ee.png" alt="s\ge 0" style="vertical-align: -3px"/>；</li>
@@ -123,7 +123,7 @@ c_1 x_1 &amp; + &amp; c_2 x_2 &amp; + &amp; \cdots &amp; + &amp; c_n x_n &amp; \
 </div>
 </div>
 <div class="section" id="id7">
-<h3>变量边界变换<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<h3>变量边界变换</h3>
 <p>如果线性模型中某些 <img class="math" src="../_images/math/8122aa89ea6e80784c6513d22787ad86e36ad0cc.png" alt="j" style="vertical-align: -3px"/> 的 <img class="math" src="../_images/math/ac0e6fa105993ce976db0dc241d59ab8e68e6efc.png" alt="x_j" style="vertical-align: -4px"/> 符号不限，存在三种变换方法，要求掌握变量分解法：将 <img class="math" src="../_images/math/ac0e6fa105993ce976db0dc241d59ab8e68e6efc.png" alt="x_j" style="vertical-align: -4px"/> 表示为两个非负变量之差，并用该差值替换所有 <img class="math" src="../_images/math/ac0e6fa105993ce976db0dc241d59ab8e68e6efc.png" alt="x_j" style="vertical-align: -4px"/>。即：</p>
 <div class="math">
 <p><img src="../_images/math/d90ac127010de3b68673b959ab79d5595173a5c0.png" alt="x_j \equiv x_j^{\prime} - x_j^{\prime\prime},\qquad x_j^{\prime}\ge 0,x_j^{\prime\prime}\ge 0"/></p>

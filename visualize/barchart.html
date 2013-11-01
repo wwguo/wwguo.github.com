@@ -54,7 +54,7 @@
           <div class="body">
             
   <div class="section" id="id1">
-<h1>柱状图<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>柱状图</h1>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -67,7 +67,7 @@
 </table>
 <p id="index-0">柱状图（bar chart）用于呈现频数或百分比。</p>
 <div class="section" id="id2">
-<h2>基本要素<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>基本要素</h2>
 <p>柱状图的基本要素包括三个：</p>
 <ul class="simple">
 <li>水平分段：先按照数据的分类数目给水平轴分段。</li>
@@ -81,9 +81,9 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h2>变换图形<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>变换图形</h2>
 <div class="section" id="id4">
-<h3>数值轴变化<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3>数值轴变化</h3>
 <img alt="../_images/barchart2.png" class="align-right" src="../_images/barchart2.png" />
 <p>媒体上常见的柱状图通常没有纵轴标度，而是直接将数值标记在竖直柱的顶端或顶端附近。</p>
 <p>R 需要做些调整：</p>
@@ -94,7 +94,7 @@ text<span class="p">(</span>bar.plot<span class="p">,</span> vector<span class="
 <p><tt class="docutils literal"><span class="pre">pos</span></tt> 用于调整数值显示的相对位置。</p>
 </div>
 <div class="section" id="id5">
-<h3>纵横轴交换<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h3>纵横轴交换</h3>
 <p>柱状图的柱可以绘制为水平柱，由横轴标度数值。</p>
 <div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span>vector<span class="p">,</span> horiz<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
@@ -102,9 +102,9 @@ text<span class="p">(</span>bar.plot<span class="p">,</span> vector<span class="
 </div>
 </div>
 <div class="section" id="id6">
-<h2>衍生图形<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<h2>衍生图形</h2>
 <div class="section" id="id7">
-<h3>累加柱状图<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<h3>累加柱状图</h3>
 <p>以 R 的示例生成的图为例展示累加柱状图：</p>
 <img alt="../_images/barchart3.png" src="../_images/barchart3.png" />
 <p>数据需是 <tt class="docutils literal"><span class="pre">matrix</span></tt> 类对象。</p>
@@ -113,7 +113,7 @@ text<span class="p">(</span>bar.plot<span class="p">,</span> vector<span class="
 </div>
 </div>
 <div class="section" id="id8">
-<h3>比较柱状图<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<h3>比较柱状图</h3>
 <p>以 R 的示例生成的图为例展示比较柱状图：</p>
 <img alt="../_images/barchart4.png" src="../_images/barchart4.png" />
 <div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span>matrix<span class="p">,</span> beside<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>

@@ -54,7 +54,7 @@
           <div class="body">
             
   <div class="section" id="simplex">
-<span id="id1"></span><h1>Simplex算法<a class="headerlink" href="#simplex" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>Simplex算法</h1>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -66,7 +66,7 @@
 </tbody>
 </table>
 <div class="section" id="index-0">
-<span id="id2"></span><h2>算法初始<a class="headerlink" href="#index-0" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>算法初始</h2>
 <p>单纯型算法是求解线性规划模型最有效的算法。根据单纯型算法，如果存在 <img class="math" src="../_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m" style="vertical-align: 0px"/> 个约束条件，则最优解不为 0 的变量必然不多于 <img class="math" src="../_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m" style="vertical-align: 0px"/> 个。现在求解 <img class="math" src="../_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m" style="vertical-align: 0px"/> 约束条件的模型，假设目标函数存在可行解且最优解有限。可以选择 <img class="math" src="../_images/math/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png" alt="m" style="vertical-align: 0px"/> 个变量作为 <strong>基变量</strong> 用于求解，其他变量作为 <strong>非基变量</strong> 设定为 0。基变量有时也称 <strong>基</strong>。</p>
 <p>单纯型算法的基本步骤如下：</p>
 <ol class="arabic simple">
@@ -103,9 +103,9 @@
 \end{array}"/></p>
 </div></div>
 <div class="section" id="id3">
-<h2>算法过程<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>算法过程</h2>
 <div class="section" id="id4">
-<h3>基本可行解<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3>基本可行解</h3>
 <p>首先需要根据选定的基变量求解模型。因为 <img class="math" src="../_images/math/ffd297bbc303c83227d3ee2d411c8f362515b2b5.png" alt="\vect{x}_N=\vect{0}" style="vertical-align: -2px"/>，所以：</p>
 <div class="math">
 <p><img src="../_images/math/0b42b465804713bbfcc9988775924205f4d176f3.png" alt="\vect{A}\vect{x}=\vect{b}\quad\Rightarrow\quad \vect{B}\vect{x}_B=\vect{b}"/></p>
@@ -119,7 +119,7 @@
 <p>基本可行解与可行域多面体的顶点顶点对应，就像要判断多面体的顶点是否是最优解一样，需要判断基本可行解是否是最优解。如果不是，则需要调整。</p>
 </div>
 <div class="section" id="id5">
-<h3>最优解判定<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h3>最优解判定</h3>
 <p>用非基变量表示基变量：</p>
 <div class="math">
 <p><img src="../_images/math/bcd8ca4129f7ea25988d55bbdc7023ba36d3d6b7.png" alt="\vect{A}\vect{x} =\vect{B}\vect{x}_B + \vect{N}\vect{x}_N = \vect{b} \quad\Rightarrow\quad \vect{x}_B=\vect{B}^{-1}\vect{b}-\vect{B}^{-1}\vect{N}\vect{x}_N"/></p>
@@ -145,7 +145,7 @@ c_{\color{red}{n}}-\vect{c}_B\vect{B}^{-1}\vect{a}_{\color{red}{n}} \\
 </ul>
 </div>
 <div class="section" id="id6">
-<h3>基变量调整<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<h3>基变量调整</h3>
 <p>如果基本可行解不是最优解，那么需要调整基变量，对应的 <img class="math" src="../_images/math/1dfad672f8176ba465bed776fdf1261c63b1602b.png" alt="\vect{B}" style="vertical-align: 0px"/> 和 <img class="math" src="../_images/math/a2d807b8247bcf251714f1d576995c07e7ce5baf.png" alt="\vect{N}" style="vertical-align: 0px"/> 等都会发生变化。调整步骤如下：</p>
 <ol class="arabic simple">
 <li>从值为正的 <img class="math" src="../_images/math/897d8920e1f813a1385aaee235eb62ba3c51b6ea.png" alt="\sigma_i" style="vertical-align: -2px"/> 中选择最大的；</li>
@@ -162,7 +162,7 @@ c_{\color{red}{n}}-\vect{c}_B\vect{B}^{-1}\vect{a}_{\color{red}{n}} \\
 </div>
 </div>
 <div class="section" id="id7">
-<h2>计算程序<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h2>计算程序</h2>
 <p>GLPK 是最好的优化软件。当然，我用 Go 语言实现的 Simplex 程序也不差。</p>
 <div class="highlight-sh"><div class="highlight"><pre><span class="nv">$ </span>glpsol -m mymodel.mod -o mymodel.sol
 </pre></div>
