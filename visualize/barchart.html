@@ -75,7 +75,7 @@
 </ul>
 <img alt="../_images/barchart1.png" class="align-center" src="../_images/barchart1.png" />
 <p>R 可以直接绘制柱状图：</p>
-<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span>vector<span class="p">)</span>
+<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span><span class="kt">vector</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -86,8 +86,8 @@
 <img alt="../_images/barchart2.png" class="align-right" src="../_images/barchart2.png" />
 <p>媒体上常见的柱状图通常没有纵轴标度，而是直接将数值标记在竖直柱的顶端或顶端附近。</p>
 <p>R 需要做些调整：</p>
-<div class="highlight-r"><div class="highlight"><pre>bar.plot <span class="o">&lt;-</span> barplot<span class="p">(</span>vector<span class="p">,</span> yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">)</span>
-text<span class="p">(</span>bar.plot<span class="p">,</span> vector<span class="p">,</span> labels<span class="o">=</span>bar.label<span class="p">,</span> pos<span class="o">=</span><span class="m">2</span><span class="p">)</span>
+<div class="highlight-r"><div class="highlight"><pre>bar.plot <span class="o">&lt;-</span> barplot<span class="p">(</span><span class="kt">vector</span><span class="p">,</span> yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">)</span>
+text<span class="p">(</span>bar.plot<span class="p">,</span> <span class="kt">vector</span><span class="p">,</span> labels<span class="o">=</span>bar.label<span class="p">,</span> pos<span class="o">=</span><span class="m">2</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><tt class="docutils literal"><span class="pre">pos</span></tt> 用于调整数值显示的相对位置。</p>
@@ -95,7 +95,7 @@ text<span class="p">(</span>bar.plot<span class="p">,</span> vector<span class="
 <div class="section" id="id5">
 <h3>纵横轴交换</h3>
 <p>柱状图的柱可以绘制为水平柱，由横轴标度数值。</p>
-<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span>vector<span class="p">,</span> horiz<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span><span class="kt">vector</span><span class="p">,</span> horiz<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -107,7 +107,7 @@ text<span class="p">(</span>bar.plot<span class="p">,</span> vector<span class="
 <p>以 R 的示例生成的图为例展示累加柱状图：</p>
 <img alt="../_images/barchart3.png" src="../_images/barchart3.png" />
 <p>数据需是 <tt class="docutils literal"><span class="pre">matrix</span></tt> 类对象。</p>
-<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span>matrix<span class="p">)</span>
+<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span><span class="kt">matrix</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -115,9 +115,47 @@ text<span class="p">(</span>bar.plot<span class="p">,</span> vector<span class="
 <h3>比较柱状图</h3>
 <p>以 R 的示例生成的图为例展示比较柱状图：</p>
 <img alt="../_images/barchart4.png" src="../_images/barchart4.png" />
-<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span>matrix<span class="p">,</span> beside<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span><span class="kt">matrix</span><span class="p">,</span> beside<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>实际应用</h2>
+<p>项目中需要比较IFDI和OFID之间的状况，变换柱状图的方向，用比值的折线图作两个柱状图的分隔，实现左右式的柱状图对比效果。</p>
+<a class="reference internal image-reference" href="../_images/barchart_empl_1.png"><img alt="../_images/barchart_empl_1.png" class="align-center" src="../_images/barchart_empl_1.png" style="width: 20cm;" /></a>
+<div class="highlight-r"><div class="highlight"><pre>oldpar <span class="o">&lt;-</span> par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span>lwd<span class="o">=</span><span class="m">3</span><span class="p">)</span>
+
+par<span class="p">(</span>fig<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.45</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> mar<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> new<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+bar.plot <span class="o">&lt;-</span> barplot<span class="p">(</span>dt<span class="p">[,</span><span class="m">2</span><span class="p">],</span> names.arg<span class="o">=</span><span class="kp">rownames</span><span class="p">(</span>dt<span class="p">),</span> col<span class="o">=</span><span class="s">&quot;#33669933&quot;</span><span class="p">,</span>border<span class="o">=</span><span class="s">&quot;#336699AA&quot;</span><span class="p">,</span>
+                    xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1250</span><span class="p">,</span><span class="m">0</span><span class="p">),</span> main<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span> xlab<span class="o">=</span><span class="s">&quot;实际利用外商直接投资&quot;</span><span class="p">,</span>
+                    horiz<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> las<span class="o">=</span><span class="m">1</span><span class="p">,</span> yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span> xaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span> cex.lab<span class="o">=</span><span class="m">1.5</span><span class="p">)</span>
+axis<span class="p">(</span>side<span class="o">=</span><span class="m">4</span><span class="p">,</span> at<span class="o">=</span>bar.plot<span class="p">,</span> labels<span class="o">=</span><span class="m">1982</span><span class="o">:</span><span class="m">2013</span><span class="p">,</span> tick<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> las<span class="o">=</span><span class="m">1</span><span class="p">,</span> col.axis<span class="o">=</span><span class="s">&quot;#00000099&quot;</span><span class="p">)</span>
+axis<span class="p">(</span>side<span class="o">=</span><span class="m">1</span><span class="p">,</span> at<span class="o">=</span><span class="kp">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">,</span><span class="m">200</span><span class="p">),</span> labels<span class="o">=</span><span class="kp">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">,</span><span class="m">200</span><span class="p">),</span> las<span class="o">=</span><span class="m">1</span><span class="p">,</span> col.axis<span class="o">=</span><span class="s">&quot;#00000099&quot;</span><span class="p">)</span>
+bar.tick <span class="o">&lt;-</span> dt<span class="p">[,</span><span class="m">2</span><span class="p">]</span>
+bar.label <span class="o">&lt;-</span> <span class="kp">formatC</span><span class="p">(</span>bar.tick<span class="p">,</span> format <span class="o">=</span> <span class="s">&quot;f&quot;</span><span class="p">,</span> digits <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
+text<span class="p">(</span>bar.tick<span class="p">,</span> bar.plot<span class="m">-0.1</span><span class="p">,</span> labels<span class="o">=</span>bar.label<span class="p">,</span> pos<span class="o">=</span><span class="m">2</span><span class="p">,</span> col<span class="o">=</span><span class="s">&quot;#33669999&quot;</span><span class="p">)</span>
+
+par<span class="p">(</span>fig<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.44</span><span class="p">,</span><span class="m">0.56</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> mar<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> new<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+plot<span class="p">(</span>dt<span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="o">*</span><span class="m">100</span><span class="p">,</span> <span class="m">1982</span><span class="o">:</span><span class="m">2013</span><span class="p">,</span> ylim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1981.6</span><span class="p">,</span><span class="m">2013.4</span><span class="p">),</span> xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">),</span>type<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span>
+     xlab<span class="o">=</span><span class="s">&quot;对外投资（右）与外商投资（左）之比&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span>yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span> bty<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span> cex.lab<span class="o">=</span><span class="m">1</span><span class="p">)</span>
+lines<span class="p">(</span>dt<span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="o">*</span><span class="m">100</span><span class="p">,</span> <span class="m">1982</span><span class="o">:</span><span class="m">2013</span><span class="p">,</span> col<span class="o">=</span><span class="s">&quot;#336699AA&quot;</span><span class="p">,</span> lwd<span class="o">=</span><span class="m">2</span><span class="p">)</span>
+points<span class="p">(</span>dt<span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="o">*</span><span class="m">100</span><span class="p">,</span> <span class="m">1982</span><span class="o">:</span><span class="m">2013</span><span class="p">,</span> col<span class="o">=</span><span class="s">&quot;#336699AA&quot;</span><span class="p">,</span> pch<span class="o">=</span><span class="m">19</span><span class="p">,</span> lwd<span class="o">=</span><span class="m">5</span><span class="p">)</span>
+pt.label <span class="o">&lt;-</span> <span class="kp">paste0</span><span class="p">(</span><span class="kp">formatC</span><span class="p">(</span>dt<span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="o">*</span><span class="m">100</span><span class="p">,</span> format <span class="o">=</span> <span class="s">&quot;f&quot;</span><span class="p">,</span> digits <span class="o">=</span> <span class="m">2</span><span class="p">),</span> <span class="s">&quot;%&quot;</span><span class="p">)</span>
+text<span class="p">(</span>dt<span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="o">*</span><span class="m">100</span><span class="p">,</span> <span class="m">1982</span><span class="o">:</span><span class="m">2013-0.1</span><span class="p">,</span> labels<span class="o">=</span>pt.label<span class="p">,</span> pos<span class="o">=</span><span class="m">4</span><span class="p">,</span> cex <span class="o">=</span> <span class="m">0.6</span><span class="p">,</span> col<span class="o">=</span><span class="s">&quot;#33669999&quot;</span><span class="p">)</span>
+
+par<span class="p">(</span>fig<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.55</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span>mar<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span>new<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+bar.plot <span class="o">&lt;-</span> barplot<span class="p">(</span>dt<span class="p">[,</span><span class="m">1</span><span class="p">],</span> names.arg<span class="o">=</span><span class="kp">rownames</span><span class="p">(</span>dt<span class="p">),</span> col<span class="o">=</span><span class="s">&quot;#33669933&quot;</span><span class="p">,</span>border<span class="o">=</span><span class="s">&quot;#336699AA&quot;</span><span class="p">,</span>
+                    xlim<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1250</span><span class="p">),</span> main<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span> xlab<span class="o">=</span><span class="s">&quot;中国企业对外直接投资&quot;</span><span class="p">,</span>
+                    horiz<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> las<span class="o">=</span><span class="m">1</span><span class="p">,</span> yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span> xaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span> cex.lab<span class="o">=</span><span class="m">1.5</span><span class="p">)</span>
+axis<span class="p">(</span>side<span class="o">=</span><span class="m">2</span><span class="p">,</span> at<span class="o">=</span>bar.plot<span class="p">,</span> labels<span class="o">=</span><span class="m">1982</span><span class="o">:</span><span class="m">2013</span><span class="p">,</span> tick<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> las<span class="o">=</span><span class="m">1</span><span class="p">,</span> col.axis<span class="o">=</span><span class="s">&quot;#00000099&quot;</span><span class="p">)</span>
+axis<span class="p">(</span>side<span class="o">=</span><span class="m">1</span><span class="p">,</span> at<span class="o">=</span><span class="kp">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">800</span><span class="p">,</span><span class="m">200</span><span class="p">),</span> labels<span class="o">=</span><span class="kp">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">800</span><span class="p">,</span><span class="m">200</span><span class="p">),</span> las<span class="o">=</span><span class="m">1</span><span class="p">,</span> col.axis<span class="o">=</span><span class="s">&quot;#00000099&quot;</span><span class="p">)</span>
+bar.tick <span class="o">&lt;-</span> dt<span class="p">[,</span><span class="m">1</span><span class="p">]</span>
+bar.label <span class="o">&lt;-</span> <span class="kp">formatC</span><span class="p">(</span>bar.tick<span class="p">,</span> format <span class="o">=</span> <span class="s">&quot;f&quot;</span><span class="p">,</span> digits <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
+text<span class="p">(</span>bar.tick<span class="p">,</span> bar.plot<span class="m">-0.1</span><span class="p">,</span> labels<span class="o">=</span>bar.label<span class="p">,</span> pos<span class="o">=</span><span class="m">4</span><span class="p">,</span> col<span class="o">=</span><span class="s">&quot;#33669999&quot;</span><span class="p">)</span>
+
+par<span class="p">(</span>oldpar<span class="p">)</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -144,6 +182,7 @@ text<span class="p">(</span>bar.plot<span class="p">,</span> vector<span class="
 <li><a class="reference internal" href="#id8">比较柱状图</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id9">实际应用</a></li>
 </ul>
 </li>
 </ul>
