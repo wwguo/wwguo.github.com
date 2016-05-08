@@ -1,0 +1,109 @@
+
+div.footerwrapper
+{
+    display: inline-block;
+    position: relative;
+    width: 54%;
+    margin: 0 auto;
+}
+
+div.footerwrapper #mail
+{
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 27px; 
+    height: 18px;
+    background: url('gmail_gray.png') no-repeat;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+}
+
+div.footerwrapper #mail:hover
+{
+    background: url('gmail.png') no-repeat;
+    /* filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80); */
+    /* -moz-opacity: 0.8; */
+    /* opacity: 0.8; */
+}
+
+div.footerwrapper a.contacticon
+{
+    position: absolute;
+    top: 2px;
+    width: 27px; 
+    height: 18px;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+}
+
+div.footerwrapper a.contacticon:hover {
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+}
+div.footerwrapper #wechatc {
+    left: 35px;
+    background: url('wechat_gray.png') no-repeat;
+}
+div.footerwrapper #weixinc {
+    left: 68px;
+    background: url('weixin_gray.png') no-repeat;
+}
+div.footerwrapper #linkedinc {
+    left: 101px;
+    background: url('linkedin_gray.png') no-repeat;
+}
+div.footerwrapper #wechatc:hover {
+    background: url('wechat.png') no-repeat;
+}
+div.footerwrapper #weixinc:hover {
+    background: url('weixin.png') no-repeat;
+}
+div.footerwrapper #linkedinc:hover {
+    background: url('linkedin.png') no-repeat;
+}
+
+/* popup */
+.popup{
+    position:fixed;
+    left:15vw;
+    /* margin-left:35px; */
+    top:90vh;
+    margin-top:-20px;
+    opacity:0;
+    transition: 1s;
+    -webkit-transition: 1s;
+    /* --------- */
+    width:200px;
+    font-size:20px;
+    padding:5px;
+    color:white;
+    text-align:center;
+}
+
+/* .popup div */
+/* { */
+/*     width:200px; */
+/*     font-size:20px; */
+/*     padding:5px; */
+/*     color:white; */
+/*     text-align:center; */
+/*     /\* opacity:0; *\/ */
+/* } */
+
+a#wechatc:hover + div.popup#wechatp {
+    margin-top:-215px;
+    opacity:1;
+}
+
+a#weixinc:hover + div.popup#weixinp {
+    margin-top:-215px;
+    opacity:1;
+}
+a#linkedinc:hover + div.popup#linkedinp {
+    margin-top:-215px;
+    opacity:1;
+}

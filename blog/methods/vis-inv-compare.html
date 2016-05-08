@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>可视化：IFDI 与 OFDI 对比 &mdash; 郭维维|博客</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="郭维维|博客" href="../index.html" />
+  
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="郭维维|博客">
+  
+  
+  <link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ifdi-ofdi">
+<h1>可视化：IFDI 与 OFDI 对比</h1>
+<p>下图是我制作的中国<strong>实际利用外商投资（IFDI）</strong>与<strong>对外直接投资（OFDI）</strong>对比图。图像显示中国的FDI发展完全符合 John Harry Dunning 的投资发展路径理论（investment development path, IDP）。中国目前处在一国投资发展的第三阶段。</p>
+<div align="center" class="align-center"><img src="../_images/vis-inv-compare.svg" /></div>
+<p>根据 Dunning 的投资发展路径理论，海外投资会经历五个阶段：第一阶段 IFDI 和 OFDI 都很少，对应中国的 1982 到 1991 这十年；第二阶段 IFDI 显著增加，但 OFDI 仍然很少，对应中国的 1992 到 2003 这十二年；第三阶段 IFDI 虽然持续增加，但增速不及 OFDI，两者渐近持平，对应中国的 2004 年到现在；第四阶段，OFDI 将远超 IFDI；第五阶段是理想阶段，OFDI 和 IFDI 都很高，投资自由，两者的区分已无必要。一国投资发展的各阶段特点主要由企业的比较优势驱动，这里就不具体说了。</p>
+<p>图像完全用 R 制作。数据本身很简单，只有1982年到2013年的外商投资（IFDI）和对外投资（OFDI）总额，但为了突出展示两者变化的对比，组合使用了柱状图左右对比和比值的折线图。完整 R 代码见<span class="xref std std-ref">这里</span>。</p>
+</div>
+
+  <div class="section">
+  
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  
+  <a href="../series/bigdata10.html">
+    <i class="fa fa-arrow-circle-left"></i>
+    关于大数据：⑩ 啥过程？
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+  
+  <a href="vis-inv-industry.html">
+    可视化：中国 OFDI 五大行业比重
+    <i class="fa fa-arrow-circle-right"></i>
+  </a>
+  </span>
+  
+</div>
+
+  
+  
+    <div class="section">
+    <h2>留言</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'wwguo';
+        var disqus_identifier = '/methods/vis-inv-compare/';
+        var disqus_title = '可视化：IFDI 与 OFDI 对比';
+        var disqus_url = 'http://wwguo.cn/methods/vis-inv-compare';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>留言由Disqus服务支持，该服务需浏览器<a href="http://disqus.com/?ref_noscript">开启 JavaScript</a>。</noscript>
+    <a href="http://disqus.com" class="dsq-brlink">留言由 <span class="logo-disqus">Disqus</span> 服务支持。</a>
+    </div>
+  
+  </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/name.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">郭维维（Wei-Wei Guo）的博客</p>
+
+
+
+
+
+
+
+  
+  
+  <h2>
+  
+  <i class="fa fa-calendar"></i>
+    2014年12月2日
+  
+  </h2>
+
+  <ul>
+    
+
+  
+
+  
+
+  
+
+  
+  <li><i class="fa-fw fa fa-folder-open"></i>
+    
+      
+      <a href="../blog/category/数据呈现.html">数据呈现</a>
+      
+    </li>
+  
+
+  
+  <li><i class="fa-fw fa fa-tags"></i>
+      
+    
+      
+      <a href="../blog/tag/可视化.html">可视化</a>,
+      
+    
+      
+      <a href="../blog/tag/海外投资.html">海外投资</a>
+      
+    </li>
+  
+  
+  <li>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wwguo'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    <i class="fa-fw fa fa-comments"></i>
+    <a href="#disqus_thread" data-disqus-identifier="/methods/vis-inv-compare/"> </a>
+  </li>
+  
+  </ul>
+
+
+
+
+<h3><a href="../blog.html">近期文章</a></h3>
+<ul>
+  
+  
+  <li><a href="../others/whim1.html">霾里望月</a></li>
+  
+  <li><a href="vis-inv-firms.html">可视化：中国 OFDI 不同类型企业比重</a></li>
+  
+  <li><a href="vis-inv-area.html">可视化：中国在各洲 OFDI 变化</a></li>
+  
+</ul>
+
+
+  <h3><a href="../blog/tag.html">标签</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/信息图.html">信息图</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/可视化.html">可视化</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/大数据.html">大数据</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/海外投资.html">海外投资</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/行业素描.html">行业素描</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/跑题.html">跑题</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../blog/category.html">类别</a></h3>
+  <ul>
+  
+    
+    <li><a href="../blog/category/数据呈现.html">数据呈现 (4)</a></li>
+    
+  
+    
+    <li><a href="../blog/category/系列文章.html">系列文章 (10)</a></li>
+    
+  
+    
+    <li><a href="../blog/category/胡思乱想.html">胡思乱想 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/category/行业分析.html">行业分析 (1)</a></li>
+    
+  
+  </ul>
+
+  <h3><a href="../blog/archive.html">归档</a></h3>
+  <ul>
+  
+    
+    <li><a href="../blog/2015.html">2015 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2014.html">2014 (13)</a></li>
+    
+  
+    
+    <li><a href="../blog/2013.html">2013 (2)</a></li>
+    
+  
+  </ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      <div id="copyright" >&copy;2016, Wei-Wei Guo(郭维维).</div>
+      <div class="footerwrapper">
+        <a id="mail" href="mailto:wwguocn@gmail.com" title="写邮件给我"></a>
+        <a class="contacticon" id="wechatc"></a>
+        <div class="popup" id="wechatp"><img alt="WeChat QRCode" src="../_static/qrwechat.jpg" style="width:100%;"></div>
+        <a class="contacticon" id="weixinc"></a>
+        <div class="popup" id="weixinp"><img alt="WeiXin QRCode" src="../_static/qrweixin.jpg" style="width:100%;"></div>
+        <a class="contacticon" id="linkedinc" href="https://www.linkedin.com/in/wwguocn"></a>
+        <div class="popup" id="linkedinp"><img alt="LinkedIn QRCode" src="../_static/qrlinkedin.png" style="width:100%;"></div>
+      </div>
+      <a id="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="See Creative Commons License 3.0"></a>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-40066595-1']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

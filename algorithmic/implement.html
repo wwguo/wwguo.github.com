@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>实现方法 &mdash; 郭维维|方法</title>
+    
+    <link rel="stylesheet" href="../_static/wise.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/color.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/wise.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="郭维维|方法" href="../main.html" />
+    <link rel="up" title="定量算法" href="index.html" />
+    <link rel="next" title="标准模型" href="linear_model.html" />
+    <link rel="prev" title="定量算法" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related">
+      <a id="fork" href="http://github.com/wwguo"></a>
+      <div class="headlink">
+        <a id="alink" class="headlink" href="index.html" title="定量算法"></a>
+        <a id="elink" class="headlink" href="../evaluative/index.html" title="定性方法"></a>
+        <a id="vlink" class="headlink" href="../visualize/index.html" title="数据呈现"></a>
+        <a id="mlink" class="headlink" href="../managerial/index.html" title="组织理论"></a>
+      </div>
+      <a id="head" href="../site/index.html" title="网站首页"></a>
+      <a id="glink" href="../index.html" title="个人信息"></a>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>实现方法</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">文章分类:</th><td class="field-body">Implementation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">创建时间:</th><td class="field-body">2015年11月</td>
+</tr>
+</tbody>
+</table>
+<p id="index-0">本部分内容是 <span class="citation"><a class="reference internal" href="../sharing/references.html#citation-wang115">王晓华</a><span> </span><span>(</span><a class="reference internal" href="../sharing/references.html#citation-wang115">2015</a><span>)</span></span> 著作的笔记。</p>
+<div class="section" id="id2">
+<h2>基本程序结构</h2>
+<p>程序结构中最基本的三板斧：顺序结构、循环结构、分支和跳转结构（if-else）。</p>
+<p>顺序结构简单且确定性最好。顺序结构存在顺序可以互换的情况，比如计算产量，能力变量和时间变量的计算没有前后关系，这便给并行计算留下了空间。</p>
+<p>循环结构包括初始化、循环体和退出条件三个部分。数据结构是二维数组，通常需要两重循环，但也可以用单循环遍历。递归也是种循环，但与以for为代表的程序语言中循环感觉上不同，更深奥（deep）。递归通常可以用复杂些的循环代替，特别是尾递归可直接替换。尾递归是尾调用的特殊形式，函数的最后一个表达式是调用一个函数。递归结构符合人的逻辑思维方式，问题是对内存空间的需求大，且参数入栈和出栈会降低算法的效率。</p>
+<p>分支和跳转结构适用于选择和判断的情景。过长过多的分支结构是软件工程中的不良结构，违背OCP原则（开放、封闭原则）。函数表结构常常可用以避免多分支结构。通过精心设计避免分支和跳转在算法结构中总是受欢迎的。</p>
+</div>
+<div class="section" id="id3">
+<h2>常用数据结构</h2>
+<p>数据结构的重点是数据的逻辑关系，包括线性结构、关联结构（如集合、映射）、树形结构、图形结构，等等。</p>
+<p>数据结构也需要积累，掌握的越多，算法设计的灵活性就越大。对于算法设计而言，数据结构最关键的是其特性和接口，至于数据结构怎么实现，不是算法设计必需的。</p>
+<div class="section" id="id4">
+<h3>线性表</h3>
+<p>线性表是最简单的基本数据结构，特点是数据元素之间没有关系，常见的包括数组（array）、链表（list）、栈（stack）、队列（queue）等。</p>
+<p>数组存储在连续区域，通过下标直接访问元素，可插入、删除、查找。数组的访问开销很小，但插入和删除开销较大，不适合插入和删除操作频繁的场合。数组查找的复杂度是<img class="math" src="../_images/math/8edb9a50284972475e40bdd7983450d86d147ccf.svg" alt="O(n)"/>，如果是有序数组，可用二分法，复杂度降低为<img class="math" src="../_images/math/347081ac3fc436b38f9027f2ae6f8107cb8e0c91.svg" alt="O(lg(n))"/>。</p>
+<ul class="simple">
+<li>统计取值范围在 [1,100] 的数字出现的次数，设计为 100 个元素的数组，下标对应数字，数组元素对应次数。</li>
+</ul>
+<p>链表适用线性表长度不能确定的情况。每个节点的数据都由两个域组成，一个存放数据，一个存放指针。单项链表指针只有后向指针，双向链表指针有前向指针和后向指针。链表的插入和删除只需修改指针指向，因此插入和删除操作效率高，但访问的效率低，需沿链表前向或后向搜索，查找操作的复杂度是<img class="math" src="../_images/math/8edb9a50284972475e40bdd7983450d86d147ccf.svg" alt="O(n)"/>。</p>
+<ul class="simple">
+<li>为免麻烦，头节点链表通常用没有数据域，只有指针域的特殊节点做固定头节点，称为表头节点、哑节点（dummy node）或哨兵节点。</li>
+</ul>
+<p>栈是特殊线性表，其插入和删除操作分别称为“入栈”和“出栈”。其实栈不是数据结构，而是数据的管理逻辑，遵循后进先出（last in first out）原则，因此有数组栈和链表栈之分。利用栈的特性，可以将算法的递归实现转变成非递归实现。</p>
+<p>队列也是特殊线性标，只能在一端插入数据，另一端删除数据。入队一端称为后端（rear），出队一端称为前端（front）。队列也是数据的管理逻辑，遵循先进先出（first in last out）原则。队列还有其他形式，比如环形队列、两端都执行入队和出队操作的双端队列（double-ended queue）、数据元素有优先级标签的优先级队列（priority queue），等等。</p>
+</div>
+<div class="section" id="id5">
+<h3>复杂结构</h3>
+<p>复杂结构的特点是数据元素之间存在关系，因此插入和删除操作不仅要对数据元素进行操作，还要维护数据元素之间的关系。</p>
+<div class="section" id="tree">
+<h4>树（tree）</h4>
+<p>树是具有层级结构的数据结构，每个节点有 0 个或多个子节点，但最多只有一个父节点。</p>
+<ul class="simple">
+<li>度，子节点个数；</li>
+<li>根节点，父节点为空的节点。</li>
+<li>叶节点，度为0的节点。</li>
+<li>兄节点，相同父节点的节点。</li>
+<li>高度，树的层级。</li>
+</ul>
+<p>根据每个节点的子节点数，可将树分为二叉树和多叉树。</p>
+<p>二叉树的节点树不超过两个。有序的二叉树称为二叉查找树（binary search tree）或二叉排序树（binary sort tree）。相对于普通二叉树，二叉查找树的特点是左节点的值都小于其根节点的值，而右节点的值都大于其根节点的值。二叉查找树的所有新插入节点都是叶节点，已存在的节点位置固定。二叉查找树的时间复杂度是<img class="math" src="../_images/math/347081ac3fc436b38f9027f2ae6f8107cb8e0c91.svg" alt="O(lg(n))"/>，但如果构造的二叉树退化成链表形的单支树，则时间复杂度就会变成<img class="math" src="../_images/math/8edb9a50284972475e40bdd7983450d86d147ccf.svg" alt="O(n)"/>。因此需要二叉查找树具有自平衡功能，保证二叉树始终是一棵平衡树。AVL树和红黑树就是自平衡二叉查找树。</p>
+<p>B树，及其变形树是典型的多叉树。B树是自平衡多叉查找树。M阶B树的每个非终端节点至少有M/2个子树，但最多M个子树。根节点如果不是终端节点，则至少有2个子树。每个节点有N个关键字，所有终端节点都在相同的层级。B+树与B树的区别在于B+树的所有终端节点包含了全部关键字信息，以及这些关键字所在节点的指针，从而将终端节点按关键字的大小排成有序链。因此对B+树的搜索可以按关键字大小顺序进行，也可以从根节点开始。B树常用于操作系统和数据库系统，适合多路分支且有序的层次结构。</p>
+<p>区间树是以区间为数据元素的红黑树。区间树的每个节点都表示一个区间，其关键字是区间的左端点。区间树的查找不是精确查找，而是确定节点区间是否与查找区间存在重叠。区间树支持获取子树的最大右端点值，从而可以根据所查找区间的左端点判断区间是否重叠，如无则转到下一个搜索节点。</p>
+<p>线段树也是以区间为数据元素的二叉查找树，与区间树的区别是线段树的每个非叶子节点表示的区间范围是其子节点的区间范围之和。</p>
+<p>堆是一种二叉完全树，用不完全的排序来储存节点（partial order），只要求父节点的值大于子节点的值，不对子节点之间做要求。完全树中，一层的节点是从左向右填满的。</p>
+<p>字符串问题可能用到字典树，如前缀树、后缀树等。</p>
+</div>
+<div class="section" id="set">
+<h4>集合（set）</h4>
+<p>集合中的元素具有无序性、互异性和确定性。集合的特点是除了插入、删除等操作外，还有集合运算，如交、并、差等。</p>
+</div>
+<div class="section" id="hash">
+<h4>哈希表（hash）</h4>
+<p>哈希表，类似映射（map），是通过关键字（key）直接访问元素的值（value）。用映射关系实现的哈希表的数据插入、删除和查找的时间复杂度都是<img class="math" src="../_images/math/bc08d8163c42dd815e9e328c12924568f3b91035.svg" alt="O(1)"/>；用红黑树实现的哈希表的时间复杂度是<img class="math" src="../_images/math/347081ac3fc436b38f9027f2ae6f8107cb8e0c91.svg" alt="O(lg(n))"/>，所以通常哈希表都是用映射关系实现，否则效果与二叉树、有序数组差别不大。</p>
+</div>
+<div class="section" id="graph">
+<h4>图（graph）</h4>
+<p>图不仅储存数据元素，还储存元素间的复杂关系。图由顶点和连接顶点的边组成，顶点描述数据元素，边描述元素间的关系。</p>
+<p>根据边是否有方向可分为有向图和无向图；根据任意两顶点间边的个数，可分为简单图和多重图；根据任意两顶点的连通性，可分为连通图和非连通图；根据边的地位平等性，可分为带权图和无权图。不论那种方式，图的基本定义方式只有两种，二元组定义和三元组定义。对于图G，如V(G)表示顶点集，E(G)表示边集合，则(V,E)就是图的二元组定义，如果存在关联函数I将E的每条边映射到V的两个顶点，即I(e)=(u,v)，则(V,E,I)就是图的三元组定义。</p>
+<p>图的存储通常采用邻接矩阵（二维数组）和邻接表（链表或可变长数组），有向图有时也此啊用十字链表存储。图的遍历是图操作的基础，常用策略包括深度优先搜索（DFS）和广度优先搜索（BFS）。</p>
+<p>深度优先搜索：从图G的某个顶点v出发，先访问v，然后选择一个与v相邻且没被访问过的顶点vi，从vi出发，依次遍历。当到达某个顶点的邻接顶点均已访问时，再退回到已访问顶点中，最后一个拥有未被访问邻接顶点的顶点，继续遍历，直到所有顶点均被访问。</p>
+<img alt="/home/wwguo/studio/release/wise/_images/pseudo/ae116ca5ed9a4e9078f64ac332f63d2aa26a9736.png" src="/home/wwguo/studio/release/wise/_images/pseudo/ae116ca5ed9a4e9078f64ac332f63d2aa26a9736.png" />
+<p>广度优先搜索：从图G的某个顶点v出发，依次访问与v相邻且没被访问过的顶点vi，然后从v1开始，依次访问与v1相邻且没访问过的顶点，以此类推，直到所有节点都被访问过。</p>
+<img alt="/home/wwguo/studio/release/wise/_images/pseudo/0b9a57a4b8f217d9493008e570866cda7dc2143d.png" src="/home/wwguo/studio/release/wise/_images/pseudo/0b9a57a4b8f217d9493008e570866cda7dc2143d.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>典型算法模式</h2>
+<p>最优解的模型通常体现了最优解的子问题的分解结构和堆叠方式。</p>
+<div class="section" id="id7">
+<h3>贪婪法</h3>
+<p>贪婪法（greedy algorithm）的求解过程本身就包含了子问题分解过程。算法每个步骤（step）都选择当前的最优选择，直至找到满足条件的第一个组合。想像的出这样的得到的结果通常不会最优，但在对最优要求不那么严格，有个解是最优先需求的情况下，贪婪法最合适。</p>
+<p>比如需要找零31分，硬币有25分、20分、10分、5分、1分四种。运用贪婪法，第一次选择的是25分，第二次是5分，第四次是1分。虽然20、10、1是同效解，但贪婪法不会得到这个解。</p>
+<p><strong>背包问题（knapsack problem）</strong>是NP完全问题：有 <em>N</em> 件物品和承重为 <em>C</em> 的背包，每件物品的重量是<img class="math" src="../_images/math/dbdcec516ed02b62a88446fd2136ad891c03e897.svg" alt="w_i"/>，价值是<img class="math" src="../_images/math/7833be3f82998b2cd001fa4f20777c0ac4cc55fe.svg" alt="p_i"/>。求解哪几件物品装入背包可使总重不超过 <em>C</em> 的情况下价值最大。</p>
+<div class="math">
+<p><img src="../_images/math/9f871632aaa1aea941fd293cedfb1a7debc26c08.svg" alt="\begin{gather*}
+  \text{maximize\quad } \sum_{i\in\Phi}{p_i} \\[2mm]
+  \sum_{i\in\Phi}{w_i} \le C \\[1mm]
+  p_i \ge 0\text{ and }w_i \ge 0 \\
+  \Phi \subset\{1,\ldots,N\}
+\end{gather*}"/></p>
+</div><p>因为隐含条件每种物品只有一个，对于物品而言，只能选择0或1，所以也称为0-1背包问题。</p>
+<p>贪婪法在运算中的特点是每次运算面对的问题本质上相同，只是规模不同。比如背包问题，第一次选择了 <em>k</em> 物品，则第二次选择时的问题约束转变为：</p>
+<div class="math">
+<p><img src="../_images/math/2edaf71b31d6156a5a0424fff863f61ad5c282bb.svg" alt="\begin{gather*}
+\sum_{i\in\Phi}{w_i} \le C-w_k \\[1mm]
+\Phi \subset\{1,\ldots,k-1,k+1,\ldots,N\}
+\end{gather*}"/></p>
+</div><p>在上述模型描述下，贪婪法处理该问题时仍然存在策略选择问题。第一种策略是根据物品价值选择，每次选最贵的；第二种是根据物品重量选，每次选最轻的；第三种是设计价重比（价值密度）指标，每次选价重比最高的。</p>
+<ul class="simple">
+<li>定义物品的数据结构</li>
+<li>定义背包问题的数据结构</li>
+<li>定义数据的处理程序（主程序）</li>
+<li>定义选择策略（三个）</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>分治法</h3>
+<p>分治法（divide and conquer）是将问题分解成一系列相互独立且规模较小的相同问题，规模依旧大的继续用相同策略分解，直至所有小问题都可解决。通过分解问题，可以实现两个目的，一是将没法解决的大问题变成可以解决的小问题，二是降低解决问题的复杂度。分治法是最适合程序语言的技巧，因此应用广泛。</p>
+<img alt="/home/wwguo/studio/release/wise/_images/pseudo/e856b90f8ca2988c39bedc78befeeac50fe62f06.png" src="/home/wwguo/studio/release/wise/_images/pseudo/e856b90f8ca2988c39bedc78befeeac50fe62f06.png" />
+<p>分治法的难点是分解和合并的设计。能用数学归纳法证明的问题，都可以用分治法解决，这也是选择分治法的信号。</p>
+</div>
+<div class="section" id="id9">
+<h3>动态规划</h3>
+<p>动态规划（dynamic programming）</p>
+</div>
+<div class="section" id="id10">
+<h3>穷举法</h3>
+<p>穷举法（enumeration）</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="tocwrapper">
+        <!-- <div class="showtoc"><span>资料目录</span></div> -->
+        <div class="showtoc"><span>显示目录</span></div>
+        <div class="hidetoc"><span>隐藏目录</span></div>
+        <div class="toc">
+          <ul>
+<li><a class="reference internal" href="#">实现方法</a><ul>
+<li><a class="reference internal" href="#id2">基本程序结构</a></li>
+<li><a class="reference internal" href="#id3">常用数据结构</a><ul>
+<li><a class="reference internal" href="#id4">线性表</a></li>
+<li><a class="reference internal" href="#id5">复杂结构</a><ul>
+<li><a class="reference internal" href="#tree">树（tree）</a></li>
+<li><a class="reference internal" href="#set">集合（set）</a></li>
+<li><a class="reference internal" href="#hash">哈希表（hash）</a></li>
+<li><a class="reference internal" href="#graph">图（graph）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">典型算法模式</a><ul>
+<li><a class="reference internal" href="#id7">贪婪法</a></li>
+<li><a class="reference internal" href="#id8">分治法</a></li>
+<li><a class="reference internal" href="#id9">动态规划</a></li>
+<li><a class="reference internal" href="#id10">穷举法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          <ul>
+            <!-- <li><a href="../genindex.html">索引目录</a></li> -->
+            <li><a href="../sharing/references.html">参考文献</a></li>
+          </ul>
+        </div>
+    </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      <div id="copyright" >©2013-2016, Wei-Wei Guo(郭维维).</div>
+      <div class="footerwrapper">
+        <a id="mail" href="mailto:wwguocn@gmail.com" title="写邮件给我"></a>
+        <a class="contacticon" id="wechatc"></a>
+        <div class="popup" id="wechatp"><img alt="WeChat QRCode" src="../_static/qrwechat.jpg" style="width:100%;"></div>
+        <a class="contacticon" id="weixinc"></a>
+        <div class="popup" id="weixinp"><img alt="WeiXin QRCode" src="../_static/qrweixin.jpg" style="width:100%;"></div>
+        <a class="contacticon" id="linkedinc" href="https://www.linkedin.com/in/wwguocn"></a>
+        <div class="popup" id="linkedinp"><img alt="LinkedIn QRCode" src="../_static/qrlinkedin.png" style="width:100%;"></div>
+      </div>
+      <a id="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="See Creative Commons License 3.0"></a>
+    </div>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-40066595-1']);
+      _gaq.push(['_setDomainName', 'wwguo.cn']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
+</html>

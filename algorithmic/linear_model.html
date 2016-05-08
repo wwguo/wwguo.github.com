@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>标准模型 &mdash; 郭维维</title>
+    <title>标准模型 &mdash; 郭维维|方法</title>
     
     <link rel="stylesheet" href="../_static/wise.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2013',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -25,16 +25,13 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/wise.js"></script>
-    <script type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey="></script>
-    <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
-    <script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-    <link rel="top" title="郭维维" href="../index.html" />
+    <link rel="top" title="郭维维|方法" href="../main.html" />
     <link rel="up" title="定量算法" href="index.html" />
     <link rel="next" title="Simplex算法" href="simplex_model.html" />
-    <link rel="prev" title="定量算法" href="index.html" /> 
+    <link rel="prev" title="实现方法" href="implement.html" /> 
   </head>
-  <body>
+  <body role="document">
     <div class="related">
       <a id="fork" href="http://github.com/wwguo"></a>
       <div class="headlink">
@@ -43,14 +40,14 @@
         <a id="vlink" class="headlink" href="../visualize/index.html" title="数据呈现"></a>
         <a id="mlink" class="headlink" href="../managerial/index.html" title="组织理论"></a>
       </div>
-      <a id="head" href="../index.html" title="回到首页"></a>
-      <a id="glink" href="../sharing/self.html" title="个人介绍"></a>
+      <a id="head" href="../site/index.html" title="网站首页"></a>
+      <a id="glink" href="../index.html" title="个人信息"></a>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="linear-mode">
 <span id="id1"></span><h1>标准模型</h1>
@@ -70,30 +67,30 @@
 <ul class="simple">
 <li>目标函数，通常是最大化利润或最小化成本。</li>
 <li>约束条件，通常表现为等式或不等式。</li>
-<li>变量边界，通常是 <img class="math" src="../_images/math/1c9e5aa755c60abb5ceaf13333e2b63b1d2161c6.png" alt="x_j\ge 0" style="vertical-align: -4px"/>。</li>
+<li>变量边界，通常是 <img class="math" src="../_images/math/eee0f5cc8a1e719547b3a72d924c88ea0d09259a.svg" alt="x_j\ge 0"/>。</li>
 </ul>
 <p>任何线性模型，在求解和分析前都应该转换为标准形：</p>
 <div class="math">
-<p><img src="../_images/math/b6876355c35b5c760adf09de6b551b76c9a5a7c7.png" alt="\begin{gather*}
+<p><img src="../_images/math/52c3e3fc95c671c483e2ef8088c4826faecc0b92.svg" alt="\begin{gather*}
 \text{maximize\ } \sum_{j=1}^n{c_jx_j}\\[0.1em]
 \begin{aligned}
 \sum_{j=1}^n{a_{ij}x_j} = b_i &amp; \text{\quad for\ } i=1,2,\ldots,m \\
 x_j\ge 0 &amp; \text{\quad for\ } j=1,2,\ldots,n \\
 \end{aligned}
 \end{gather*}"/></p>
-</div><p>即将约束条件中的不等式统一转换为等式。需要注意该标准模型要求 <img class="math" src="../_images/math/cccbdb33b6d68788c6c471b1268575f54775de56.png" alt="\vect{b}\ge 0" style="vertical-align: -3px"/>。</p>
-<p>线性规划模型的变量 <img class="math" src="../_images/math/1f0c6927b9a9220e24febe319c9818d48cc109cd.png" alt="x_j" style="vertical-align: -4px"/> 一般定义为产量。线性模型标准型中的系数也都可以对应实际经济问题的要素：</p>
+</div><p>即将约束条件中的不等式统一转换为等式。需要注意该标准模型要求 <img class="math" src="../_images/math/d3e596ba5472eed67aa8199a3cc3033c4354f619.svg" alt="\vect{b}\ge 0"/>。</p>
+<p>线性规划模型的变量 <img class="math" src="../_images/math/f1dd847aae0e67345e13ece2a66b340f2d3afcc4.svg" alt="x_j"/> 一般定义为产量。线性模型标准型中的系数也都可以对应实际经济问题的要素：</p>
 <ul class="simple">
-<li>右边常数 <img class="math" src="../_images/math/bb2a542ca92b44f4dc2bbd74f475ec3b45c4f008.png" alt="\vect{b}" style="vertical-align: 0px"/> ——资源向量。</li>
-<li>目标函数系数 <img class="math" src="../_images/math/51e735bbfd84bbd67c2366a07d8c775bb4a5bbe8.png" alt="\vect{c}" style="vertical-align: 0px"/> ——最大化问题通常对应收益问题，因此目标函数系数称为价格向量；最小化问题通常对应成本问题，因此目标函数系数称为成本向量。</li>
-<li>约束条件系数 <img class="math" src="../_images/math/503ec81b0b472829d1925d250dedd510ea06ea56.png" alt="\vect{A}" style="vertical-align: 0px"/> ——技术矩阵。</li>
+<li>右边常数 <img class="math" src="../_images/math/803738483c237567d269bf7941902b476b6a397f.svg" alt="\vect{b}"/> ——资源向量。</li>
+<li>目标函数系数 <img class="math" src="../_images/math/dd7a74b4a025cc80865f0da570185e9495aa8014.svg" alt="\vect{c}"/> ——最大化问题通常对应收益问题，因此目标函数系数称为价格向量；最小化问题通常对应成本问题，因此目标函数系数称为成本向量。</li>
+<li>约束条件系数 <img class="math" src="../_images/math/00e76ad7512b5765ae849ae59400478d098d8b8d.svg" alt="\vect{A}"/> ——技术矩阵。</li>
 </ul>
 </div>
 <div class="section" id="id3">
 <h2>模型变换</h2>
 <p>线性规划模型的约束条件存在以下三种形式：</p>
 <div class="math">
-<p><img src="../_images/math/c7338009791909acf5ff09a08686c56de53e3068.png" alt="\begin{array}{rcrcccrcl}
+<p><img src="../_images/math/8515f06c3d57ed9009870b44b2a40dea76ee4613.svg" alt="\begin{array}{rcrcccrcl}
 a_1 x_1 &amp; + &amp; a_2 x_2 &amp; + &amp; \cdots &amp; + &amp; a_n x_n &amp; \ge &amp; a \\
 b_1 x_1 &amp; + &amp; b_2 x_2 &amp; + &amp; \cdots &amp; + &amp; b_n x_n &amp;  =  &amp; b \\
 c_1 x_1 &amp; + &amp; c_2 x_2 &amp; + &amp; \cdots &amp; + &amp; c_n x_n &amp; \le &amp; c \\
@@ -104,28 +101,28 @@ c_1 x_1 &amp; + &amp; c_2 x_2 &amp; + &amp; \cdots &amp; + &amp; c_n x_n &amp; \
 <p>线性规划模型的目标函数只有两种形式：最大化模型和最小化模型。两者之间的变换可以简单地将目标函数系数的符号取反，就可以将最大化函数转换为最小化函数，反之亦然。</p>
 <div class="section" id="id5">
 <h4>不等式间变换</h4>
-<p>约束条件中 <img class="math" src="../_images/math/2a761c11bae7d29e54e1593e4dc1151fbed87df9.png" alt="\sum_{j=1}^n{a_jx_j}\le b1" style="vertical-align: -7px"/> 可以变换为 <img class="math" src="../_images/math/27b53a96ded630800399567efc64c8720d713c65.png" alt="\sum_{j=1}^n{(-a_j)x_j}\ge -b" style="vertical-align: -7px"/>，反之亦反。</p>
+<p>约束条件中 <img class="math" src="../_images/math/26ee8e5412de637ed16691ff16fd33a2ee37799d.svg" alt="\sum_{j=1}^n{a_jx_j}\le b1"/> 可以变换为 <img class="math" src="../_images/math/04aea476196f83ea2c4dc0c3cd1c88ee842ccf07.svg" alt="\sum_{j=1}^n{(-a_j)x_j}\ge -b"/>，反之亦反。</p>
 </div>
 <div class="section" id="id6">
 <h4>不等式变换等式</h4>
 <p>模型中的任何不等式都可以在引入一个非负变量后变换为一个等式。</p>
 <ul class="simple">
-<li><img class="math" src="../_images/math/8f9d64856e02ef1762f4b88322020e250d88dbbe.png" alt="\sum_{j=1}^n{a_jx_j}\le b" style="vertical-align: -7px"/> 可变换为 <img class="math" src="../_images/math/41c876a6703b11c1bd9c870a1d44d09ee158a40f.png" alt="\sum_{j=1}^n{a_jx_j} + 1s = b" style="vertical-align: -7px"/>，其中 <img class="math" src="../_images/math/69220ea95b644e0e88331e36e88ae7f39f0ba2b8.png" alt="s\ge 0" style="vertical-align: -3px"/>；</li>
-<li><img class="math" src="../_images/math/dd9660cfedcbefcda93fbcf30e853738754a2bc2.png" alt="\sum_{j=1}^n{a_jx_j}\ge b" style="vertical-align: -7px"/> 可变换为 <img class="math" src="../_images/math/73ba562830a4fc626b0f2352f7cbfc116931cd2a.png" alt="\sum_{j=1}^n{a_jx_j} - 1t = b" style="vertical-align: -7px"/>，其中 <img class="math" src="../_images/math/7505eaac13b9d7c89df1c6121d962637b629c78e.png" alt="t\ge 0" style="vertical-align: -3px"/>。</li>
+<li><img class="math" src="../_images/math/ad74fbf62ab8c974838e877825f14b6a478f63c3.svg" alt="\sum_{j=1}^n{a_jx_j}\le b"/> 可变换为 <img class="math" src="../_images/math/81513e729c5608088367d13a3f6f1250eae46b42.svg" alt="\sum_{j=1}^n{a_jx_j} + 1s = b"/>，其中 <img class="math" src="../_images/math/07ece9fc4c8dbd5d380d0aba2398681288a973d0.svg" alt="s\ge 0"/>；</li>
+<li><img class="math" src="../_images/math/44bf4834564c825644b677b8200a6b089082cd1f.svg" alt="\sum_{j=1}^n{a_jx_j}\ge b"/> 可变换为 <img class="math" src="../_images/math/55422b8ea784ce19a5964d5af4d2fd62b0c745e9.svg" alt="\sum_{j=1}^n{a_jx_j} - 1t = b"/>，其中 <img class="math" src="../_images/math/e6ac15c14d866a6f6e359b1aa71a4d13124a461b.svg" alt="t\ge 0"/>。</li>
 </ul>
 <p>其中：</p>
 <ul class="simple">
-<li>原有变量 <img class="math" src="../_images/math/1f0c6927b9a9220e24febe319c9818d48cc109cd.png" alt="x_j" style="vertical-align: -4px"/> 称为 <strong>结构变量</strong>；</li>
-<li>引入变量 <img class="math" src="../_images/math/42243bb9e3a603dbc9bb3090bacef9cb5e4eb238.png" alt="s" style="vertical-align: 0px"/> 称为 <strong>松弛变量</strong>；</li>
-<li>引入变量 <img class="math" src="../_images/math/c45c924c5a9123082f3773ddab3e8d7726b4683c.png" alt="t" style="vertical-align: 0px"/> 称为 <strong>剩余变量</strong>。</li>
+<li>原有变量 <img class="math" src="../_images/math/f1dd847aae0e67345e13ece2a66b340f2d3afcc4.svg" alt="x_j"/> 称为 <strong>结构变量</strong>；</li>
+<li>引入变量 <img class="math" src="../_images/math/7edf528557b5c74fba069bc6882dd6092a1ddfe6.svg" alt="s"/> 称为 <strong>松弛变量</strong>；</li>
+<li>引入变量 <img class="math" src="../_images/math/1c4f0196116c8d7a86b31d2aaa545763bbd5a390.svg" alt="t"/> 称为 <strong>剩余变量</strong>。</li>
 </ul>
 </div>
 </div>
 <div class="section" id="id7">
 <h3>变量边界变换</h3>
-<p>如果线性模型中某些 <img class="math" src="../_images/math/5394e9c9759b8e06cc7cb475ffff288f4982c5ae.png" alt="j" style="vertical-align: -3px"/> 的 <img class="math" src="../_images/math/1f0c6927b9a9220e24febe319c9818d48cc109cd.png" alt="x_j" style="vertical-align: -4px"/> 符号不限，存在三种变换方法，要求掌握变量分解法：将 <img class="math" src="../_images/math/1f0c6927b9a9220e24febe319c9818d48cc109cd.png" alt="x_j" style="vertical-align: -4px"/> 表示为两个非负变量之差，并用该差值替换所有 <img class="math" src="../_images/math/1f0c6927b9a9220e24febe319c9818d48cc109cd.png" alt="x_j" style="vertical-align: -4px"/>。即：</p>
+<p>如果线性模型中某些 <img class="math" src="../_images/math/5cde1da0ca5a535243f089aff50039fbeab0a754.svg" alt="j"/> 的 <img class="math" src="../_images/math/f1dd847aae0e67345e13ece2a66b340f2d3afcc4.svg" alt="x_j"/> 符号不限，存在三种变换方法，要求掌握变量分解法：将 <img class="math" src="../_images/math/f1dd847aae0e67345e13ece2a66b340f2d3afcc4.svg" alt="x_j"/> 表示为两个非负变量之差，并用该差值替换所有 <img class="math" src="../_images/math/f1dd847aae0e67345e13ece2a66b340f2d3afcc4.svg" alt="x_j"/>。即：</p>
 <div class="math">
-<p><img src="../_images/math/3a00ba6a7fc0b85c31a47d590307be01ea011089.png" alt="x_j \equiv x_j^{\prime} - x_j^{\prime\prime},\qquad x_j^{\prime}\ge 0,x_j^{\prime\prime}\ge 0"/></p>
+<p><img src="../_images/math/d479d75b76ae58946bc6e112aad3883f6f4b1582.svg" alt="x_j \equiv x_j^{\prime} - x_j^{\prime\prime},\qquad x_j^{\prime}\ge 0,x_j^{\prime\prime}\ge 0"/></p>
 </div><p>该变换会增加模型的变量数目，但可保留原始关系中的线性属性。</p>
 </div>
 </div>
@@ -157,8 +154,8 @@ c_1 x_1 &amp; + &amp; c_2 x_2 &amp; + &amp; \cdots &amp; + &amp; c_n x_n &amp; \
 </ul>
 
           <ul>
-            <li><a href="../genindex.html">索引目录</a></li>
-            <li><a href="../references.html">参考文献</a></li>
+            <!-- <li><a href="../genindex.html">索引目录</a></li> -->
+            <li><a href="../sharing/references.html">参考文献</a></li>
           </ul>
         </div>
     </div>
@@ -166,10 +163,15 @@ c_1 x_1 &amp; + &amp; c_2 x_2 &amp; + &amp; \cdots &amp; + &amp; c_n x_n &amp; \
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      <a id="copyright" >©Copyright, Wei-Wei Guo(郭维维).</a>
+      <div id="copyright" >©2013-2016, Wei-Wei Guo(郭维维).</div>
       <div class="footerwrapper">
-        <a id="mail" href="mailto:wwguocn@gmail.com" title="Email to me"></a>
-        <a id="blog" href="http://wwguocn.tumblr.com" title="Visit my blog"></a>
+        <a id="mail" href="mailto:wwguocn@gmail.com" title="写邮件给我"></a>
+        <a class="contacticon" id="wechatc"></a>
+        <div class="popup" id="wechatp"><img alt="WeChat QRCode" src="../_static/qrwechat.jpg" style="width:100%;"></div>
+        <a class="contacticon" id="weixinc"></a>
+        <div class="popup" id="weixinp"><img alt="WeiXin QRCode" src="../_static/qrweixin.jpg" style="width:100%;"></div>
+        <a class="contacticon" id="linkedinc" href="https://www.linkedin.com/in/wwguocn"></a>
+        <div class="popup" id="linkedinp"><img alt="LinkedIn QRCode" src="../_static/qrlinkedin.png" style="width:100%;"></div>
       </div>
       <a id="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="See Creative Commons License 3.0"></a>
     </div>
@@ -177,6 +179,8 @@ c_1 x_1 &amp; + &amp; c_2 x_2 &amp; + &amp; \cdots &amp; + &amp; c_n x_n &amp; \
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-40066595-1']);
+      _gaq.push(['_setDomainName', 'wwguo.cn']);
+      _gaq.push(['_setAllowLinker', true]);
       _gaq.push(['_trackPageview']);
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;

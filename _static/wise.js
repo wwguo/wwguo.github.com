@@ -74,12 +74,12 @@ $(document).ready(function (){
         $("a.headlink").removeClass("present")
         $("a.headlink#mlink").addClass("present")
         break;
-    case "sharing":
-        // $("div.tocwrapper").hide()
-        switchcolor("gray")
-        $("a.headlink").removeClass("present")
-        $("a.headlink#glink").addClass("present")
-        break;
+    // case "sharing":
+    //     // $("div.tocwrapper").hide()
+    //     switchcolor("gray")
+    //     $("a.headlink").removeClass("present")
+    //     $("a.headlink#glink").addClass("present")
+    //     break;
     default:
         $("div.tocwrapper").hide()
         switchcolor("gray")

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>柱状图 &mdash; 郭维维</title>
+    <title>柱状图 &mdash; 郭维维|方法</title>
     
     <link rel="stylesheet" href="../_static/wise.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2013',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -25,16 +25,13 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/wise.js"></script>
-    <script type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey="></script>
-    <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
-    <script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-    <link rel="top" title="郭维维" href="../index.html" />
+    <link rel="top" title="郭维维|方法" href="../main.html" />
     <link rel="up" title="数据呈现" href="index.html" />
     <link rel="next" title="分位图" href="quantile.html" />
     <link rel="prev" title="分布图" href="distribution.html" /> 
   </head>
-  <body>
+  <body role="document">
     <div class="related">
       <a id="fork" href="http://github.com/wwguo"></a>
       <div class="headlink">
@@ -43,14 +40,14 @@
         <a id="vlink" class="headlink" href="index.html" title="数据呈现"></a>
         <a id="mlink" class="headlink" href="../managerial/index.html" title="组织理论"></a>
       </div>
-      <a id="head" href="../index.html" title="回到首页"></a>
-      <a id="glink" href="../sharing/self.html" title="个人介绍"></a>
+      <a id="head" href="../site/index.html" title="网站首页"></a>
+      <a id="glink" href="../index.html" title="个人信息"></a>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
 <h1>柱状图</h1>
@@ -75,7 +72,7 @@
 </ul>
 <img alt="../_images/barchart1.png" class="align-center" src="../_images/barchart1.png" />
 <p>R 可以直接绘制柱状图：</p>
-<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span><span class="kt">vector</span><span class="p">)</span>
+<div class="highlight-r"><div class="highlight"><pre><span></span>barplot<span class="p">(</span><span class="kt">vector</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -86,16 +83,16 @@
 <img alt="../_images/barchart2.png" class="align-right" src="../_images/barchart2.png" />
 <p>媒体上常见的柱状图通常没有纵轴标度，而是直接将数值标记在竖直柱的顶端或顶端附近。</p>
 <p>R 需要做些调整：</p>
-<div class="highlight-r"><div class="highlight"><pre>bar.plot <span class="o">&lt;-</span> barplot<span class="p">(</span><span class="kt">vector</span><span class="p">,</span> yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">)</span>
+<div class="highlight-r"><div class="highlight"><pre><span></span>bar.plot <span class="o">&lt;-</span> barplot<span class="p">(</span><span class="kt">vector</span><span class="p">,</span> yaxt<span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">)</span>
 text<span class="p">(</span>bar.plot<span class="p">,</span> <span class="kt">vector</span><span class="p">,</span> labels<span class="o">=</span>bar.label<span class="p">,</span> pos<span class="o">=</span><span class="m">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">pos</span></tt> 用于调整数值显示的相对位置。</p>
+<p><code class="docutils literal"><span class="pre">pos</span></code> 用于调整数值显示的相对位置。</p>
 </div>
 <div class="section" id="id5">
 <h3>纵横轴交换</h3>
 <p>柱状图的柱可以绘制为水平柱，由横轴标度数值。</p>
-<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span><span class="kt">vector</span><span class="p">,</span> horiz<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<div class="highlight-r"><div class="highlight"><pre><span></span>barplot<span class="p">(</span><span class="kt">vector</span><span class="p">,</span> horiz<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -106,8 +103,8 @@ text<span class="p">(</span>bar.plot<span class="p">,</span> <span class="kt">ve
 <h3>累加柱状图</h3>
 <p>以 R 的示例生成的图为例展示累加柱状图：</p>
 <img alt="../_images/barchart3.png" src="../_images/barchart3.png" />
-<p>数据需是 <tt class="docutils literal"><span class="pre">matrix</span></tt> 类对象。</p>
-<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span><span class="kt">matrix</span><span class="p">)</span>
+<p>数据需是 <code class="docutils literal"><span class="pre">matrix</span></code> 类对象。</p>
+<div class="highlight-r"><div class="highlight"><pre><span></span>barplot<span class="p">(</span><span class="kt">matrix</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -115,16 +112,16 @@ text<span class="p">(</span>bar.plot<span class="p">,</span> <span class="kt">ve
 <h3>比较柱状图</h3>
 <p>以 R 的示例生成的图为例展示比较柱状图：</p>
 <img alt="../_images/barchart4.png" src="../_images/barchart4.png" />
-<div class="highlight-r"><div class="highlight"><pre>barplot<span class="p">(</span><span class="kt">matrix</span><span class="p">,</span> beside<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<div class="highlight-r"><div class="highlight"><pre><span></span>barplot<span class="p">(</span><span class="kt">matrix</span><span class="p">,</span> beside<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="id9">
-<h2>实际应用</h2>
+<div class="section" id="barplot-example">
+<span id="id9"></span><h2>实际应用</h2>
 <p>项目中需要比较IFDI和OFID之间的状况，变换柱状图的方向，用比值的折线图作两个柱状图的分隔，实现左右式的柱状图对比效果。</p>
 <a class="reference internal image-reference" href="../_images/barchart_empl_1.png"><img alt="../_images/barchart_empl_1.png" class="align-center" src="../_images/barchart_empl_1.png" style="width: 20cm;" /></a>
-<div class="highlight-r"><div class="highlight"><pre>oldpar <span class="o">&lt;-</span> par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span>lwd<span class="o">=</span><span class="m">3</span><span class="p">)</span>
+<div class="highlight-r"><div class="highlight"><pre><span></span>oldpar <span class="o">&lt;-</span> par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span>lwd<span class="o">=</span><span class="m">3</span><span class="p">)</span>
 
 par<span class="p">(</span>fig<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.45</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> mar<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> new<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 bar.plot <span class="o">&lt;-</span> barplot<span class="p">(</span>dt<span class="p">[,</span><span class="m">2</span><span class="p">],</span> names.arg<span class="o">=</span><span class="kp">rownames</span><span class="p">(</span>dt<span class="p">),</span> col<span class="o">=</span><span class="s">&quot;#33669933&quot;</span><span class="p">,</span>border<span class="o">=</span><span class="s">&quot;#336699AA&quot;</span><span class="p">,</span>
@@ -182,14 +179,14 @@ par<span class="p">(</span>oldpar<span class="p">)</span>
 <li><a class="reference internal" href="#id8">比较柱状图</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">实际应用</a></li>
+<li><a class="reference internal" href="#barplot-example">实际应用</a></li>
 </ul>
 </li>
 </ul>
 
           <ul>
-            <li><a href="../genindex.html">索引目录</a></li>
-            <li><a href="../references.html">参考文献</a></li>
+            <!-- <li><a href="../genindex.html">索引目录</a></li> -->
+            <li><a href="../sharing/references.html">参考文献</a></li>
           </ul>
         </div>
     </div>
@@ -197,10 +194,15 @@ par<span class="p">(</span>oldpar<span class="p">)</span>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      <a id="copyright" >©Copyright, Wei-Wei Guo(郭维维).</a>
+      <div id="copyright" >©2013-2016, Wei-Wei Guo(郭维维).</div>
       <div class="footerwrapper">
-        <a id="mail" href="mailto:wwguocn@gmail.com" title="Email to me"></a>
-        <a id="blog" href="http://wwguocn.tumblr.com" title="Visit my blog"></a>
+        <a id="mail" href="mailto:wwguocn@gmail.com" title="写邮件给我"></a>
+        <a class="contacticon" id="wechatc"></a>
+        <div class="popup" id="wechatp"><img alt="WeChat QRCode" src="../_static/qrwechat.jpg" style="width:100%;"></div>
+        <a class="contacticon" id="weixinc"></a>
+        <div class="popup" id="weixinp"><img alt="WeiXin QRCode" src="../_static/qrweixin.jpg" style="width:100%;"></div>
+        <a class="contacticon" id="linkedinc" href="https://www.linkedin.com/in/wwguocn"></a>
+        <div class="popup" id="linkedinp"><img alt="LinkedIn QRCode" src="../_static/qrlinkedin.png" style="width:100%;"></div>
       </div>
       <a id="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="See Creative Commons License 3.0"></a>
     </div>
@@ -208,6 +210,8 @@ par<span class="p">(</span>oldpar<span class="p">)</span>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-40066595-1']);
+      _gaq.push(['_setDomainName', 'wwguo.cn']);
+      _gaq.push(['_setAllowLinker', true]);
       _gaq.push(['_trackPageview']);
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;

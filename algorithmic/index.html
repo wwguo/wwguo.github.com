@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>定量算法 &mdash; 郭维维</title>
+    <title>定量算法 &mdash; 郭维维|方法</title>
     
     <link rel="stylesheet" href="../_static/wise.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2013',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -25,15 +25,12 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/wise.js"></script>
-    <script type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey="></script>
-    <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
-    <script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-    <link rel="top" title="郭维维" href="../index.html" />
-    <link rel="next" title="标准模型" href="linear_model.html" />
-    <link rel="prev" title="Wei-Wei Guo&#39;s Site" href="../main.html" /> 
+    <link rel="top" title="郭维维|方法" href="../main.html" />
+    <link rel="next" title="实现方法" href="implement.html" />
+    <link rel="prev" title="郭维维的主页" href="../site/index.html" /> 
   </head>
-  <body>
+  <body role="document">
     <div class="related">
       <a id="fork" href="http://github.com/wwguo"></a>
       <div class="headlink">
@@ -42,17 +39,26 @@
         <a id="vlink" class="headlink" href="../visualize/index.html" title="数据呈现"></a>
         <a id="mlink" class="headlink" href="../managerial/index.html" title="组织理论"></a>
       </div>
-      <a id="head" href="../index.html" title="回到首页"></a>
-      <a id="glink" href="../sharing/self.html" title="个人介绍"></a>
+      <a id="head" href="../site/index.html" title="网站首页"></a>
+      <a id="glink" href="../index.html" title="个人信息"></a>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
 <h1>定量算法</h1>
+<p>算法（algorithm）广义来讲就是定义好的计算过程，接收输入的数据，产生输出的数据。Knuth将算法的特征总结为（1)确定性，步骤明确结果可期；(2)有穷性，存在结束条件；(3)可行性，过程走得通；(4)有输入和输出。</p>
+<p>算法原本是各行各业根据本领域的问题想出来的定量分析过程，因为计算机变成个行业，算法似乎成了程序员们的天下。其实对于各行业的专家对自己行业的算法早已烂熟，只是不能变成代码。比如动态规划、线性规划等是运筹学的研究结果，但也早已成为算法领域的常规设计。程序员们用自己的行话抽象地讲述其他领域讨论了多年的问题，将这些算法根据程序语言的特点变成代码，并解决程序语言的局限造成的问题。</p>
+<p>对于以软件程序为最终形态的算法而言，其中包括算法的设计模式、展示形式和实现方法等三方面内容。设计模式（design pattern）即线性规划、搜索枚举、贪婪法、分治法等。展示形式如伪代码、流程图、控制表等。实现方法包括顺序执行、并行执行、递归方法、迭代方法，等等。对于程序而言，算法只是其中一个环节，另一个环节是数据结构，即根据算法需要设计的输入数据存储形式，目的是让算法更简单、执行效率更高。现在流行的大数据面临的数据清洗问题其实属于数据结构的范畴。</p>
+<p>程序员对算法的焦点是时间复杂度<em>O</em>，即程序执行的效率。</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="implement.html">实现方法</a></li>
+</ul>
+</div>
 <div class="section" id="id2">
 <h2>优化算法</h2>
 <div class="section" id="id3">
@@ -92,8 +98,8 @@
 </ul>
 
           <ul>
-            <li><a href="../genindex.html">索引目录</a></li>
-            <li><a href="../references.html">参考文献</a></li>
+            <!-- <li><a href="../genindex.html">索引目录</a></li> -->
+            <li><a href="../sharing/references.html">参考文献</a></li>
           </ul>
         </div>
     </div>
@@ -101,10 +107,15 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      <a id="copyright" >©Copyright, Wei-Wei Guo(郭维维).</a>
+      <div id="copyright" >©2013-2016, Wei-Wei Guo(郭维维).</div>
       <div class="footerwrapper">
-        <a id="mail" href="mailto:wwguocn@gmail.com" title="Email to me"></a>
-        <a id="blog" href="http://wwguocn.tumblr.com" title="Visit my blog"></a>
+        <a id="mail" href="mailto:wwguocn@gmail.com" title="写邮件给我"></a>
+        <a class="contacticon" id="wechatc"></a>
+        <div class="popup" id="wechatp"><img alt="WeChat QRCode" src="../_static/qrwechat.jpg" style="width:100%;"></div>
+        <a class="contacticon" id="weixinc"></a>
+        <div class="popup" id="weixinp"><img alt="WeiXin QRCode" src="../_static/qrweixin.jpg" style="width:100%;"></div>
+        <a class="contacticon" id="linkedinc" href="https://www.linkedin.com/in/wwguocn"></a>
+        <div class="popup" id="linkedinp"><img alt="LinkedIn QRCode" src="../_static/qrlinkedin.png" style="width:100%;"></div>
       </div>
       <a id="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="See Creative Commons License 3.0"></a>
     </div>
@@ -112,6 +123,8 @@
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-40066595-1']);
+      _gaq.push(['_setDomainName', 'wwguo.cn']);
+      _gaq.push(['_setAllowLinker', true]);
       _gaq.push(['_trackPageview']);
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;

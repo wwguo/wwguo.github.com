@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">郭维维|博客 - Posted in 2013</title>
+  <id>http://wwguo.cn/blog/2013/atom.xml</id>
+  <updated>2013-11-02T00:00:00Z</updated>
+  <link href="http://wwguo.cn/" />
+  <link href="http://wwguo.cn/blog/2013/atom.xml" rel="self" />
+  <generator uri="http://ablog.readthedocs.org" version="0.8.3">ABlog</generator>
+  <entry xml:base="http://wwguo.cn/blog/2013/atom.xml">
+    <title type="text">关于大数据：② 啥特点？</title>
+    <id>http://wwguo.cn/series/bigdata2.html</id>
+    <updated>2013-11-02T00:00:00Z</updated>
+    <published>2013-11-02T00:00:00Z</published>
+    <link href="http://wwguo.cn/series/bigdata2.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;p&gt;谈及大数据的特点，目前的共识是 3V，即更高（volume）、更快（velocity）、更多（variety）。事实上这三个特点对传统数据和大数据的区分只能看作定性描述。因为细论起来，很难说清楚数据量多大才算大？数据类型多多才算多？数据更新多快才算快？说简单点，3V 的意思就是传统数据和大数据的区别如同缓缓流淌的溪水和迸流而下的山洪。这能描述两者的差异，却无助于把握本质。&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://wwguo.cn/blog/2013/atom.xml">
+    <title type="text">关于大数据：① 这是啥？</title>
+    <id>http://wwguo.cn/series/bigdata1.html</id>
+    <updated>2013-10-30T00:00:00Z</updated>
+    <published>2013-10-30T00:00:00Z</published>
+    <link href="http://wwguo.cn/series/bigdata1.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;strong&gt;大数据（Big Data）&lt;/strong&gt;是个我很不喜欢的词，因为常让我不知所措。这个词很简洁，每个人第一次看到时都能生出某种联想，概念直观有力；这个词也很简陋，每个人产生的联想又都不同，想和他人聊聊想法，得先讨论半天概念内涵，结果是讨论地精疲力尽，却还在确认对方的理解。&lt;/p&gt;
+</content>
+  </entry>
+</feed>

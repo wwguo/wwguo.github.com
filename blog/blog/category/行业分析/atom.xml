@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">郭维维|博客 - Posts in 行业分析</title>
+  <id>http://wwguo.cn/blog/category/行业分析/atom.xml</id>
+  <updated>2014-09-22T00:00:00Z</updated>
+  <link href="http://wwguo.cn/" />
+  <link href="http://wwguo.cn/blog/category/行业分析/atom.xml" rel="self" />
+  <generator uri="http://ablog.readthedocs.org" version="0.8.3">ABlog</generator>
+  <entry xml:base="http://wwguo.cn/blog/category/行业分析/atom.xml">
+    <title type="text">行业素描：P2P借贷</title>
+    <id>http://wwguo.cn/analysis/industry_p2p.html</id>
+    <updated>2014-09-22T00:00:00Z</updated>
+    <published>2014-09-22T00:00:00Z</published>
+    <link href="http://wwguo.cn/analysis/industry_p2p.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;p&gt;P2P借贷（P2P lending）行业素描图的时间轴截止2014年8月，近三个月行业又些新发展，一方面是行业监管开始正规化，另一方面是传统借贷机构开始介入行业。9月中旬国务院发展研究中心召集多位银行高管及陆金所、银客网等平台开闭门会议。10月20日，央行支付清算协会官员也证实了“国字头”政策即将出台。新闻上讲P2P行业今年就已跑路百多家，诈骗平台占近一半。这个数字一点也不意外，如果按借贷项目来算，比例可能更高。&lt;/p&gt;
+</content>
+  </entry>
+</feed>

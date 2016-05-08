@@ -19,7 +19,7 @@ body
 {
     margin: 0 auto;
     padding: 0;
-    max-width: 11in;
+    max-width: 11in ; max width document will expand to.;
     min-width: 9in;
     background-color: #EEEEEE;
     color: #333333;
@@ -36,8 +36,8 @@ div.related
 {
     position: relative;
     margin: 0 auto;
-    max-width: 11in;
-    height: 130px;
+    max-width: 11in ; max width document will expand to.;
+    height: 130px ; height of header;
     background: #CCCCCC;
     /* padding: 6px; */
     /* border-left: 6px solid #CCCCCC; */
@@ -155,125 +155,125 @@ div.related a:hover
  * page layout - relbars (front)
  *****************************************************/
 
-div.front
-{
-    position: relative;
-    margin: 100px;
-    max-width: 11in;
-    min-height: 5in;
-    padding: 0 20px; 
-}
+/* div.front */
+/* { */
+/*     position: relative; */
+/*     margin: 100px; */
+/*     max-width: 11in; */
+/*     min-height: 5in; */
+/*     padding: 0 20px;  */
+/* } */
 
-div.front a
-{
-    margin: 0;
-    padding: 0;
-    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
-    -moz-opacity: 0.8;
-    opacity: 0.8;
-}
+/* div.front a */
+/* { */
+/*     margin: 0; */
+/*     padding: 0; */
+/*     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80); */
+/*     -moz-opacity: 0.8; */
+/*     opacity: 0.8; */
+/* } */
 
-div.front a:hover
-{
-    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-    -moz-opacity: 1;
-    opacity: 1;
-}
+/* div.front a:hover */
+/* { */
+/*     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100); */
+/*     -moz-opacity: 1; */
+/*     opacity: 1; */
+/* } */
 
-div.front div.name
-{
-    display: block;
-    position: relative;
-    top: 30px;
-    margin: 0 auto;
-    width: 100%;
-}
+/* div.front div.name */
+/* { */
+/*     display: block; */
+/*     position: relative; */
+/*     top: 30px; */
+/*     margin: 0 auto; */
+/*     width: 100%; */
+/* } */
 
-div.front div.name img
-{
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    width: 650px;
-}
+/* div.front div.name img */
+/* { */
+/*     display: block; */
+/*     position: relative; */
+/*     margin: 0 auto; */
+/*     width: 650px; */
+/* } */
 
-div.front div.glink
-{
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
-    width: 650px; 
-    height: 100px;
-}
+/* div.front div.glink */
+/* { */
+/*     display: block; */
+/*     position: relative; */
+/*     margin: 0 auto; */
+/*     padding: 0; */
+/*     width: 650px;  */
+/*     height: 100px; */
+/* } */
 
-div.front div.glink a#glink
-{
-    position: absolute;
-    width: 56px; 
-    height: 130px;
-    top: -87px;
-    left: 455px;
-    background: url('favfront.png') no-repeat;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
-    border: 0;
-}
+/* div.front div.glink a#glink */
+/* { */
+/*     position: absolute; */
+/*     width: 56px;  */
+/*     height: 130px; */
+/*     top: -87px; */
+/*     left: 455px; */
+/*     background: url('favfront.png') no-repeat; */
+/*     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF); */
+/*     border: 0; */
+/* } */
 
-div.front div.frontlink
-{
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
-    width: 450px;
-    height: 160px;
-}
+/* div.front div.frontlink */
+/* { */
+/*     display: block; */
+/*     position: relative; */
+/*     margin: 0 auto; */
+/*     padding: 0; */
+/*     width: 450px; */
+/*     height: 160px; */
+/* } */
 
-div.front a.frontlink
-{
-    position: absolute;
-    width: 200px; 
-    height: 60px;
-    /* border: 1px solid #CCCCCC; */
-}
+/* div.front a.frontlink */
+/* { */
+/*     position: absolute; */
+/*     width: 200px;  */
+/*     height: 60px; */
+/*     /\* border: 1px solid #CCCCCC; *\/ */
+/* } */
 
-div.front a#alink
-{
-    top: 0;
-    left: 0;
-    color: #336699;
-    background: url('alfront.png') no-repeat;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
-    border: 1px solid #C2D1E0;
-}
-div.front a#elink
-{
-    top: 0;
-    left: 250px;
-    color: #336600;
-    background: url('elfront.png') no-repeat;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
-    border: 1px solid #C2D1B2;
-}
-div.front a#vlink
-{
-    top: 100px;
-    left: 0;
-    color: #732C7B;
-    background: url('vlfront.png') no-repeat;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
-    border: 1px solid #E0C2E0;
-}
+/* div.front a#alink */
+/* { */
+/*     top: 0; */
+/*     left: 0; */
+/*     color: #336699; */
+/*     background: url('alfront.png') no-repeat; */
+/*     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF); */
+/*     border: 1px solid #C2D1E0; */
+/* } */
+/* div.front a#elink */
+/* { */
+/*     top: 0; */
+/*     left: 250px; */
+/*     color: #336600; */
+/*     background: url('elfront.png') no-repeat; */
+/*     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF); */
+/*     border: 1px solid #C2D1B2; */
+/* } */
+/* div.front a#vlink */
+/* { */
+/*     top: 100px; */
+/*     left: 0; */
+/*     color: #732C7B; */
+/*     background: url('vlfront.png') no-repeat; */
+/*     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF); */
+/*     border: 1px solid #E0C2E0; */
+/* } */
 
-div.front a#mlink
-{
-    top: 100px;
-    left: 250px;
-    color: #E18A07;
-    background: url('mhfront.png') no-repeat;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
-    border: 1px solid #FFE0B2;
-}
+/* div.front a#mlink */
+/* { */
+/*     top: 100px; */
+/*     left: 250px; */
+/*     color: #E18A07; */
+/*     background: url('mhfront.png') no-repeat; */
+/*     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF); */
+/*     border: 1px solid #FFE0B2; */
+/* } */
 
 /*****************************************************
  * page layout - document
@@ -283,7 +283,7 @@ div.document
 {
     position: relative;
     margin: 0 auto;
-    max-width: 11in;
+    max-width: 11in ; max width document will expand to.;
     background: #FFFFFF;
 }
 
@@ -299,7 +299,7 @@ div.bodywrapper
 
 div.body
 {
-    min-height: 4.5in;
+    min-height: 4.5in ; min height of document;
     /* note: this ^ is just a hack to prevent body from being shorter than sidebar */
     background: #FFFFFF;
     border: 6px solid #CCCCCC;
@@ -315,7 +315,7 @@ div.body
 div.tocwrapper
 {
     position: absolute;
-    top: 0; /*130px*/
+    top: 0; /*130px ; height of header*/
     right: 0;
     width: 260px;
     margin: 5px;
@@ -423,17 +423,17 @@ div.footer
 div.footerwrapper
 {
     position: relative;
-    width: 50%;
+    width: 54%;
     margin: 0 auto;
 }
 
 div.footerwrapper #mail
 {
     position: absolute;
-    top: -2px;
+    top: 0px;
     left: 0px;
-    width: 29px; 
-    height: 20px;
+    width: 27px; 
+    height: 18px;
     background: url('gmail.png') no-repeat;
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);
     -moz-opacity: 0.3;
@@ -447,30 +447,45 @@ div.footerwrapper #mail:hover
     opacity: 0.8;
 }
 
-div.footerwrapper #blog
+div.footerwrapper a.contacticon
 {
     position: absolute;
-    top: -3px;
-    left: 35px;
-    width: 29px; 
-    height: 22px;
-    background: url('blog.png') no-repeat;
+    top: 0px;
+    width: 27px; 
+    height: 18px;
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);
     -moz-opacity: 0.3;
     opacity: 0.3;
 }
 
-div.footerwrapper #blog:hover
+div.footerwrapper a.contacticon:hover
 {
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
     -moz-opacity: 0.8;
     opacity: 0.8;
 }
 
+div.footerwrapper #wechatc
+{
+    left: 35px;
+    background: url('wechat.png') no-repeat;
+}
+
+div.footerwrapper #weixinc
+{
+    left: 68px;
+    background: url('weixin.png') no-repeat;
+}
+div.footerwrapper #linkedinc
+{
+    left: 101px;
+    background: url('linkedin.png') no-repeat;
+}
+
 div.footer #copyright 
 {
     position: relative;
-    width: 25%;
+    width: 23%;
     float: left;
     top: 1px;
     color: #888888;
@@ -482,7 +497,7 @@ div.footer #copyright:hover
     color: #333333;
 }
 
-div.footer a#license
+div.footer #license
 {
     position: relative;
     float: right;
@@ -497,12 +512,55 @@ div.footer a#license
     opacity: 0.3;
 }
 
-div.footer a#license:hover
+div.footer #license:hover
 {
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
     -moz-opacity: 0.8;
     opacity: 0.8;
 }
+
+/* popup */
+.popup{
+    position:fixed;
+    left:11vw;
+    /* margin-left:35px; */
+    top:90vh;
+    margin-top:-20px;
+    opacity:0;
+    transition: 1s;
+    -webkit-transition: 1s;
+    /* --------- */
+    width:200px;
+    font-size:20px;
+    padding:5px;
+    color:white;
+    text-align:center;
+}
+
+/* .popup div */
+/* { */
+/*     width:200px; */
+/*     font-size:20px; */
+/*     padding:5px; */
+/*     color:white; */
+/*     text-align:center; */
+/*     /\* opacity:0; *\/ */
+/* } */
+
+a#wechatc:hover + div.popup#wechatp {
+    margin-top:-215px;
+    opacity:1;
+}
+
+a#weixinc:hover + div.popup#weixinp {
+    margin-top:-215px;
+    opacity:1;
+}
+a#linkedinc:hover + div.popup#linkedinp {
+    margin-top:-215px;
+    opacity:1;
+}
+
 
 /*****************************************************
  * document - section headers
@@ -529,7 +587,7 @@ div.body h1 {
     margin: 0 0 .5em 0;
     padding: .9em 0 0 0;
     font-size: 250%;
-    font-family: "Impact", "Adobe Heiti Std", "Microsoft YaHei", sans-serif;
+    font-family: "Memphis LT Std", "Adobe Heiti Std", "Microsoft YaHei", sans-serif;
     font-weight: bold;
     text-shadow: 2px 2px 1px rgba(0,0,0,.1);
     letter-spacing: 2px;
@@ -542,7 +600,7 @@ div.body h2
     clear: both; /* for floating admonitions */
     border-bottom: 1px solid;
     border-color:  #CCCCCC;
-    font-family: "Impact", "Adobe Heiti Std", "Microsoft YaHei", sans-serif;
+    font-family: "Memphis LT Std", "Adobe Heiti Std", "Microsoft YaHei", sans-serif;
     font-size: 180%;
     font-weight: bold;
     text-shadow: 2px 2px 1px rgba(0,0,0,.1);
@@ -969,6 +1027,25 @@ div.viewcode-block:target
     font-family: "DejaVu Sans Mono", "Courier New", "Adobe Kaiti Std", "SimKai", monospace;
 }
 
+/*****************************************************
+ * document - Category logo styling
+ *****************************************************/
+
+img[alt="gl"] {
+    vertical-align: text-bottom;
+}
+img[alt="al"] {
+    vertical-align: text-bottom;
+}
+img[alt="el"] {
+    vertical-align: text-bottom;
+}
+img[alt="vl"] {
+    vertical-align: text-bottom;
+}
+img[alt="ml"] {
+    vertical-align: text-bottom;
+}
 
 /*****************************************************
  * index page styling
@@ -1020,9 +1097,9 @@ table.indextable td > dl > dd > dl
  * adapt for 'compact' and 'minimal' page sizes
  *------------------------------------*/
 
-@media only screen and (max-width: 960px),
-       only screen and (max-width: 700px),
-       only screen and (max-device-width: 700px),
+@media only screen and (max-width: 960px ; max width of "compact" mode (hides extra padding).),
+       only screen and (max-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
+       only screen and (max-device-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
        handheld
 {
     body { margin: 0; }
@@ -1033,8 +1110,8 @@ table.indextable td > dl > dd > dl
 /*------------------------------------
  * adapt for 'minimal' page size
  *------------------------------------*/
-@media only screen and (max-width: 700px),
-       only screen and (max-device-width: 700px),
+@media only screen and (max-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
+       only screen and (max-device-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
        handheld
 {
     body { font-size: 90%; }
