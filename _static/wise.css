@@ -423,7 +423,7 @@ div.footer
 div.footerwrapper
 {
     position: relative;
-    width: 54%;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -485,11 +485,14 @@ div.footerwrapper #linkedinc
 div.footer #copyright 
 {
     position: relative;
-    width: 23%;
+    width: 30%;
+    height: 31px;
+    margin-left: 0.7%;
     float: left;
     top: 1px;
     color: #888888;
     font-weight: bold;
+    text-align: left;
 }
 
 div.footer #copyright:hover
