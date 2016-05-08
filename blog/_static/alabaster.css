@@ -59,6 +59,7 @@ div.body {
 
 div.body > .section {
     text-align: justify;
+    margin-bottom: 50px;
 }
 
 div.footer {
