@@ -1034,19 +1034,7 @@ div.viewcode-block:target
  * document - Category logo styling
  *****************************************************/
 
-img[alt="gl"] {
-    vertical-align: text-bottom;
-}
-img[alt="al"] {
-    vertical-align: text-bottom;
-}
-img[alt="el"] {
-    vertical-align: text-bottom;
-}
-img[alt="vl"] {
-    vertical-align: text-bottom;
-}
-img[alt="ml"] {
+img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] {
     vertical-align: text-bottom;
 }
 
@@ -1094,6 +1082,9 @@ table.indextable td > dl > dd > dl
 @media only screen and (min-device-width: 16in)
 {
     body { font-size: 87.5%; }
+    img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] {
+        vertical-align: middle;
+    }
 }
 
 /*------------------------------------
@@ -1106,12 +1097,18 @@ table.indextable td > dl > dd > dl
        handheld
 {
     body {
+        position: relative;
         margin: 0;
         font-size: 120%;
     }
     div.footer { display: none; }
     div.admonition.floater { display: none; }
 
+    div.related
+    {
+        position: absolute;
+        bottom: 0; 
+    }
 }
 
 /*------------------------------------
