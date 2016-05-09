@@ -1077,21 +1077,71 @@ table.indextable td > dl > dd > dl
  *****************************************************/
 
 @media screen and (max-width: 870px) {
-    /* body { */
-    /*     position: relative; */
+    body {
+        position: relative;
         /* margin: 0; */
-    /* } */
+    }
     div.footer { display: none; }
     div.admonition.floater { display: none; }
 
     div.related
     {
         position: absolute;
-        float: bottom;
+        width: 100%;
+        bottom: 0;
     }
     /* img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] { */
     /*     vertical-align: middle; */
     /* } */
+    div.related a#fork
+    {
+        display: none;
+    }
+    div.related a#head
+    {
+        display: none;
+    }
+    div.related a#glink
+    {
+        position: relative;
+        width: 18%; 
+        height: 18%;
+        background: url('fav.png') no-repeat;
+    }
+    div.related div.headlink
+    {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    div.related a#alink
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        background: url('al.png') no-repeat;
+    }
+    div.related a#elink
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        background: url('el.png') no-repeat;
+    }
+    div.related a#vlink
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        background: url('vl.png') no-repeat;
+    }
+    div.related a#mlink
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        background: url('mh.png') no-repeat;
+    }
 }
 /* /\*------------------------------------ */
 /*  * adapt for larger displays */
