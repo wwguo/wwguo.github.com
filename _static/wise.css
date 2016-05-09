@@ -1093,7 +1093,7 @@ table.indextable td > dl > dd > dl
  *------------------------------------*/
 @media only screen and (min-device-width: 16in)
 {
-    body { font-size: 95%; }
+    body { font-size: 87.5%; }
 }
 
 /*------------------------------------
@@ -1105,9 +1105,13 @@ table.indextable td > dl > dd > dl
        only screen and (max-device-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
        handheld
 {
-    body { margin: 0; }
-
+    body {
+        margin: 0;
+        font-size: 120%;
+    }
+    div.footer { display: none; }
     div.admonition.floater { display: none; }
+
 }
 
 /*------------------------------------
@@ -1145,10 +1149,6 @@ table.indextable td > dl > dd > dl
     div.body
     {
         padding: 0 10px 30px;
-    }
-    div.footer
-    {
-        display: none;
     }
 }
 
