@@ -1079,35 +1079,31 @@ table.indextable td > dl > dd > dl
 /*------------------------------------
  * adapt for larger displays
  *------------------------------------*/
-/* @media screen and (min-device-width: 16in) */
-/* { */
-/*     body { font-size: 87.5%; } */
-/*     img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] { */
-/*         vertical-align: middle; */
-/*     } */
-/*     div.footer { display: none; } */
-/* } */
+@media only screen and (min-device-width: 16in)
+{
+    body { font-size: 87.5%; }
+    img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] {
+        vertical-align: middle;
+    }
+    div.footer { display: none; }
+}
 
 /*------------------------------------
  * adapt for 'compact' and 'minimal' page sizes
  *------------------------------------*/
 
-/* @media screen and (max-width: 960px ; max width of "compact" mode (hides extra padding).), */
-       /* screen and (max-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).), */
-       /* screen and (max-device-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).) */
-@media screen and (max-width: 870px)
+@media only screen and (max-width: 960px ; max width of "compact" mode (hides extra padding).),
+       only screen and (max-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
+       only screen and (max-device-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
+       handheld
 {
     body {
         position: relative;
         margin: 0;
         font-size: 120%;
     }
-    div.footer {
-        display: none;
-    }
-    div.admonition.floater {
-        display: none;
-    }
+    div.footer { display: none; }
+    div.admonition.floater { display: none; }
 
     div.related
     {
@@ -1119,8 +1115,9 @@ table.indextable td > dl > dd > dl
 /*------------------------------------
  * adapt for 'minimal' page size
  *------------------------------------*/
-@media screen and (max-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
-       screen and (max-device-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).)
+@media only screen and (max-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
+       only screen and (max-device-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
+       handheld
 {
     body { font-size: 90%; }
 
