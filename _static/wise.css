@@ -1107,6 +1107,7 @@ table.indextable td > dl > dd > dl
     div.footer div.mobile {
         display: block;
         background: #CCCCCC;
+        padding: 0 0 20px 0;
     }
     div.footer div.mobile a {
         margin: 0;
