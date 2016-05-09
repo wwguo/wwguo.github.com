@@ -1079,19 +1079,20 @@ table.indextable td > dl > dd > dl
 /*------------------------------------
  * adapt for larger displays
  *------------------------------------*/
-@media only screen and (min-device-width: 16in)
+@media screen and (min-device-width: 16in)
 {
     body { font-size: 87.5%; }
     img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] {
         vertical-align: middle;
     }
+    div.footer { display: none; }
 }
 
 /*------------------------------------
  * adapt for 'compact' and 'minimal' page sizes
  *------------------------------------*/
 
-@media only screen and (max-width: 960px ; max width of "compact" mode (hides extra padding).),
+@media screen and (max-width: 960px ; max width of "compact" mode (hides extra padding).),
        only screen and (max-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
        only screen and (max-device-width: 700px ; max width of "minimal" mode (hides sidebar and other extras).),
        handheld
