@@ -31,7 +31,6 @@ body
 /*****************************************************
  * page layout - relbars (top)
  *****************************************************/
-
 div.related
 {
     position: relative;
@@ -418,6 +417,11 @@ div.footer
     padding: 9px 0;
     text-align: center;
     font-size: 95%;
+}
+
+div.footer div.mobile
+{
+    display: none;
 }
 
 div.footerwrapper
@@ -1077,70 +1081,41 @@ table.indextable td > dl > dd > dl
  *****************************************************/
 
 @media screen and (max-width: 870px) {
-    body {
-        position: relative;
-        /* margin: 0; */
+    img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] {
+        vertical-align: baseline;
+        width: 5%;
     }
-    div.footer { display: none; }
+    div.related { display: none; }
     div.admonition.floater { display: none; }
+    div.tocwrapper { display: none; }
 
-    div.related
-    {
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-    }
-    /* img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] { */
-    /*     vertical-align: middle; */
+    /* div.document { */
+    /*     position: relative; */
     /* } */
-    div.related a#fork
+    div.footer
     {
-        display: none;
+        /* position: relative; */
+        padding: 0;
+        width: 100%;
+        /* height: 20vw; */
+        /* height: 0.2vw; */
     }
-    div.related a#head
-    {
-        display: none;
+    div.footer div#copyright { display: none; }
+    div.footer div.footerwrapper { display: none; }
+    div.footer a#license { display: none; }
+    
+    div.footer div.mobile {
+        display: block;
+        background: #CCCCCC;
     }
-    div.related a#glink
-    {
-        position: relative;
-        width: 18%; 
-        height: 18%;
-        background: url('fav.png') no-repeat;
-    }
-    div.related div.headlink
-    {
-        position: relative;
+    div.footer div.mobile a {
         margin: 0;
         padding: 0;
     }
-    div.related a#alink
+    div.footer div.mobile img
     {
-        position: relative;
-        top: 0;
-        left: 0;
-        background: url('al.png') no-repeat;
-    }
-    div.related a#elink
-    {
-        position: relative;
-        top: 0;
-        left: 0;
-        background: url('el.png') no-repeat;
-    }
-    div.related a#vlink
-    {
-        position: relative;
-        top: 0;
-        left: 0;
-        background: url('vl.png') no-repeat;
-    }
-    div.related a#mlink
-    {
-        position: relative;
-        top: 0;
-        left: 0;
-        background: url('mh.png') no-repeat;
+        margin: 0;
+        padding: 0;
     }
 }
 /* /\*------------------------------------ */
