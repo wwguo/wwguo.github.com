@@ -581,15 +581,13 @@ a:hover tt, a:hover code {
         display: none;
     }
     
-    div.body h1,
-    div.body h2,
-    div.body h3,
-    div.body h4,
-    div.body h5,
-    div.body h6 {
-        font-size: small;
-        margin: 10px 0px 3px 0px;
-    }
+    div.body h1 { font-size: 180%; }
+    div.body h2 { font-size: 140%; }
+    div.body h3 { font-size: 120%; }
+    div.body h4 { font-size: 110%; }
+    div.body h5 { font-size: 100%; }
+    div.body h6 { font-size: 100%; }
+    
 }
 
 
