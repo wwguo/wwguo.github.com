@@ -1082,12 +1082,17 @@ table.indextable td > dl > dd > dl
 
 @media screen and (max-width: 870px) {
     body {
-        width: 100%;
+        margin: 0;
+        padding: 20px 20px;
     }
     div.related { display: none; }
     div.admonition.floater { display: none; }
     div.tocwrapper { display: none; }
 
+    div.document {
+        width: 100%;
+        margin: 0;
+    }
     /* div.document { */
     /*     position: relative; */
     /* } */
