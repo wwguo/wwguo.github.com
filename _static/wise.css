@@ -1081,9 +1081,8 @@ table.indextable td > dl > dd > dl
  *****************************************************/
 
 @media screen and (max-width: 870px) {
-    img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] {
-        vertical-align: baseline;
-        width: 5%;
+    body {
+        width: auto;
     }
     div.related { display: none; }
     div.admonition.floater { display: none; }
@@ -1117,6 +1116,9 @@ table.indextable td > dl > dd > dl
     {
         margin: 0;
         padding: 0;
+    }
+    img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] {
+        vertical-align: baseline;
     }
 }
 /* /\*------------------------------------ */
