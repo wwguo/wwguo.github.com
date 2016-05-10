@@ -1124,16 +1124,16 @@ table.indextable td > dl > dd > dl
         margin: 0;
         padding: 0;
     }
-    div.footer div.mobile img
+    div.footer div.mobile a img
     {
         margin: 0;
         padding: 0;
     }
     img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] {
-        vertical-align: -5%;
+        vertical-align: middle;
     }
     img[alt="cc-share"],img[alt="cc-by"],img[alt="cc-nc"],img[alt="cc-nd"] {
-        vertical-align: -5%;
+        vertical-align: middle;
     }
 }
 /* /\*------------------------------------ */
