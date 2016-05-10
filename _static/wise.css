@@ -1084,7 +1084,6 @@ table.indextable td > dl > dd > dl
     body {
         min-width: 0;
         width: auto;
-        font-size: 12px;
     }
     div.related { display: none; }
     div.admonition.floater { display: none; }
@@ -1092,6 +1091,7 @@ table.indextable td > dl > dd > dl
 
     div.document {
         width: 100%;
+        font-size: 90%;
         /* position: relative; */
     }
     div.footer
