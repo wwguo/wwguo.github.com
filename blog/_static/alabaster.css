@@ -587,7 +587,7 @@ a:hover tt, a:hover code {
     div.body h4,
     div.body h5,
     div.body h6 {
-        font-weight: small;
+        font-size: small;
         margin: 10px 0px 3px 0px;
     }
 }
