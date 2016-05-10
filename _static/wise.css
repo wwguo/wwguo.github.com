@@ -1084,7 +1084,7 @@ table.indextable td > dl > dd > dl
     body {
         min-width: 0;
         width: auto;
-        font-size: 90%;
+        font-size: 12px;
     }
     div.related { display: none; }
     div.admonition.floater { display: none; }
