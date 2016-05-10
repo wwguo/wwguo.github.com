@@ -1088,6 +1088,7 @@ table.indextable td > dl > dd > dl
     }
 
     blockquote {
+        position: absolute;
         left: -10px;
     }
     div.related { display: none; }
@@ -1127,6 +1128,7 @@ table.indextable td > dl > dd > dl
     }
     img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] {
         vertical-align: baseline;
+        width: 5%;
     }
     
 }
