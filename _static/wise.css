@@ -1084,6 +1084,11 @@ table.indextable td > dl > dd > dl
     body {
         min-width: 0;
         width: auto;
+        font-size: 87.5%;
+    }
+
+    blockquote {
+        padding: -10px;
     }
     div.related { display: none; }
     div.admonition.floater { display: none; }
@@ -1091,7 +1096,7 @@ table.indextable td > dl > dd > dl
 
     div.document {
         width: 100%;
-        font-size: 90%;
+        /* font-size: 90%; */
         /* position: relative; */
     }
     div.footer
@@ -1123,6 +1128,7 @@ table.indextable td > dl > dd > dl
     img[alt="gl"],img[alt="al"],img[alt="el"],img[alt="vl"],img[alt="ml"] {
         vertical-align: baseline;
     }
+    
 }
 /* /\*------------------------------------ */
 /*  * adapt for larger displays */
