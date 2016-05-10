@@ -495,8 +495,15 @@ a:hover tt, a:hover code {
         display: none;
     }
 
-
-
+    div.body h1,
+    div.body h2,
+    div.body h3,
+    div.body h4,
+    div.body h5,
+    div.body h6 {
+        font-weight: small;
+        margin: 10px 0px 3px 0px;
+    }
 }
 
 
@@ -572,6 +579,16 @@ a:hover tt, a:hover code {
 
     .github {
         display: none;
+    }
+    
+    div.body h1,
+    div.body h2,
+    div.body h3,
+    div.body h4,
+    div.body h5,
+    div.body h6 {
+        font-weight: small;
+        margin: 10px 0px 3px 0px;
     }
 }
 
