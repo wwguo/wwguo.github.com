@@ -1084,11 +1084,11 @@ table.indextable td > dl > dd > dl
     body {
         min-width: 0;
         width: auto;
-        font-size: 87.5%;
+        font-size: 85%;
     }
 
     blockquote {
-        padding: -10px;
+        left: -10px;
     }
     div.related { display: none; }
     div.admonition.floater { display: none; }
