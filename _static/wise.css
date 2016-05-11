@@ -1091,8 +1091,9 @@ table.indextable td > dl > dd > dl
     }
 
     blockquote {
-        position: relative;
-        width: 90%;
+        /* position: relative; */
+        width: 80%;
+        left: 10%;
     }
     div.related { display: none; }
     div.admonition.floater { display: none; }
