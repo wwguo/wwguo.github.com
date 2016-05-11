@@ -1093,6 +1093,7 @@ table.indextable td > dl > dd > dl
     blockquote {
         position: relative;
         left: -10%;
+        right: -40%;
     }
     div.related { display: none; }
     div.admonition.floater { display: none; }
