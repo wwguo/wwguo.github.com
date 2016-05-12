@@ -623,6 +623,11 @@ div.body h4  { font-size: 120%; }
 div.body h5, div.body p.rubric { font-size: 110%; }
 div.body h6 { font-size: 100%; }
 
+div.body ul {
+    padding: 0 0 0 %5;
+    margin: 0;
+}
+
 div.body p,
 div.body dd,
 div.body li
