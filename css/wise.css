@@ -121,7 +121,7 @@ li.flip .back {
 
 @media screen and (max-width: 870px) {
     header {
-        margin: 4vw 0 2vw 0;
+        padding: 4vw 0 2vw 0;
     }
 
     .container {
