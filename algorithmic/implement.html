@@ -126,9 +126,7 @@
 <p>根据边是否有方向可分为有向图和无向图；根据任意两顶点间边的个数，可分为简单图和多重图；根据任意两顶点的连通性，可分为连通图和非连通图；根据边的地位平等性，可分为带权图和无权图。不论那种方式，图的基本定义方式只有两种，二元组定义和三元组定义。对于图G，如V(G)表示顶点集，E(G)表示边集合，则(V,E)就是图的二元组定义，如果存在关联函数I将E的每条边映射到V的两个顶点，即I(e)=(u,v)，则(V,E,I)就是图的三元组定义。</p>
 <p>图的存储通常采用邻接矩阵（二维数组）和邻接表（链表或可变长数组），有向图有时也此啊用十字链表存储。图的遍历是图操作的基础，常用策略包括深度优先搜索（DFS）和广度优先搜索（BFS）。</p>
 <p>深度优先搜索：从图G的某个顶点v出发，先访问v，然后选择一个与v相邻且没被访问过的顶点vi，从vi出发，依次遍历。当到达某个顶点的邻接顶点均已访问时，再退回到已访问顶点中，最后一个拥有未被访问邻接顶点的顶点，继续遍历，直到所有顶点均被访问。</p>
-<img alt="/home/wwguo/studio/release/wise/_images/pseudo/ae116ca5ed9a4e9078f64ac332f63d2aa26a9736.png" src="/home/wwguo/studio/release/wise/_images/pseudo/ae116ca5ed9a4e9078f64ac332f63d2aa26a9736.png" />
 <p>广度优先搜索：从图G的某个顶点v出发，依次访问与v相邻且没被访问过的顶点vi，然后从v1开始，依次访问与v1相邻且没访问过的顶点，以此类推，直到所有节点都被访问过。</p>
-<img alt="/home/wwguo/studio/release/wise/_images/pseudo/0b9a57a4b8f217d9493008e570866cda7dc2143d.png" src="/home/wwguo/studio/release/wise/_images/pseudo/0b9a57a4b8f217d9493008e570866cda7dc2143d.png" />
 </div>
 </div>
 </div>
@@ -165,7 +163,6 @@
 <div class="section" id="id8">
 <h3>分治法</h3>
 <p>分治法（divide and conquer）是将问题分解成一系列相互独立且规模较小的相同问题，规模依旧大的继续用相同策略分解，直至所有小问题都可解决。通过分解问题，可以实现两个目的，一是将没法解决的大问题变成可以解决的小问题，二是降低解决问题的复杂度。分治法是最适合程序语言的技巧，因此应用广泛。</p>
-<img alt="/home/wwguo/studio/release/wise/_images/pseudo/e856b90f8ca2988c39bedc78befeeac50fe62f06.png" src="/home/wwguo/studio/release/wise/_images/pseudo/e856b90f8ca2988c39bedc78befeeac50fe62f06.png" />
 <p>分治法的难点是分解和合并的设计。能用数学归纳法证明的问题，都可以用分治法解决，这也是选择分治法的信号。</p>
 </div>
 <div class="section" id="id9">

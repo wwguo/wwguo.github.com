@@ -1,5 +1,5 @@
 html, body {
-     font-size: 40px;      
+     /* font-size: 40px;       */
      margin:0; /* remove default margin */
      padding:0; /* remove default padding */
      width:100%; /* take full browser width */
@@ -8,7 +8,6 @@ html, body {
 
 body {
     background-color: #ecf0f1;
-    margin: 0;
     font-family: "Helvetica", "Arial", "Microsoft YaHei", "Adobe Heiti Std", "SimHei", sans-serif;
     color: #666666; 
     text-align: center;	
@@ -18,7 +17,7 @@ p { color: #333333;  }
 /* @import url(http://fonts.googleapis.com/css?family=Bree+Serif); */
 /* the important bits */
 header {
-    margin: 50px 0 25px;
+    padding: 50px 0 25px 0;
 }
 
 header p {
